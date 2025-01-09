@@ -5,7 +5,7 @@
     type="LIBRARY"
     maven="io.flutter.plugins.imagepicker:image_picker_android:"
     agpVersion="8.3.1"
-    buildFolder="C:\Users\Administrator\Desktop\apps\build\image_picker_android"
+    buildFolder="C:\Users\Administrator\Desktop\SukanNow\build\image_picker_android"
     bootClassPath="C:\Users\Administrator\AppData\Local\Android\sdk\platforms\android-34\android.jar;C:\Users\Administrator\AppData\Local\Android\sdk\build-tools\34.0.0\core-lambda-stubs.jar"
     javaSourceLevel="11"
     compileTarget="android-34"

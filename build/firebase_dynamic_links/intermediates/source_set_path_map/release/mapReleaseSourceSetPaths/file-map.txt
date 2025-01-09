@@ -23,9 +23,9 @@ io.flutter.plugins.firebase.dynamiclinks.firebase_dynamic_links-jetified-firebas
 io.flutter.plugins.firebase.dynamiclinks.firebase_dynamic_links-jetified-savedstate-1.2.1-22 C:\Users\Administrator\.gradle\caches\transforms-3\f43e84c994933236fb617181baea2b8d\transformed\jetified-savedstate-1.2.1\res
 io.flutter.plugins.firebase.dynamiclinks.firebase_dynamic_links-main-23 C:\Users\Administrator\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_dynamic_links-6.1.0\android\src\main\res
 io.flutter.plugins.firebase.dynamiclinks.firebase_dynamic_links-release-24 C:\Users\Administrator\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_dynamic_links-6.1.0\android\src\release\res
-io.flutter.plugins.firebase.dynamiclinks.firebase_dynamic_links-release-25 C:\Users\Administrator\Desktop\apps\build\firebase_core\intermediates\packaged_res\release\packageReleaseResources
-io.flutter.plugins.firebase.dynamiclinks.firebase_dynamic_links-pngs-26 C:\Users\Administrator\Desktop\apps\build\firebase_dynamic_links\generated\res\pngs\release
-io.flutter.plugins.firebase.dynamiclinks.firebase_dynamic_links-resValues-27 C:\Users\Administrator\Desktop\apps\build\firebase_dynamic_links\generated\res\resValues\release
-io.flutter.plugins.firebase.dynamiclinks.firebase_dynamic_links-mergeReleaseResources-28 C:\Users\Administrator\Desktop\apps\build\firebase_dynamic_links\intermediates\incremental\release\mergeReleaseResources\merged.dir
-io.flutter.plugins.firebase.dynamiclinks.firebase_dynamic_links-mergeReleaseResources-29 C:\Users\Administrator\Desktop\apps\build\firebase_dynamic_links\intermediates\incremental\release\mergeReleaseResources\stripped.dir
-io.flutter.plugins.firebase.dynamiclinks.firebase_dynamic_links-release-30 C:\Users\Administrator\Desktop\apps\build\firebase_dynamic_links\intermediates\merged_res\release\mergeReleaseResources
+io.flutter.plugins.firebase.dynamiclinks.firebase_dynamic_links-release-25 C:\Users\Administrator\Desktop\SukanNow\build\firebase_core\intermediates\packaged_res\release\packageReleaseResources
+io.flutter.plugins.firebase.dynamiclinks.firebase_dynamic_links-pngs-26 C:\Users\Administrator\Desktop\SukanNow\build\firebase_dynamic_links\generated\res\pngs\release
+io.flutter.plugins.firebase.dynamiclinks.firebase_dynamic_links-resValues-27 C:\Users\Administrator\Desktop\SukanNow\build\firebase_dynamic_links\generated\res\resValues\release
+io.flutter.plugins.firebase.dynamiclinks.firebase_dynamic_links-mergeReleaseResources-28 C:\Users\Administrator\Desktop\SukanNow\build\firebase_dynamic_links\intermediates\incremental\release\mergeReleaseResources\merged.dir
+io.flutter.plugins.firebase.dynamiclinks.firebase_dynamic_links-mergeReleaseResources-29 C:\Users\Administrator\Desktop\SukanNow\build\firebase_dynamic_links\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+io.flutter.plugins.firebase.dynamiclinks.firebase_dynamic_links-release-30 C:\Users\Administrator\Desktop\SukanNow\build\firebase_dynamic_links\intermediates\merged_res\release\mergeReleaseResources

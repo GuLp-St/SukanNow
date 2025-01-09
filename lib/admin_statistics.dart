@@ -1,5 +1,6 @@
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
 
 class AdminStats extends StatefulWidget {
   const AdminStats({super.key});
@@ -135,7 +136,7 @@ class _AdminStatsState extends State<AdminStats> {
               _buildStatTile('Total Users', _totalUsers),
               _buildStatTile('Total Bookings', _totalBookings),
               const Divider(),
-              const Text('Event', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+              const Text('Event Participation', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
               _buildParticipationList(_eventParticipation),
               const Divider(),
               const Text('Membership', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
@@ -159,35 +160,35 @@ class _AdminStatsState extends State<AdminStats> {
   }
 
   Widget _buildParticipationList(Map<String, int> participationData) {
-    return Column(
-      children: participationData.entries.map((entry) {
-        return ListTile(
-          title: Text(entry.key),
-          trailing: Text(entry.value.toString()),
-        );
-      }).toList(),
+    return SfCircularChart(
+      title: ChartTitle(text: 'Participation Overview'),
+      legend: Legend(isVisible: true), // Add this line to enable the legend
+      series: <PieSeries<MapEntry<String, int>, String>>[
+        PieSeries<MapEntry<String, int>, String>(
+          explode: true,
+          explodeIndex: 0,
+          dataSource: participationData.entries.toList(),
+          xValueMapper: (MapEntry<String, int> entry, _) => entry.key,
+          yValueMapper: (MapEntry<String, int> entry, _) => entry.value,
+          dataLabelSettings: const DataLabelSettings(isVisible: true),
+        ),
+      ],
     );
   }
 
-  Widget _buildSportsParticipationList(Map<String, Map<String, int>> participationData) {
-    return Column(
-      children: participationData.entries.map((entry) {
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(entry.key, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
-            ListTile(
-              title: const Text('This Week'),
-              trailing: Text(entry.value['This Week'].toString()),
-            ),
-            ListTile(
-              title: const Text('Last Week'),
-              trailing: Text(entry.value['Last Week'].toString()),
-            ),
-            const Divider(),
-          ],
-        );
-      }).toList(),
-    );
-  }
+Widget _buildSportsParticipationList(Map<String, Map<String, int>> participationData) {
+  return SfCartesianChart(
+    title: ChartTitle(text: 'Sports Participation'),
+    primaryXAxis: CategoryAxis(),
+    legend: Legend(isVisible: true), // Add the legend here
+    series: participationData.entries.map((entry) {
+      return ColumnSeries<MapEntry<String, int>, String>(
+        name: entry.key,
+        dataSource: entry.value.entries.toList(),
+        xValueMapper: (MapEntry<String, int> entry, _) => entry.key,
+        yValueMapper: (MapEntry<String, int> entry, _) => entry.value,
+      );
+    }).toList(),
+  );
+}
 }

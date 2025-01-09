@@ -1,21 +1,25 @@
 -- Merging decision tree log ---
 application
-INJECTED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:3:5-34:19
-INJECTED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:3:5-34:19
-MERGED from [:cloud_firestore] C:\Users\Administrator\Desktop\apps\build\cloud_firestore\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:5-13:19
-MERGED from [:cloud_firestore] C:\Users\Administrator\Desktop\apps\build\cloud_firestore\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:5-13:19
-MERGED from [:firebase_auth] C:\Users\Administrator\Desktop\apps\build\firebase_auth\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:5-13:19
-MERGED from [:firebase_auth] C:\Users\Administrator\Desktop\apps\build\firebase_auth\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:5-13:19
-MERGED from [:firebase_database] C:\Users\Administrator\Desktop\apps\build\firebase_database\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:5-13:19
-MERGED from [:firebase_database] C:\Users\Administrator\Desktop\apps\build\firebase_database\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:5-13:19
-MERGED from [:firebase_dynamic_links] C:\Users\Administrator\Desktop\apps\build\firebase_dynamic_links\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:5-15:19
-MERGED from [:firebase_dynamic_links] C:\Users\Administrator\Desktop\apps\build\firebase_dynamic_links\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:5-15:19
-MERGED from [:firebase_storage] C:\Users\Administrator\Desktop\apps\build\firebase_storage\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:5-13:19
-MERGED from [:firebase_storage] C:\Users\Administrator\Desktop\apps\build\firebase_storage\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:5-13:19
-MERGED from [:firebase_core] C:\Users\Administrator\Desktop\apps\build\firebase_core\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:5-13:19
-MERGED from [:firebase_core] C:\Users\Administrator\Desktop\apps\build\firebase_core\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:5-13:19
-MERGED from [:image_picker_android] C:\Users\Administrator\Desktop\apps\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:5-32:19
-MERGED from [:image_picker_android] C:\Users\Administrator\Desktop\apps\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:5-32:19
+INJECTED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:3:5-34:19
+INJECTED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:3:5-34:19
+MERGED from [:cloud_firestore] C:\Users\Administrator\Desktop\SukanNow\build\cloud_firestore\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:5-13:19
+MERGED from [:cloud_firestore] C:\Users\Administrator\Desktop\SukanNow\build\cloud_firestore\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_auth] C:\Users\Administrator\Desktop\SukanNow\build\firebase_auth\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_auth] C:\Users\Administrator\Desktop\SukanNow\build\firebase_auth\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_database] C:\Users\Administrator\Desktop\SukanNow\build\firebase_database\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_database] C:\Users\Administrator\Desktop\SukanNow\build\firebase_database\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_dynamic_links] C:\Users\Administrator\Desktop\SukanNow\build\firebase_dynamic_links\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_dynamic_links] C:\Users\Administrator\Desktop\SukanNow\build\firebase_dynamic_links\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_storage] C:\Users\Administrator\Desktop\SukanNow\build\firebase_storage\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_storage] C:\Users\Administrator\Desktop\SukanNow\build\firebase_storage\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_core] C:\Users\Administrator\Desktop\SukanNow\build\firebase_core\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_core] C:\Users\Administrator\Desktop\SukanNow\build\firebase_core\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:5-13:19
+MERGED from [:image_picker_android] C:\Users\Administrator\Desktop\SukanNow\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:5-32:19
+MERGED from [:image_picker_android] C:\Users\Administrator\Desktop\SukanNow\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:5-32:19
+MERGED from [:open_file_android] C:\Users\Administrator\Desktop\SukanNow\build\open_file_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:5-20:19
+MERGED from [:open_file_android] C:\Users\Administrator\Desktop\SukanNow\build\open_file_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:5-20:19
+MERGED from [:printing] C:\Users\Administrator\Desktop\SukanNow\build\printing\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:5-17:19
+MERGED from [:printing] C:\Users\Administrator\Desktop\SukanNow\build\printing\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:5-17:19
 MERGED from [com.google.firebase:firebase-auth:23.1.0] C:\Users\Administrator\.gradle\caches\transforms-3\d25c01b453ef9e47b33f3bf583beff09\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:28:5-73:19
 MERGED from [com.google.firebase:firebase-auth:23.1.0] C:\Users\Administrator\.gradle\caches\transforms-3\d25c01b453ef9e47b33f3bf583beff09\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:28:5-73:19
 MERGED from [com.google.firebase:firebase-firestore:25.1.1] C:\Users\Administrator\.gradle\caches\transforms-3\e1dfce89a2cfd8cc9f6c33e0f0cc1a04\transformed\jetified-firebase-firestore-25.1.1\AndroidManifest.xml:13:5-24:19
@@ -46,6 +50,8 @@ MERGED from [com.google.android.gms:play-services-fido:20.1.0] C:\Users\Administ
 MERGED from [com.google.android.gms:play-services-fido:20.1.0] C:\Users\Administrator\.gradle\caches\transforms-3\1d85acb67871611aca13036a4ec36742\transformed\jetified-play-services-fido-20.1.0\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\Administrator\.gradle\caches\transforms-3\7e65965891d5ec4333620e3e0668feaa\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:19:5-23:19
 MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\Administrator\.gradle\caches\transforms-3\7e65965891d5ec4333620e3e0668feaa\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:19:5-23:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Administrator\.gradle\caches\transforms-3\d09b5c7f981e4d3a8b7d0d610e29fece\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Administrator\.gradle\caches\transforms-3\d09b5c7f981e4d3a8b7d0d610e29fece\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
 MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Administrator\.gradle\caches\transforms-3\8a93a6a0bcfa9e83d7a67a559ae2dd4e\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:23:5-33:19
 MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Administrator\.gradle\caches\transforms-3\8a93a6a0bcfa9e83d7a67a559ae2dd4e\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:23:5-33:19
 MERGED from [androidx.window:window:1.2.0] C:\Users\Administrator\.gradle\caches\transforms-3\a7d12b81a17aa05e3bb86ceca71fe4bb\transformed\jetified-window-1.2.0\AndroidManifest.xml:22:5-29:19
@@ -67,34 +73,37 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Ad
 MERGED from [com.google.android.play:core-common:2.0.3] C:\Users\Administrator\.gradle\caches\transforms-3\ab99f9d4c0fddde7a88d2bcdfbfb1b81\transformed\jetified-core-common-2.0.3\AndroidManifest.xml:11:5-19:19
 MERGED from [com.google.android.play:core-common:2.0.3] C:\Users\Administrator\.gradle\caches\transforms-3\ab99f9d4c0fddde7a88d2bcdfbfb1b81\transformed\jetified-core-common-2.0.3\AndroidManifest.xml:11:5-19:19
 	android:extractNativeLibs
-		INJECTED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.13.1] C:\Users\Administrator\.gradle\caches\transforms-3\d0dc63ebc59af83212e5d4ba8e238ecc\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
 	android:label
-		ADDED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:4:9-33
+		ADDED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:4:9-33
 	android:icon
-		ADDED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:6:9-43
+		ADDED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:6:9-43
 	android:name
-		INJECTED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:5:9-42
+		INJECTED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:5:9-42
 manifest
-ADDED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:1:1-46:12
-INJECTED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:1:1-46:12
-INJECTED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:1:1-46:12
-INJECTED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:1:1-46:12
-MERGED from [:cloud_firestore] C:\Users\Administrator\Desktop\apps\build\cloud_firestore\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:2:1-15:12
-MERGED from [:desktop_webview_auth] C:\Users\Administrator\Desktop\apps\build\desktop_webview_auth\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:2:1-7:12
-MERGED from [:firebase_auth] C:\Users\Administrator\Desktop\apps\build\firebase_auth\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:2:1-15:12
-MERGED from [:firebase_database] C:\Users\Administrator\Desktop\apps\build\firebase_database\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:2:1-15:12
-MERGED from [:firebase_dynamic_links] C:\Users\Administrator\Desktop\apps\build\firebase_dynamic_links\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:2:1-17:12
-MERGED from [:firebase_storage] C:\Users\Administrator\Desktop\apps\build\firebase_storage\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:2:1-15:12
-MERGED from [:firebase_core] C:\Users\Administrator\Desktop\apps\build\firebase_core\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:2:1-15:12
-MERGED from [:image_picker_android] C:\Users\Administrator\Desktop\apps\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:2:1-34:12
-MERGED from [:flutter_plugin_android_lifecycle] C:\Users\Administrator\Desktop\apps\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:2:1-7:12
-MERGED from [:google_sign_in_android] C:\Users\Administrator\Desktop\apps\build\google_sign_in_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:2:1-9:12
-MERGED from [:image_editor_common] C:\Users\Administrator\Desktop\apps\build\image_editor_common\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:2:1-7:12
-MERGED from [:pedometer] C:\Users\Administrator\Desktop\apps\build\pedometer\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:2:1-7:12
-MERGED from [:permission_handler_android] C:\Users\Administrator\Desktop\apps\build\permission_handler_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:2:1-7:12
+ADDED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:1:1-46:12
+INJECTED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:1:1-46:12
+INJECTED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:1:1-46:12
+INJECTED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:1:1-46:12
+MERGED from [:cloud_firestore] C:\Users\Administrator\Desktop\SukanNow\build\cloud_firestore\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:2:1-15:12
+MERGED from [:desktop_webview_auth] C:\Users\Administrator\Desktop\SukanNow\build\desktop_webview_auth\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:2:1-7:12
+MERGED from [:firebase_auth] C:\Users\Administrator\Desktop\SukanNow\build\firebase_auth\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:2:1-15:12
+MERGED from [:firebase_database] C:\Users\Administrator\Desktop\SukanNow\build\firebase_database\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:2:1-15:12
+MERGED from [:firebase_dynamic_links] C:\Users\Administrator\Desktop\SukanNow\build\firebase_dynamic_links\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:2:1-17:12
+MERGED from [:firebase_storage] C:\Users\Administrator\Desktop\SukanNow\build\firebase_storage\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:2:1-15:12
+MERGED from [:firebase_core] C:\Users\Administrator\Desktop\SukanNow\build\firebase_core\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:2:1-15:12
+MERGED from [:image_picker_android] C:\Users\Administrator\Desktop\SukanNow\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:2:1-34:12
+MERGED from [:flutter_plugin_android_lifecycle] C:\Users\Administrator\Desktop\SukanNow\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:2:1-7:12
+MERGED from [:google_sign_in_android] C:\Users\Administrator\Desktop\SukanNow\build\google_sign_in_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:2:1-9:12
+MERGED from [:image_editor_common] C:\Users\Administrator\Desktop\SukanNow\build\image_editor_common\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:2:1-7:12
+MERGED from [:open_file_android] C:\Users\Administrator\Desktop\SukanNow\build\open_file_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:2:1-22:12
+MERGED from [:path_provider_android] C:\Users\Administrator\Desktop\SukanNow\build\path_provider_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:2:1-7:12
+MERGED from [:pedometer] C:\Users\Administrator\Desktop\SukanNow\build\pedometer\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:2:1-7:12
+MERGED from [:permission_handler_android] C:\Users\Administrator\Desktop\SukanNow\build\permission_handler_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:2:1-7:12
+MERGED from [:printing] C:\Users\Administrator\Desktop\SukanNow\build\printing\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:2:1-19:12
 MERGED from [com.google.firebase:firebase-auth:23.1.0] C:\Users\Administrator\.gradle\caches\transforms-3\d25c01b453ef9e47b33f3bf583beff09\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:17:1-75:12
 MERGED from [com.google.firebase:firebase-firestore:25.1.1] C:\Users\Administrator\.gradle\caches\transforms-3\e1dfce89a2cfd8cc9f6c33e0f0cc1a04\transformed\jetified-firebase-firestore-25.1.1\AndroidManifest.xml:2:1-26:12
 MERGED from [com.google.firebase:firebase-dynamic-links:22.1.0] C:\Users\Administrator\.gradle\caches\transforms-3\da2bf040a345220abd954f8dd6f92bf1\transformed\jetified-firebase-dynamic-links-22.1.0\AndroidManifest.xml:15:1-33:12
@@ -102,6 +111,8 @@ MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\Administrator
 MERGED from [com.google.firebase:firebase-database:21.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\c8d0f3b7471ecad8e68216f51ab4d4b1\transformed\jetified-firebase-database-21.0.0\AndroidManifest.xml:15:1-38:12
 MERGED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\891e63d23de504c392581983afbf0c53\transformed\jetified-firebase-appcheck-18.0.0\AndroidManifest.xml:15:1-34:12
 MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\e0a8a277922772524867cb543ccc003b\transformed\jetified-firebase-common-ktx-21.0.0\AndroidManifest.xml:2:1-18:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-3\3ba1c41de0e9d53fd780e09cdaebb4a5\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-3\9eb00dccf0e570d516179c732833cbba\transformed\appcompat-1.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.credentials:credentials:1.2.0-rc01] C:\Users\Administrator\.gradle\caches\transforms-3\1048f859c20cb78a07de8b4d016dd8ea\transformed\jetified-credentials-1.2.0-rc01\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Administrator\.gradle\caches\transforms-3\9ebd62dec3307144b7933f74f3c38eb9\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:17:1-44:12
 MERGED from [com.google.android.gms:play-services-auth:21.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\9dc9a0a5d92f83b46b25f35dc2b11013\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:17:1-40:12
@@ -120,6 +131,8 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] C:\Users\Administ
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] C:\Users\Administrator\.gradle\caches\transforms-3\2598f982b1a3d2b94c7eebf80cd93a5a\transformed\jetified-lifecycle-viewmodel-savedstate-2.7.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] C:\Users\Administrator\.gradle\caches\transforms-3\3aef1103f8c906479375e72615fd7a49\transformed\lifecycle-viewmodel-2.7.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] C:\Users\Administrator\.gradle\caches\transforms-3\47e3a71393c55cf77f74b261526c6a61\transformed\lifecycle-runtime-2.7.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\Administrator\.gradle\caches\transforms-3\39fdc7082a8f939d67ef5d6130ef6652\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Administrator\.gradle\caches\transforms-3\d09b5c7f981e4d3a8b7d0d610e29fece\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:17:1-35:12
 MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Administrator\.gradle\caches\transforms-3\8a93a6a0bcfa9e83d7a67a559ae2dd4e\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:17:1-35:12
 MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\Administrator\.gradle\caches\transforms-3\f43e84c994933236fb617181baea2b8d\transformed\jetified-savedstate-1.2.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.window:window-java:1.2.0] C:\Users\Administrator\.gradle\caches\transforms-3\a7bc71df8653c043b9d130f392f3ca2e\transformed\jetified-window-java-1.2.0\AndroidManifest.xml:17:1-21:12
@@ -129,9 +142,12 @@ MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] C:\Users
 MERGED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\Administrator\.gradle\caches\transforms-3\57a19dca3ebc85dc92100fefff08f112\transformed\jetified-play-services-basement-18.4.0\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.fragment:fragment:1.7.1] C:\Users\Administrator\.gradle\caches\transforms-3\6168c3d71e196b19ee53206d301ea9d2\transformed\fragment-1.7.1\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.activity:activity:1.9.3] C:\Users\Administrator\.gradle\caches\transforms-3\d06f6c32346e6cf4abd35af5c2ca01c7\transformed\jetified-activity-1.9.3\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\658d3b0c08b127a42275a7e29e6cde10\transformed\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.browser:browser:1.4.0] C:\Users\Administrator\.gradle\caches\transforms-3\2106d9c23741fad136dda07a6d8335fe\transformed\browser-1.4.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\30621eb11c1909be498328ba86801732\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core-ktx:1.13.1] C:\Users\Administrator\.gradle\caches\transforms-3\eb465b3bc30b8225e869b94d0f88bc06\transformed\jetified-core-ktx-1.13.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-3\1e02242df5a910219602fc0459fc2e50\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-3\7c99c7a52251d8616915b6572fd9a452\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.customview:customview:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\a27cce505f1a3a3a09c8b3e2a978928a\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core:1.13.1] C:\Users\Administrator\.gradle\caches\transforms-3\d0dc63ebc59af83212e5d4ba8e238ecc\transformed\core-1.13.1\AndroidManifest.xml:17:1-30:12
 MERGED from [androidx.exifinterface:exifinterface:1.3.7] C:\Users\Administrator\.gradle\caches\transforms-3\617681b23dd97472c04716a25a3cbb08\transformed\exifinterface-1.3.7\AndroidManifest.xml:17:1-24:12
@@ -140,6 +156,7 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Administrator\.gra
 MERGED from [androidx.tracing:tracing:1.2.0] C:\Users\Administrator\.gradle\caches\transforms-3\e6c91923e0ead3a2c2391f4ec4d3e403\transformed\jetified-tracing-1.2.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\e6115f2df4a35106e9d2b91e0289a68b\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Administrator\.gradle\caches\transforms-3\ddcfb4b3b6a8e20ecb5de1dff09336f6\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\f3f1c1262babbdb9703b23da8660f9aa\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\2be708a2ea45fe15e2b4c5cddb6dc5c4\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-components:18.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\00b7e7d9edbacd07e5befd7211263068\transformed\jetified-firebase-components-18.0.0\AndroidManifest.xml:15:1-20:12
 MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\Administrator\.gradle\caches\transforms-3\5f063aeccc9a604432144eb8e439fce6\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
@@ -152,99 +169,105 @@ MERGED from [com.getkeepsafe.relinker:relinker:1.4.5] C:\Users\Administrator\.gr
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\68f562cd565a079d0a15562b25b10eb3\transformed\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.android.play:core-common:2.0.3] C:\Users\Administrator\.gradle\caches\transforms-3\ab99f9d4c0fddde7a88d2bcdfbfb1b81\transformed\jetified-core-common-2.0.3\AndroidManifest.xml:2:1-21:12
 	package
-		INJECTED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:1:11-69
+		ADDED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:1:11-69
 uses-permission#android.permission.ACTIVITY_RECOGNITION
-ADDED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:2:5-79
+ADDED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:2:5-79
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:2:22-76
+		ADDED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:2:22-76
 queries
-ADDED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:40:5-45:15
+ADDED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:40:5-45:15
 intent#action:name:android.intent.action.PROCESS_TEXT+data:mimeType:text/plain
-ADDED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:41:9-44:18
+ADDED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:41:9-44:18
 action#android.intent.action.PROCESS_TEXT
-ADDED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:42:13-72
+ADDED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:42:13-72
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:42:21-70
+		ADDED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:42:21-70
 data
-ADDED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:43:13-50
+ADDED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:43:13-50
 	android:mimeType
-		ADDED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:43:19-48
+		ADDED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:43:19-48
 activity#com.example.apps.MainActivity
-ADDED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:7:9-28:20
+ADDED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:7:9-28:20
 	android:launchMode
-		ADDED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:10:13-43
+		ADDED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:10:13-43
 	android:hardwareAccelerated
-		ADDED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:14:13-47
+		ADDED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:14:13-47
 	android:windowSoftInputMode
-		ADDED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:15:13-55
+		ADDED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:15:13-55
 	android:exported
-		ADDED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:9:13-36
+		ADDED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:9:13-36
 	android:configChanges
-		ADDED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:13:13-163
+		ADDED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:13:13-163
 	android:theme
-		ADDED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:12:13-47
+		ADDED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:12:13-47
 	android:taskAffinity
-		ADDED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:11:13-36
+		ADDED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:11:13-36
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:8:13-41
+		ADDED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:8:13-41
 meta-data#io.flutter.embedding.android.NormalTheme
-ADDED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:20:13-23:17
+ADDED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:20:13-23:17
 	android:resource
-		ADDED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:22:15-52
+		ADDED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:22:15-52
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:21:15-70
+		ADDED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:21:15-70
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:24:13-27:29
+ADDED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:24:13-27:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:25:17-68
+ADDED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:25:17-68
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:25:25-66
+		ADDED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:25:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:26:17-76
+ADDED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:26:17-76
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:26:27-74
+		ADDED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:26:27-74
 meta-data#flutterEmbedding
-ADDED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:31:9-33:33
+ADDED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:31:9-33:33
 	android:value
-		ADDED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:33:13-30
+		ADDED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:33:13-30
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml:32:13-44
+		ADDED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml:32:13-44
 uses-sdk
-INJECTED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml
-MERGED from [:cloud_firestore] C:\Users\Administrator\Desktop\apps\build\cloud_firestore\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
-MERGED from [:cloud_firestore] C:\Users\Administrator\Desktop\apps\build\cloud_firestore\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
-MERGED from [:desktop_webview_auth] C:\Users\Administrator\Desktop\apps\build\desktop_webview_auth\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
-MERGED from [:desktop_webview_auth] C:\Users\Administrator\Desktop\apps\build\desktop_webview_auth\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
-MERGED from [:firebase_auth] C:\Users\Administrator\Desktop\apps\build\firebase_auth\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
-MERGED from [:firebase_auth] C:\Users\Administrator\Desktop\apps\build\firebase_auth\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
-MERGED from [:firebase_database] C:\Users\Administrator\Desktop\apps\build\firebase_database\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
-MERGED from [:firebase_database] C:\Users\Administrator\Desktop\apps\build\firebase_database\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
-MERGED from [:firebase_dynamic_links] C:\Users\Administrator\Desktop\apps\build\firebase_dynamic_links\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
-MERGED from [:firebase_dynamic_links] C:\Users\Administrator\Desktop\apps\build\firebase_dynamic_links\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
-MERGED from [:firebase_storage] C:\Users\Administrator\Desktop\apps\build\firebase_storage\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
-MERGED from [:firebase_storage] C:\Users\Administrator\Desktop\apps\build\firebase_storage\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
-MERGED from [:firebase_core] C:\Users\Administrator\Desktop\apps\build\firebase_core\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
-MERGED from [:firebase_core] C:\Users\Administrator\Desktop\apps\build\firebase_core\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
-MERGED from [:image_picker_android] C:\Users\Administrator\Desktop\apps\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:6:5-44
-MERGED from [:image_picker_android] C:\Users\Administrator\Desktop\apps\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:6:5-44
-MERGED from [:flutter_plugin_android_lifecycle] C:\Users\Administrator\Desktop\apps\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
-MERGED from [:flutter_plugin_android_lifecycle] C:\Users\Administrator\Desktop\apps\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
-MERGED from [:google_sign_in_android] C:\Users\Administrator\Desktop\apps\build\google_sign_in_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
-MERGED from [:google_sign_in_android] C:\Users\Administrator\Desktop\apps\build\google_sign_in_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
-MERGED from [:image_editor_common] C:\Users\Administrator\Desktop\apps\build\image_editor_common\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
-MERGED from [:image_editor_common] C:\Users\Administrator\Desktop\apps\build\image_editor_common\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
-MERGED from [:pedometer] C:\Users\Administrator\Desktop\apps\build\pedometer\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
-MERGED from [:pedometer] C:\Users\Administrator\Desktop\apps\build\pedometer\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
-MERGED from [:permission_handler_android] C:\Users\Administrator\Desktop\apps\build\permission_handler_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
-MERGED from [:permission_handler_android] C:\Users\Administrator\Desktop\apps\build\permission_handler_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
+INJECTED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml
+MERGED from [:cloud_firestore] C:\Users\Administrator\Desktop\SukanNow\build\cloud_firestore\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
+MERGED from [:cloud_firestore] C:\Users\Administrator\Desktop\SukanNow\build\cloud_firestore\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
+MERGED from [:desktop_webview_auth] C:\Users\Administrator\Desktop\SukanNow\build\desktop_webview_auth\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
+MERGED from [:desktop_webview_auth] C:\Users\Administrator\Desktop\SukanNow\build\desktop_webview_auth\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
+MERGED from [:firebase_auth] C:\Users\Administrator\Desktop\SukanNow\build\firebase_auth\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
+MERGED from [:firebase_auth] C:\Users\Administrator\Desktop\SukanNow\build\firebase_auth\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
+MERGED from [:firebase_database] C:\Users\Administrator\Desktop\SukanNow\build\firebase_database\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
+MERGED from [:firebase_database] C:\Users\Administrator\Desktop\SukanNow\build\firebase_database\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
+MERGED from [:firebase_dynamic_links] C:\Users\Administrator\Desktop\SukanNow\build\firebase_dynamic_links\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
+MERGED from [:firebase_dynamic_links] C:\Users\Administrator\Desktop\SukanNow\build\firebase_dynamic_links\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
+MERGED from [:firebase_storage] C:\Users\Administrator\Desktop\SukanNow\build\firebase_storage\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
+MERGED from [:firebase_storage] C:\Users\Administrator\Desktop\SukanNow\build\firebase_storage\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
+MERGED from [:firebase_core] C:\Users\Administrator\Desktop\SukanNow\build\firebase_core\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
+MERGED from [:firebase_core] C:\Users\Administrator\Desktop\SukanNow\build\firebase_core\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
+MERGED from [:image_picker_android] C:\Users\Administrator\Desktop\SukanNow\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:6:5-44
+MERGED from [:image_picker_android] C:\Users\Administrator\Desktop\SukanNow\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:6:5-44
+MERGED from [:flutter_plugin_android_lifecycle] C:\Users\Administrator\Desktop\SukanNow\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
+MERGED from [:flutter_plugin_android_lifecycle] C:\Users\Administrator\Desktop\SukanNow\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
+MERGED from [:google_sign_in_android] C:\Users\Administrator\Desktop\SukanNow\build\google_sign_in_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
+MERGED from [:google_sign_in_android] C:\Users\Administrator\Desktop\SukanNow\build\google_sign_in_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
+MERGED from [:image_editor_common] C:\Users\Administrator\Desktop\SukanNow\build\image_editor_common\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
+MERGED from [:image_editor_common] C:\Users\Administrator\Desktop\SukanNow\build\image_editor_common\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
+MERGED from [:open_file_android] C:\Users\Administrator\Desktop\SukanNow\build\open_file_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:6:5-44
+MERGED from [:open_file_android] C:\Users\Administrator\Desktop\SukanNow\build\open_file_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:6:5-44
+MERGED from [:path_provider_android] C:\Users\Administrator\Desktop\SukanNow\build\path_provider_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
+MERGED from [:path_provider_android] C:\Users\Administrator\Desktop\SukanNow\build\path_provider_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
+MERGED from [:pedometer] C:\Users\Administrator\Desktop\SukanNow\build\pedometer\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
+MERGED from [:pedometer] C:\Users\Administrator\Desktop\SukanNow\build\pedometer\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
+MERGED from [:permission_handler_android] C:\Users\Administrator\Desktop\SukanNow\build\permission_handler_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
+MERGED from [:permission_handler_android] C:\Users\Administrator\Desktop\SukanNow\build\permission_handler_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
+MERGED from [:printing] C:\Users\Administrator\Desktop\SukanNow\build\printing\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
+MERGED from [:printing] C:\Users\Administrator\Desktop\SukanNow\build\printing\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-auth:23.1.0] C:\Users\Administrator\.gradle\caches\transforms-3\d25c01b453ef9e47b33f3bf583beff09\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:21:5-23:151
 MERGED from [com.google.firebase:firebase-auth:23.1.0] C:\Users\Administrator\.gradle\caches\transforms-3\d25c01b453ef9e47b33f3bf583beff09\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:21:5-23:151
 MERGED from [com.google.firebase:firebase-firestore:25.1.1] C:\Users\Administrator\.gradle\caches\transforms-3\e1dfce89a2cfd8cc9f6c33e0f0cc1a04\transformed\jetified-firebase-firestore-25.1.1\AndroidManifest.xml:6:5-44
@@ -259,6 +282,10 @@ MERGED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\Administrato
 MERGED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\891e63d23de504c392581983afbf0c53\transformed\jetified-firebase-appcheck-18.0.0\AndroidManifest.xml:18:5-44
 MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\e0a8a277922772524867cb543ccc003b\transformed\jetified-firebase-common-ktx-21.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\e0a8a277922772524867cb543ccc003b\transformed\jetified-firebase-common-ktx-21.0.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-3\3ba1c41de0e9d53fd780e09cdaebb4a5\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-3\3ba1c41de0e9d53fd780e09cdaebb4a5\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-3\9eb00dccf0e570d516179c732833cbba\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\Administrator\.gradle\caches\transforms-3\9eb00dccf0e570d516179c732833cbba\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.credentials:credentials:1.2.0-rc01] C:\Users\Administrator\.gradle\caches\transforms-3\1048f859c20cb78a07de8b4d016dd8ea\transformed\jetified-credentials-1.2.0-rc01\AndroidManifest.xml:5:5-44
 MERGED from [androidx.credentials:credentials:1.2.0-rc01] C:\Users\Administrator\.gradle\caches\transforms-3\1048f859c20cb78a07de8b4d016dd8ea\transformed\jetified-credentials-1.2.0-rc01\AndroidManifest.xml:5:5-44
 MERGED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Administrator\.gradle\caches\transforms-3\9ebd62dec3307144b7933f74f3c38eb9\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:21:5-44
@@ -295,6 +322,10 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] C:\Users\Administrato
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] C:\Users\Administrator\.gradle\caches\transforms-3\3aef1103f8c906479375e72615fd7a49\transformed\lifecycle-viewmodel-2.7.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] C:\Users\Administrator\.gradle\caches\transforms-3\47e3a71393c55cf77f74b261526c6a61\transformed\lifecycle-runtime-2.7.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] C:\Users\Administrator\.gradle\caches\transforms-3\47e3a71393c55cf77f74b261526c6a61\transformed\lifecycle-runtime-2.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\Administrator\.gradle\caches\transforms-3\39fdc7082a8f939d67ef5d6130ef6652\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\Administrator\.gradle\caches\transforms-3\39fdc7082a8f939d67ef5d6130ef6652\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Administrator\.gradle\caches\transforms-3\d09b5c7f981e4d3a8b7d0d610e29fece\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Administrator\.gradle\caches\transforms-3\d09b5c7f981e4d3a8b7d0d610e29fece\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:21:5-44
 MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Administrator\.gradle\caches\transforms-3\8a93a6a0bcfa9e83d7a67a559ae2dd4e\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:21:5-44
 MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Administrator\.gradle\caches\transforms-3\8a93a6a0bcfa9e83d7a67a559ae2dd4e\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:21:5-44
 MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\Administrator\.gradle\caches\transforms-3\f43e84c994933236fb617181baea2b8d\transformed\jetified-savedstate-1.2.1\AndroidManifest.xml:20:5-44
@@ -313,12 +344,18 @@ MERGED from [androidx.fragment:fragment:1.7.1] C:\Users\Administrator\.gradle\ca
 MERGED from [androidx.fragment:fragment:1.7.1] C:\Users\Administrator\.gradle\caches\transforms-3\6168c3d71e196b19ee53206d301ea9d2\transformed\fragment-1.7.1\AndroidManifest.xml:5:5-44
 MERGED from [androidx.activity:activity:1.9.3] C:\Users\Administrator\.gradle\caches\transforms-3\d06f6c32346e6cf4abd35af5c2ca01c7\transformed\jetified-activity-1.9.3\AndroidManifest.xml:20:5-44
 MERGED from [androidx.activity:activity:1.9.3] C:\Users\Administrator\.gradle\caches\transforms-3\d06f6c32346e6cf4abd35af5c2ca01c7\transformed\jetified-activity-1.9.3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\658d3b0c08b127a42275a7e29e6cde10\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\658d3b0c08b127a42275a7e29e6cde10\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.browser:browser:1.4.0] C:\Users\Administrator\.gradle\caches\transforms-3\2106d9c23741fad136dda07a6d8335fe\transformed\browser-1.4.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.browser:browser:1.4.0] C:\Users\Administrator\.gradle\caches\transforms-3\2106d9c23741fad136dda07a6d8335fe\transformed\browser-1.4.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\30621eb11c1909be498328ba86801732\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\30621eb11c1909be498328ba86801732\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core-ktx:1.13.1] C:\Users\Administrator\.gradle\caches\transforms-3\eb465b3bc30b8225e869b94d0f88bc06\transformed\jetified-core-ktx-1.13.1\AndroidManifest.xml:5:5-44
 MERGED from [androidx.core:core-ktx:1.13.1] C:\Users\Administrator\.gradle\caches\transforms-3\eb465b3bc30b8225e869b94d0f88bc06\transformed\jetified-core-ktx-1.13.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-3\1e02242df5a910219602fc0459fc2e50\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-3\1e02242df5a910219602fc0459fc2e50\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-3\7c99c7a52251d8616915b6572fd9a452\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-3\7c99c7a52251d8616915b6572fd9a452\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.customview:customview:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\a27cce505f1a3a3a09c8b3e2a978928a\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.customview:customview:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\a27cce505f1a3a3a09c8b3e2a978928a\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core:1.13.1] C:\Users\Administrator\.gradle\caches\transforms-3\d0dc63ebc59af83212e5d4ba8e238ecc\transformed\core-1.13.1\AndroidManifest.xml:20:5-44
@@ -335,6 +372,8 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Administrator\.g
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\e6115f2df4a35106e9d2b91e0289a68b\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Administrator\.gradle\caches\transforms-3\ddcfb4b3b6a8e20ecb5de1dff09336f6\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Administrator\.gradle\caches\transforms-3\ddcfb4b3b6a8e20ecb5de1dff09336f6\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\f3f1c1262babbdb9703b23da8660f9aa\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\f3f1c1262babbdb9703b23da8660f9aa\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\2be708a2ea45fe15e2b4c5cddb6dc5c4\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\2be708a2ea45fe15e2b4c5cddb6dc5c4\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-components:18.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\00b7e7d9edbacd07e5befd7211263068\transformed\jetified-firebase-components-18.0.0\AndroidManifest.xml:18:5-44
@@ -360,21 +399,21 @@ MERGED from [com.google.android.play:core-common:2.0.3] C:\Users\Administrator\.
 	tools:overrideLibrary
 		ADDED from [com.google.firebase:firebase-auth:23.1.0] C:\Users\Administrator\.gradle\caches\transforms-3\d25c01b453ef9e47b33f3bf583beff09\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:23:9-148
 	android:targetSdkVersion
-		INJECTED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\Administrator\Desktop\apps\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Administrator\Desktop\SukanNow\android\app\src\main\AndroidManifest.xml
 service#com.google.firebase.components.ComponentDiscoveryService
-ADDED from [:cloud_firestore] C:\Users\Administrator\Desktop\apps\build\cloud_firestore\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:9-12:19
-MERGED from [:firebase_auth] C:\Users\Administrator\Desktop\apps\build\firebase_auth\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:9-12:19
-MERGED from [:firebase_auth] C:\Users\Administrator\Desktop\apps\build\firebase_auth\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:9-12:19
-MERGED from [:firebase_database] C:\Users\Administrator\Desktop\apps\build\firebase_database\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:9-12:19
-MERGED from [:firebase_database] C:\Users\Administrator\Desktop\apps\build\firebase_database\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:9-12:19
-MERGED from [:firebase_dynamic_links] C:\Users\Administrator\Desktop\apps\build\firebase_dynamic_links\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:10:9-14:19
-MERGED from [:firebase_dynamic_links] C:\Users\Administrator\Desktop\apps\build\firebase_dynamic_links\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:10:9-14:19
-MERGED from [:firebase_storage] C:\Users\Administrator\Desktop\apps\build\firebase_storage\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:9-12:19
-MERGED from [:firebase_storage] C:\Users\Administrator\Desktop\apps\build\firebase_storage\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:9-12:19
-MERGED from [:firebase_core] C:\Users\Administrator\Desktop\apps\build\firebase_core\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:9-12:19
-MERGED from [:firebase_core] C:\Users\Administrator\Desktop\apps\build\firebase_core\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:9-12:19
+ADDED from [:cloud_firestore] C:\Users\Administrator\Desktop\SukanNow\build\cloud_firestore\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_auth] C:\Users\Administrator\Desktop\SukanNow\build\firebase_auth\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_auth] C:\Users\Administrator\Desktop\SukanNow\build\firebase_auth\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_database] C:\Users\Administrator\Desktop\SukanNow\build\firebase_database\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_database] C:\Users\Administrator\Desktop\SukanNow\build\firebase_database\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_dynamic_links] C:\Users\Administrator\Desktop\SukanNow\build\firebase_dynamic_links\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_dynamic_links] C:\Users\Administrator\Desktop\SukanNow\build\firebase_dynamic_links\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_storage] C:\Users\Administrator\Desktop\SukanNow\build\firebase_storage\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_storage] C:\Users\Administrator\Desktop\SukanNow\build\firebase_storage\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_core] C:\Users\Administrator\Desktop\SukanNow\build\firebase_core\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_core] C:\Users\Administrator\Desktop\SukanNow\build\firebase_core\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:9-12:19
 MERGED from [com.google.firebase:firebase-auth:23.1.0] C:\Users\Administrator\.gradle\caches\transforms-3\d25c01b453ef9e47b33f3bf583beff09\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:66:9-72:19
 MERGED from [com.google.firebase:firebase-auth:23.1.0] C:\Users\Administrator\.gradle\caches\transforms-3\d25c01b453ef9e47b33f3bf583beff09\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:66:9-72:19
 MERGED from [com.google.firebase:firebase-firestore:25.1.1] C:\Users\Administrator\.gradle\caches\transforms-3\e1dfce89a2cfd8cc9f6c33e0f0cc1a04\transformed\jetified-firebase-firestore-25.1.1\AndroidManifest.xml:14:9-23:19
@@ -398,29 +437,29 @@ MERGED from [com.google.firebase:firebase-common:21.0.0] C:\Users\Administrator\
 	android:directBootAware
 		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\Administrator\.gradle\caches\transforms-3\f2cca529a7ec7cdee1013263807b0a75\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:32:13-43
 	android:name
-		ADDED from [:cloud_firestore] C:\Users\Administrator\Desktop\apps\build\cloud_firestore\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:18-89
+		ADDED from [:cloud_firestore] C:\Users\Administrator\Desktop\SukanNow\build\cloud_firestore\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:18-89
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar
-ADDED from [:cloud_firestore] C:\Users\Administrator\Desktop\apps\build\cloud_firestore\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:13-11:85
+ADDED from [:cloud_firestore] C:\Users\Administrator\Desktop\SukanNow\build\cloud_firestore\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:13-11:85
 	android:value
-		ADDED from [:cloud_firestore] C:\Users\Administrator\Desktop\apps\build\cloud_firestore\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:11:17-82
+		ADDED from [:cloud_firestore] C:\Users\Administrator\Desktop\SukanNow\build\cloud_firestore\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:11:17-82
 	android:name
-		ADDED from [:cloud_firestore] C:\Users\Administrator\Desktop\apps\build\cloud_firestore\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:10:17-134
+		ADDED from [:cloud_firestore] C:\Users\Administrator\Desktop\SukanNow\build\cloud_firestore\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:10:17-134
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar
-ADDED from [:firebase_auth] C:\Users\Administrator\Desktop\apps\build\firebase_auth\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:13-11:85
+ADDED from [:firebase_auth] C:\Users\Administrator\Desktop\SukanNow\build\firebase_auth\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:13-11:85
 	android:value
-		ADDED from [:firebase_auth] C:\Users\Administrator\Desktop\apps\build\firebase_auth\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:11:17-82
+		ADDED from [:firebase_auth] C:\Users\Administrator\Desktop\SukanNow\build\firebase_auth\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:11:17-82
 	android:name
-		ADDED from [:firebase_auth] C:\Users\Administrator\Desktop\apps\build\firebase_auth\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:10:17-124
+		ADDED from [:firebase_auth] C:\Users\Administrator\Desktop\SukanNow\build\firebase_auth\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:10:17-124
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.database.FlutterFirebaseAppRegistrar
-ADDED from [:firebase_database] C:\Users\Administrator\Desktop\apps\build\firebase_database\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:13-11:85
+ADDED from [:firebase_database] C:\Users\Administrator\Desktop\SukanNow\build\firebase_database\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:13-11:85
 	android:value
-		ADDED from [:firebase_database] C:\Users\Administrator\Desktop\apps\build\firebase_database\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:11:17-82
+		ADDED from [:firebase_database] C:\Users\Administrator\Desktop\SukanNow\build\firebase_database\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:11:17-82
 	android:name
-		ADDED from [:firebase_database] C:\Users\Administrator\Desktop\apps\build\firebase_database\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:10:17-127
+		ADDED from [:firebase_database] C:\Users\Administrator\Desktop\SukanNow\build\firebase_database\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:10:17-127
 uses-permission#android.permission.INTERNET
-ADDED from [:firebase_dynamic_links] C:\Users\Administrator\Desktop\apps\build\firebase_dynamic_links\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:5-67
-MERGED from [:google_sign_in_android] C:\Users\Administrator\Desktop\apps\build\google_sign_in_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:5-67
-MERGED from [:google_sign_in_android] C:\Users\Administrator\Desktop\apps\build\google_sign_in_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:5-67
+ADDED from [:firebase_dynamic_links] C:\Users\Administrator\Desktop\SukanNow\build\firebase_dynamic_links\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:5-67
+MERGED from [:google_sign_in_android] C:\Users\Administrator\Desktop\SukanNow\build\google_sign_in_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:5-67
+MERGED from [:google_sign_in_android] C:\Users\Administrator\Desktop\SukanNow\build\google_sign_in_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:5-67
 MERGED from [com.google.firebase:firebase-auth:23.1.0] C:\Users\Administrator\.gradle\caches\transforms-3\d25c01b453ef9e47b33f3bf583beff09\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:25:5-67
 MERGED from [com.google.firebase:firebase-auth:23.1.0] C:\Users\Administrator\.gradle\caches\transforms-3\d25c01b453ef9e47b33f3bf583beff09\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:25:5-67
 MERGED from [com.google.firebase:firebase-firestore:25.1.1] C:\Users\Administrator\.gradle\caches\transforms-3\e1dfce89a2cfd8cc9f6c33e0f0cc1a04\transformed\jetified-firebase-firestore-25.1.1\AndroidManifest.xml:11:5-67
@@ -432,63 +471,87 @@ MERGED from [com.google.firebase:firebase-database:21.0.0] C:\Users\Administrato
 MERGED from [com.google.android.recaptcha:recaptcha:18.5.1] C:\Users\Administrator\.gradle\caches\transforms-3\4484bc846bee419ceb2d9bc30c50d82d\transformed\jetified-recaptcha-18.5.1\AndroidManifest.xml:7:5-67
 MERGED from [com.google.android.recaptcha:recaptcha:18.5.1] C:\Users\Administrator\.gradle\caches\transforms-3\4484bc846bee419ceb2d9bc30c50d82d\transformed\jetified-recaptcha-18.5.1\AndroidManifest.xml:7:5-67
 	android:name
-		ADDED from [:firebase_dynamic_links] C:\Users\Administrator\Desktop\apps\build\firebase_dynamic_links\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:22-64
+		ADDED from [:firebase_dynamic_links] C:\Users\Administrator\Desktop\SukanNow\build\firebase_dynamic_links\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:22-64
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.dynamiclinks.FlutterFirebaseAppRegistrar
-ADDED from [:firebase_dynamic_links] C:\Users\Administrator\Desktop\apps\build\firebase_dynamic_links\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:11:13-13:85
+ADDED from [:firebase_dynamic_links] C:\Users\Administrator\Desktop\SukanNow\build\firebase_dynamic_links\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:11:13-13:85
 	android:value
-		ADDED from [:firebase_dynamic_links] C:\Users\Administrator\Desktop\apps\build\firebase_dynamic_links\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:13:17-82
+		ADDED from [:firebase_dynamic_links] C:\Users\Administrator\Desktop\SukanNow\build\firebase_dynamic_links\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:13:17-82
 	android:name
-		ADDED from [:firebase_dynamic_links] C:\Users\Administrator\Desktop\apps\build\firebase_dynamic_links\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:12:17-131
+		ADDED from [:firebase_dynamic_links] C:\Users\Administrator\Desktop\SukanNow\build\firebase_dynamic_links\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:12:17-131
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar
-ADDED from [:firebase_storage] C:\Users\Administrator\Desktop\apps\build\firebase_storage\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:13-11:85
+ADDED from [:firebase_storage] C:\Users\Administrator\Desktop\SukanNow\build\firebase_storage\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:13-11:85
 	android:value
-		ADDED from [:firebase_storage] C:\Users\Administrator\Desktop\apps\build\firebase_storage\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:11:17-82
+		ADDED from [:firebase_storage] C:\Users\Administrator\Desktop\SukanNow\build\firebase_storage\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:11:17-82
 	android:name
-		ADDED from [:firebase_storage] C:\Users\Administrator\Desktop\apps\build\firebase_storage\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:10:17-126
+		ADDED from [:firebase_storage] C:\Users\Administrator\Desktop\SukanNow\build\firebase_storage\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:10:17-126
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar
-ADDED from [:firebase_core] C:\Users\Administrator\Desktop\apps\build\firebase_core\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:13-11:85
+ADDED from [:firebase_core] C:\Users\Administrator\Desktop\SukanNow\build\firebase_core\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:13-11:85
 	android:value
-		ADDED from [:firebase_core] C:\Users\Administrator\Desktop\apps\build\firebase_core\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:11:17-82
+		ADDED from [:firebase_core] C:\Users\Administrator\Desktop\SukanNow\build\firebase_core\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:11:17-82
 	android:name
-		ADDED from [:firebase_core] C:\Users\Administrator\Desktop\apps\build\firebase_core\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:10:17-124
+		ADDED from [:firebase_core] C:\Users\Administrator\Desktop\SukanNow\build\firebase_core\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:10:17-124
 provider#io.flutter.plugins.imagepicker.ImagePickerFileProvider
-ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\apps\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:9-17:20
+ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\SukanNow\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:9-17:20
 	android:grantUriPermissions
-		ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\apps\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:13:13-47
+		ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\SukanNow\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:13:13-47
 	android:authorities
-		ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\apps\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:11:13-74
+		ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\SukanNow\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:11:13-74
 	android:exported
-		ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\apps\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:12:13-37
+		ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\SukanNow\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:12:13-37
 	android:name
-		ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\apps\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:10:13-82
+		ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\SukanNow\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:10:13-82
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\apps\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:14:13-16:75
+ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\SukanNow\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:14:13-16:75
 	android:resource
-		ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\apps\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:16:17-72
+		ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\SukanNow\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:16:17-72
 	android:name
-		ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\apps\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:15:17-67
+		ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\SukanNow\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:15:17-67
 service#com.google.android.gms.metadata.ModuleDependencies
-ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\apps\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:19:9-31:19
+ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\SukanNow\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:19:9-31:19
 	android:enabled
-		ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\apps\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:21:13-36
+		ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\SukanNow\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:21:13-36
 	android:exported
-		ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\apps\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:22:13-37
+		ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\SukanNow\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:22:13-37
 	tools:ignore
-		ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\apps\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:23:13-40
+		ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\SukanNow\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:23:13-40
 	android:name
-		ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\apps\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:20:13-78
+		ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\SukanNow\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:20:13-78
 intent-filter#action:name:com.google.android.gms.metadata.MODULE_DEPENDENCIES
-ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\apps\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:24:13-26:29
+ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\SukanNow\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:24:13-26:29
 action#com.google.android.gms.metadata.MODULE_DEPENDENCIES
-ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\apps\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:25:17-94
+ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\SukanNow\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:25:17-94
 	android:name
-		ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\apps\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:25:25-91
+		ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\SukanNow\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:25:25-91
 meta-data#photopicker_activity:0:required
-ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\apps\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:28:13-30:36
+ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\SukanNow\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:28:13-30:36
 	android:value
-		ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\apps\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:30:17-33
+		ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\SukanNow\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:30:17-33
 	android:name
-		ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\apps\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:29:17-63
+		ADDED from [:image_picker_android] C:\Users\Administrator\Desktop\SukanNow\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:29:17-63
+provider#com.crazecoder.openfile.FileProvider
+ADDED from [:open_file_android] C:\Users\Administrator\Desktop\SukanNow\build\open_file_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:9-19:20
+	android:requestLegacyExternalStorage
+		ADDED from [:open_file_android] C:\Users\Administrator\Desktop\SukanNow\build\open_file_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:14:13-56
+	android:grantUriPermissions
+		ADDED from [:open_file_android] C:\Users\Administrator\Desktop\SukanNow\build\open_file_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:13:13-47
+	android:authorities
+		ADDED from [:open_file_android] C:\Users\Administrator\Desktop\SukanNow\build\open_file_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:11:13-88
+	android:exported
+		ADDED from [:open_file_android] C:\Users\Administrator\Desktop\SukanNow\build\open_file_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:12:13-37
+	tools:replace
+		ADDED from [:open_file_android] C:\Users\Administrator\Desktop\SukanNow\build\open_file_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:15:13-48
+	android:name
+		ADDED from [:open_file_android] C:\Users\Administrator\Desktop\SukanNow\build\open_file_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:10:13-64
+provider#net.nfet.flutter.printing.PrintFileProvider
+ADDED from [:printing] C:\Users\Administrator\Desktop\SukanNow\build\printing\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:9-16:20
+	android:grantUriPermissions
+		ADDED from [:printing] C:\Users\Administrator\Desktop\SukanNow\build\printing\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:12:13-47
+	android:authorities
+		ADDED from [:printing] C:\Users\Administrator\Desktop\SukanNow\build\printing\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:10:13-68
+	android:exported
+		ADDED from [:printing] C:\Users\Administrator\Desktop\SukanNow\build\printing\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:11:13-37
+	android:name
+		ADDED from [:printing] C:\Users\Administrator\Desktop\SukanNow\build\printing\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:13-71
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.firebase:firebase-auth:23.1.0] C:\Users\Administrator\.gradle\caches\transforms-3\d25c01b453ef9e47b33f3bf583beff09\transformed\jetified-firebase-auth-23.1.0\AndroidManifest.xml:26:5-79
 MERGED from [com.google.firebase:firebase-firestore:25.1.1] C:\Users\Administrator\.gradle\caches\transforms-3\e1dfce89a2cfd8cc9f6c33e0f0cc1a04\transformed\jetified-firebase-firestore-25.1.1\AndroidManifest.xml:10:5-79
@@ -696,19 +759,27 @@ ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\Administr
 	android:name
 		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\Administrator\.gradle\caches\transforms-3\7e65965891d5ec4333620e3e0668feaa\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:19-85
 provider#androidx.startup.InitializationProvider
-ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Administrator\.gradle\caches\transforms-3\8a93a6a0bcfa9e83d7a67a559ae2dd4e\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:24:9-32:20
+ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Administrator\.gradle\caches\transforms-3\d09b5c7f981e4d3a8b7d0d610e29fece\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Administrator\.gradle\caches\transforms-3\8a93a6a0bcfa9e83d7a67a559ae2dd4e\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Administrator\.gradle\caches\transforms-3\8a93a6a0bcfa9e83d7a67a559ae2dd4e\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:24:9-32:20
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Administrator\.gradle\caches\transforms-3\40e2a9b915afb6aab0d0aeef6fa3da84\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:24:9-32:20
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Administrator\.gradle\caches\transforms-3\40e2a9b915afb6aab0d0aeef6fa3da84\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:24:9-32:20
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Administrator\.gradle\caches\transforms-3\395175ee52bc848dc60729207b6bb877\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Administrator\.gradle\caches\transforms-3\395175ee52bc848dc60729207b6bb877\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
 	tools:node
-		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Administrator\.gradle\caches\transforms-3\8a93a6a0bcfa9e83d7a67a559ae2dd4e\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:28:13-31
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Administrator\.gradle\caches\transforms-3\d09b5c7f981e4d3a8b7d0d610e29fece\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:28:13-31
 	android:authorities
-		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Administrator\.gradle\caches\transforms-3\8a93a6a0bcfa9e83d7a67a559ae2dd4e\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:26:13-68
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Administrator\.gradle\caches\transforms-3\d09b5c7f981e4d3a8b7d0d610e29fece\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
 	android:exported
-		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Administrator\.gradle\caches\transforms-3\8a93a6a0bcfa9e83d7a67a559ae2dd4e\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:27:13-37
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Administrator\.gradle\caches\transforms-3\d09b5c7f981e4d3a8b7d0d610e29fece\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
 	android:name
-		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Administrator\.gradle\caches\transforms-3\8a93a6a0bcfa9e83d7a67a559ae2dd4e\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:25:13-67
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Administrator\.gradle\caches\transforms-3\d09b5c7f981e4d3a8b7d0d610e29fece\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Administrator\.gradle\caches\transforms-3\d09b5c7f981e4d3a8b7d0d610e29fece\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Administrator\.gradle\caches\transforms-3\d09b5c7f981e4d3a8b7d0d610e29fece\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Administrator\.gradle\caches\transforms-3\d09b5c7f981e4d3a8b7d0d610e29fece\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
 meta-data#androidx.lifecycle.ProcessLifecycleInitializer
 ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Administrator\.gradle\caches\transforms-3\8a93a6a0bcfa9e83d7a67a559ae2dd4e\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
 	android:value

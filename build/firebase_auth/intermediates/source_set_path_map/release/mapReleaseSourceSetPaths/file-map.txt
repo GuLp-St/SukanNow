@@ -28,9 +28,9 @@ io.flutter.plugins.firebase.auth.firebase_auth-jetified-firebase-common-21.0.0-2
 io.flutter.plugins.firebase.auth.firebase_auth-jetified-savedstate-1.2.1-27 C:\Users\Administrator\.gradle\caches\transforms-3\f43e84c994933236fb617181baea2b8d\transformed\jetified-savedstate-1.2.1\res
 io.flutter.plugins.firebase.auth.firebase_auth-main-28 C:\Users\Administrator\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_auth-5.4.0\android\src\main\res
 io.flutter.plugins.firebase.auth.firebase_auth-release-29 C:\Users\Administrator\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_auth-5.4.0\android\src\release\res
-io.flutter.plugins.firebase.auth.firebase_auth-pngs-30 C:\Users\Administrator\Desktop\apps\build\firebase_auth\generated\res\pngs\release
-io.flutter.plugins.firebase.auth.firebase_auth-resValues-31 C:\Users\Administrator\Desktop\apps\build\firebase_auth\generated\res\resValues\release
-io.flutter.plugins.firebase.auth.firebase_auth-mergeReleaseResources-32 C:\Users\Administrator\Desktop\apps\build\firebase_auth\intermediates\incremental\release\mergeReleaseResources\merged.dir
-io.flutter.plugins.firebase.auth.firebase_auth-mergeReleaseResources-33 C:\Users\Administrator\Desktop\apps\build\firebase_auth\intermediates\incremental\release\mergeReleaseResources\stripped.dir
-io.flutter.plugins.firebase.auth.firebase_auth-release-34 C:\Users\Administrator\Desktop\apps\build\firebase_auth\intermediates\merged_res\release\mergeReleaseResources
-io.flutter.plugins.firebase.auth.firebase_auth-release-35 C:\Users\Administrator\Desktop\apps\build\firebase_core\intermediates\packaged_res\release\packageReleaseResources
+io.flutter.plugins.firebase.auth.firebase_auth-pngs-30 C:\Users\Administrator\Desktop\SukanNow\build\firebase_auth\generated\res\pngs\release
+io.flutter.plugins.firebase.auth.firebase_auth-resValues-31 C:\Users\Administrator\Desktop\SukanNow\build\firebase_auth\generated\res\resValues\release
+io.flutter.plugins.firebase.auth.firebase_auth-mergeReleaseResources-32 C:\Users\Administrator\Desktop\SukanNow\build\firebase_auth\intermediates\incremental\release\mergeReleaseResources\merged.dir
+io.flutter.plugins.firebase.auth.firebase_auth-mergeReleaseResources-33 C:\Users\Administrator\Desktop\SukanNow\build\firebase_auth\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+io.flutter.plugins.firebase.auth.firebase_auth-release-34 C:\Users\Administrator\Desktop\SukanNow\build\firebase_auth\intermediates\merged_res\release\mergeReleaseResources
+io.flutter.plugins.firebase.auth.firebase_auth-release-35 C:\Users\Administrator\Desktop\SukanNow\build\firebase_core\intermediates\packaged_res\release\packageReleaseResources

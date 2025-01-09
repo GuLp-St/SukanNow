@@ -20,9 +20,9 @@ io.flutter.plugins.imagepicker.image_picker_android-jetified-core-1.0.0-18 C:\Us
 io.flutter.plugins.imagepicker.image_picker_android-jetified-savedstate-1.2.1-19 C:\Users\Administrator\.gradle\caches\transforms-3\f43e84c994933236fb617181baea2b8d\transformed\jetified-savedstate-1.2.1\res
 io.flutter.plugins.imagepicker.image_picker_android-main-20 C:\Users\Administrator\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+19\android\src\main\res
 io.flutter.plugins.imagepicker.image_picker_android-release-21 C:\Users\Administrator\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+19\android\src\release\res
-io.flutter.plugins.imagepicker.image_picker_android-release-22 C:\Users\Administrator\Desktop\apps\build\flutter_plugin_android_lifecycle\intermediates\packaged_res\release\packageReleaseResources
-io.flutter.plugins.imagepicker.image_picker_android-pngs-23 C:\Users\Administrator\Desktop\apps\build\image_picker_android\generated\res\pngs\release
-io.flutter.plugins.imagepicker.image_picker_android-resValues-24 C:\Users\Administrator\Desktop\apps\build\image_picker_android\generated\res\resValues\release
-io.flutter.plugins.imagepicker.image_picker_android-mergeReleaseResources-25 C:\Users\Administrator\Desktop\apps\build\image_picker_android\intermediates\incremental\release\mergeReleaseResources\merged.dir
-io.flutter.plugins.imagepicker.image_picker_android-mergeReleaseResources-26 C:\Users\Administrator\Desktop\apps\build\image_picker_android\intermediates\incremental\release\mergeReleaseResources\stripped.dir
-io.flutter.plugins.imagepicker.image_picker_android-release-27 C:\Users\Administrator\Desktop\apps\build\image_picker_android\intermediates\merged_res\release\mergeReleaseResources
+io.flutter.plugins.imagepicker.image_picker_android-release-22 C:\Users\Administrator\Desktop\SukanNow\build\flutter_plugin_android_lifecycle\intermediates\packaged_res\release\packageReleaseResources
+io.flutter.plugins.imagepicker.image_picker_android-pngs-23 C:\Users\Administrator\Desktop\SukanNow\build\image_picker_android\generated\res\pngs\release
+io.flutter.plugins.imagepicker.image_picker_android-resValues-24 C:\Users\Administrator\Desktop\SukanNow\build\image_picker_android\generated\res\resValues\release
+io.flutter.plugins.imagepicker.image_picker_android-mergeReleaseResources-25 C:\Users\Administrator\Desktop\SukanNow\build\image_picker_android\intermediates\incremental\release\mergeReleaseResources\merged.dir
+io.flutter.plugins.imagepicker.image_picker_android-mergeReleaseResources-26 C:\Users\Administrator\Desktop\SukanNow\build\image_picker_android\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+io.flutter.plugins.imagepicker.image_picker_android-release-27 C:\Users\Administrator\Desktop\SukanNow\build\image_picker_android\intermediates\merged_res\release\mergeReleaseResources

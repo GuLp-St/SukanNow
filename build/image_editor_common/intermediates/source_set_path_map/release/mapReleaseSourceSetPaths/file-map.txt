@@ -20,8 +20,8 @@ com.fluttercandies.image_editor.image_editor_common-jetified-core-1.0.0-18 C:\Us
 com.fluttercandies.image_editor.image_editor_common-jetified-savedstate-1.2.1-19 C:\Users\Administrator\.gradle\caches\transforms-3\f43e84c994933236fb617181baea2b8d\transformed\jetified-savedstate-1.2.1\res
 com.fluttercandies.image_editor.image_editor_common-main-20 C:\Users\Administrator\AppData\Local\Pub\Cache\hosted\pub.dev\image_editor_common-1.2.0\android\src\main\res
 com.fluttercandies.image_editor.image_editor_common-release-21 C:\Users\Administrator\AppData\Local\Pub\Cache\hosted\pub.dev\image_editor_common-1.2.0\android\src\release\res
-com.fluttercandies.image_editor.image_editor_common-pngs-22 C:\Users\Administrator\Desktop\apps\build\image_editor_common\generated\res\pngs\release
-com.fluttercandies.image_editor.image_editor_common-resValues-23 C:\Users\Administrator\Desktop\apps\build\image_editor_common\generated\res\resValues\release
-com.fluttercandies.image_editor.image_editor_common-mergeReleaseResources-24 C:\Users\Administrator\Desktop\apps\build\image_editor_common\intermediates\incremental\release\mergeReleaseResources\merged.dir
-com.fluttercandies.image_editor.image_editor_common-mergeReleaseResources-25 C:\Users\Administrator\Desktop\apps\build\image_editor_common\intermediates\incremental\release\mergeReleaseResources\stripped.dir
-com.fluttercandies.image_editor.image_editor_common-release-26 C:\Users\Administrator\Desktop\apps\build\image_editor_common\intermediates\merged_res\release\mergeReleaseResources
+com.fluttercandies.image_editor.image_editor_common-pngs-22 C:\Users\Administrator\Desktop\SukanNow\build\image_editor_common\generated\res\pngs\release
+com.fluttercandies.image_editor.image_editor_common-resValues-23 C:\Users\Administrator\Desktop\SukanNow\build\image_editor_common\generated\res\resValues\release
+com.fluttercandies.image_editor.image_editor_common-mergeReleaseResources-24 C:\Users\Administrator\Desktop\SukanNow\build\image_editor_common\intermediates\incremental\release\mergeReleaseResources\merged.dir
+com.fluttercandies.image_editor.image_editor_common-mergeReleaseResources-25 C:\Users\Administrator\Desktop\SukanNow\build\image_editor_common\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+com.fluttercandies.image_editor.image_editor_common-release-26 C:\Users\Administrator\Desktop\SukanNow\build\image_editor_common\intermediates\merged_res\release\mergeReleaseResources

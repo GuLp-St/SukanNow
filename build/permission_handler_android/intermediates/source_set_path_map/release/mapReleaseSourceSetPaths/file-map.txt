@@ -20,8 +20,8 @@ com.baseflow.permissionhandler.permission_handler_android-jetified-core-1.0.0-18
 com.baseflow.permissionhandler.permission_handler_android-jetified-savedstate-1.2.1-19 C:\Users\Administrator\.gradle\caches\transforms-3\f43e84c994933236fb617181baea2b8d\transformed\jetified-savedstate-1.2.1\res
 com.baseflow.permissionhandler.permission_handler_android-main-20 C:\Users\Administrator\AppData\Local\Pub\Cache\hosted\pub.dev\permission_handler_android-12.0.13\android\src\main\res
 com.baseflow.permissionhandler.permission_handler_android-release-21 C:\Users\Administrator\AppData\Local\Pub\Cache\hosted\pub.dev\permission_handler_android-12.0.13\android\src\release\res
-com.baseflow.permissionhandler.permission_handler_android-pngs-22 C:\Users\Administrator\Desktop\apps\build\permission_handler_android\generated\res\pngs\release
-com.baseflow.permissionhandler.permission_handler_android-resValues-23 C:\Users\Administrator\Desktop\apps\build\permission_handler_android\generated\res\resValues\release
-com.baseflow.permissionhandler.permission_handler_android-mergeReleaseResources-24 C:\Users\Administrator\Desktop\apps\build\permission_handler_android\intermediates\incremental\release\mergeReleaseResources\merged.dir
-com.baseflow.permissionhandler.permission_handler_android-mergeReleaseResources-25 C:\Users\Administrator\Desktop\apps\build\permission_handler_android\intermediates\incremental\release\mergeReleaseResources\stripped.dir
-com.baseflow.permissionhandler.permission_handler_android-release-26 C:\Users\Administrator\Desktop\apps\build\permission_handler_android\intermediates\merged_res\release\mergeReleaseResources
+com.baseflow.permissionhandler.permission_handler_android-pngs-22 C:\Users\Administrator\Desktop\SukanNow\build\permission_handler_android\generated\res\pngs\release
+com.baseflow.permissionhandler.permission_handler_android-resValues-23 C:\Users\Administrator\Desktop\SukanNow\build\permission_handler_android\generated\res\resValues\release
+com.baseflow.permissionhandler.permission_handler_android-mergeReleaseResources-24 C:\Users\Administrator\Desktop\SukanNow\build\permission_handler_android\intermediates\incremental\release\mergeReleaseResources\merged.dir
+com.baseflow.permissionhandler.permission_handler_android-mergeReleaseResources-25 C:\Users\Administrator\Desktop\SukanNow\build\permission_handler_android\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+com.baseflow.permissionhandler.permission_handler_android-release-26 C:\Users\Administrator\Desktop\SukanNow\build\permission_handler_android\intermediates\merged_res\release\mergeReleaseResources

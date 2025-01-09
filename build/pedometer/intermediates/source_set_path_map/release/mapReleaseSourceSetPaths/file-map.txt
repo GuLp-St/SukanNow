@@ -20,8 +20,8 @@ com.example.pedometer-jetified-core-1.0.0-18 C:\Users\Administrator\.gradle\cach
 com.example.pedometer-jetified-savedstate-1.2.1-19 C:\Users\Administrator\.gradle\caches\transforms-3\f43e84c994933236fb617181baea2b8d\transformed\jetified-savedstate-1.2.1\res
 com.example.pedometer-main-20 C:\Users\Administrator\AppData\Local\Pub\Cache\hosted\pub.dev\pedometer-4.0.2\android\src\main\res
 com.example.pedometer-release-21 C:\Users\Administrator\AppData\Local\Pub\Cache\hosted\pub.dev\pedometer-4.0.2\android\src\release\res
-com.example.pedometer-pngs-22 C:\Users\Administrator\Desktop\apps\build\pedometer\generated\res\pngs\release
-com.example.pedometer-resValues-23 C:\Users\Administrator\Desktop\apps\build\pedometer\generated\res\resValues\release
-com.example.pedometer-mergeReleaseResources-24 C:\Users\Administrator\Desktop\apps\build\pedometer\intermediates\incremental\release\mergeReleaseResources\merged.dir
-com.example.pedometer-mergeReleaseResources-25 C:\Users\Administrator\Desktop\apps\build\pedometer\intermediates\incremental\release\mergeReleaseResources\stripped.dir
-com.example.pedometer-release-26 C:\Users\Administrator\Desktop\apps\build\pedometer\intermediates\merged_res\release\mergeReleaseResources
+com.example.pedometer-pngs-22 C:\Users\Administrator\Desktop\SukanNow\build\pedometer\generated\res\pngs\release
+com.example.pedometer-resValues-23 C:\Users\Administrator\Desktop\SukanNow\build\pedometer\generated\res\resValues\release
+com.example.pedometer-mergeReleaseResources-24 C:\Users\Administrator\Desktop\SukanNow\build\pedometer\intermediates\incremental\release\mergeReleaseResources\merged.dir
+com.example.pedometer-mergeReleaseResources-25 C:\Users\Administrator\Desktop\SukanNow\build\pedometer\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+com.example.pedometer-release-26 C:\Users\Administrator\Desktop\SukanNow\build\pedometer\intermediates\merged_res\release\mergeReleaseResources

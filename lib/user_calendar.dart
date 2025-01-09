@@ -40,26 +40,27 @@ class _UserCalendarState extends State<UserCalendar> {
   }
 
   List<dynamic> _getEventsForDay(DateTime day) {
-  final formattedDay = DateFormat('yyyy-MM-dd').format(day);
-  final events = <dynamic>[];
+    final formattedDay = DateFormat('yyyy-MM-dd').format(day);
+    final events = <dynamic>[];
 
-  for (var event in widget.registeredEvents) {
-    final eventData = event.values.first as Map<dynamic, dynamic>;
-    if (eventData['date'] == formattedDay) {
-      // Include all event details
-      events.add(eventData); 
+    for (var event in widget.registeredEvents) {
+      final eventData = event.values.first as Map<dynamic, dynamic>;
+      if (eventData['date'] == formattedDay) {
+        // Include all event details
+        events.add(eventData); 
+      }
     }
+
+    for (var booking in widget.bookings) {
+      if (booking['date'] == formattedDay) {
+        // Include all booking details
+        events.add(booking);
+      }
+    }
+
+    return events;
   }
 
-  for (var booking in widget.bookings) {
-    if (booking['date'] == formattedDay) {
-      // Include all booking details
-      events.add(booking);
-    }
-  }
-
-  return events;
-}
   void _onDaySelected(DateTime selectedDay, DateTime focusedDay) {
     if (!isSameDay(_focusedDay, selectedDay)) {
       setState(() {
@@ -91,6 +92,69 @@ class _UserCalendarState extends State<UserCalendar> {
             onPageChanged: (focusedDay) {
               _focusedDay = focusedDay;
             },
+            calendarBuilders: CalendarBuilders(
+              markerBuilder: (context, date, events) {
+                if (events.isNotEmpty) {
+                  return Container(
+                    margin: const EdgeInsets.only(top: 5.0), // Adjust margin as needed
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.white, // Change the color here
+                    ),
+                    width: 8.0, // Adjust size as needed
+                    height: 8.0, // Adjust size as needed
+                  );
+                }
+                return null; // Return null if there are no events
+              },
+            ),
+            calendarStyle: const CalendarStyle(
+              defaultTextStyle: TextStyle(color: Colors.white),
+              weekendTextStyle: TextStyle(color: Colors.white),
+              todayDecoration: BoxDecoration(
+                color: Colors.orange,
+                shape: BoxShape.circle,
+              ),
+              selectedDecoration: BoxDecoration(
+                color: Color.fromARGB(255, 88, 94, 99),
+                shape: BoxShape.circle,
+              ),
+              outsideDaysVisible: false,
+              cellMargin: EdgeInsets.all(5),
+              canMarkersOverflow: true,
+            ),
+            headerStyle: const HeaderStyle(
+              formatButtonVisible: false,
+              formatButtonShowsNext: false,
+              titleCentered: true,
+              titleTextStyle: TextStyle(
+                color: Colors.white,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+              decoration: BoxDecoration(
+                color: Colors.orange,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(10),
+                  topRight: Radius.circular(10),
+                  bottomLeft: Radius.circular(10),
+                  bottomRight: Radius.circular(10),
+                ),
+              ),
+              leftChevronPadding: EdgeInsets.only(left: 16),
+              rightChevronPadding: EdgeInsets.only(right: 16),
+              headerMargin: EdgeInsets.only(bottom: 20),
+            ),
+            daysOfWeekStyle: const DaysOfWeekStyle(
+              weekdayStyle: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+              weekendStyle: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ),
           const SizedBox(height: 8.0),
           Expanded(

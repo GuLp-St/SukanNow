@@ -20,8 +20,8 @@ io.flutter.plugins.flutter_plugin_android_lifecycle-jetified-core-1.0.0-18 C:\Us
 io.flutter.plugins.flutter_plugin_android_lifecycle-jetified-savedstate-1.2.1-19 C:\Users\Administrator\.gradle\caches\transforms-3\f43e84c994933236fb617181baea2b8d\transformed\jetified-savedstate-1.2.1\res
 io.flutter.plugins.flutter_plugin_android_lifecycle-main-20 C:\Users\Administrator\AppData\Local\Pub\Cache\hosted\pub.dev\flutter_plugin_android_lifecycle-2.0.24\android\src\main\res
 io.flutter.plugins.flutter_plugin_android_lifecycle-release-21 C:\Users\Administrator\AppData\Local\Pub\Cache\hosted\pub.dev\flutter_plugin_android_lifecycle-2.0.24\android\src\release\res
-io.flutter.plugins.flutter_plugin_android_lifecycle-pngs-22 C:\Users\Administrator\Desktop\apps\build\flutter_plugin_android_lifecycle\generated\res\pngs\release
-io.flutter.plugins.flutter_plugin_android_lifecycle-resValues-23 C:\Users\Administrator\Desktop\apps\build\flutter_plugin_android_lifecycle\generated\res\resValues\release
-io.flutter.plugins.flutter_plugin_android_lifecycle-mergeReleaseResources-24 C:\Users\Administrator\Desktop\apps\build\flutter_plugin_android_lifecycle\intermediates\incremental\release\mergeReleaseResources\merged.dir
-io.flutter.plugins.flutter_plugin_android_lifecycle-mergeReleaseResources-25 C:\Users\Administrator\Desktop\apps\build\flutter_plugin_android_lifecycle\intermediates\incremental\release\mergeReleaseResources\stripped.dir
-io.flutter.plugins.flutter_plugin_android_lifecycle-release-26 C:\Users\Administrator\Desktop\apps\build\flutter_plugin_android_lifecycle\intermediates\merged_res\release\mergeReleaseResources
+io.flutter.plugins.flutter_plugin_android_lifecycle-pngs-22 C:\Users\Administrator\Desktop\SukanNow\build\flutter_plugin_android_lifecycle\generated\res\pngs\release
+io.flutter.plugins.flutter_plugin_android_lifecycle-resValues-23 C:\Users\Administrator\Desktop\SukanNow\build\flutter_plugin_android_lifecycle\generated\res\resValues\release
+io.flutter.plugins.flutter_plugin_android_lifecycle-mergeReleaseResources-24 C:\Users\Administrator\Desktop\SukanNow\build\flutter_plugin_android_lifecycle\intermediates\incremental\release\mergeReleaseResources\merged.dir
+io.flutter.plugins.flutter_plugin_android_lifecycle-mergeReleaseResources-25 C:\Users\Administrator\Desktop\SukanNow\build\flutter_plugin_android_lifecycle\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+io.flutter.plugins.flutter_plugin_android_lifecycle-release-26 C:\Users\Administrator\Desktop\SukanNow\build\flutter_plugin_android_lifecycle\intermediates\merged_res\release\mergeReleaseResources

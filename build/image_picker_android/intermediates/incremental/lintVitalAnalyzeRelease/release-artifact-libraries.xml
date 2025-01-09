@@ -1,9 +1,9 @@
 <libraries>
   <library
       name=":@@:flutter_plugin_android_lifecycle::release"
-      jars="C:\Users\Administrator\Desktop\apps\build\flutter_plugin_android_lifecycle\.transforms\f4bdf6ecd603dda633c6b292b5453ada\transformed\out\jars\classes.jar;C:\Users\Administrator\Desktop\apps\build\flutter_plugin_android_lifecycle\.transforms\f4bdf6ecd603dda633c6b292b5453ada\transformed\out\jars\libs\R.jar"
+      jars="C:\Users\Administrator\Desktop\SukanNow\build\flutter_plugin_android_lifecycle\.transforms\e1ae24e778b32e4e812d6f910235dd98\transformed\out\jars\classes.jar;C:\Users\Administrator\Desktop\SukanNow\build\flutter_plugin_android_lifecycle\.transforms\e1ae24e778b32e4e812d6f910235dd98\transformed\out\jars\libs\R.jar"
       resolved="io.flutter.plugins.flutter_plugin_android_lifecycle:flutter_plugin_android_lifecycle:unspecified"
-      folder="C:\Users\Administrator\Desktop\apps\build\flutter_plugin_android_lifecycle\.transforms\f4bdf6ecd603dda633c6b292b5453ada\transformed\out"
+      folder="C:\Users\Administrator\Desktop\SukanNow\build\flutter_plugin_android_lifecycle\.transforms\e1ae24e778b32e4e812d6f910235dd98\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"

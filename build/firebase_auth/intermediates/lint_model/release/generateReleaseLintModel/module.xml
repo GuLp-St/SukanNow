@@ -5,7 +5,7 @@
     type="LIBRARY"
     maven="io.flutter.plugins.firebase.auth:firebase_auth:"
     agpVersion="8.3.1"
-    buildFolder="C:\Users\Administrator\Desktop\apps\build\firebase_auth"
+    buildFolder="C:\Users\Administrator\Desktop\SukanNow\build\firebase_auth"
     bootClassPath="C:\Users\Administrator\AppData\Local\Android\sdk\platforms\android-34\android.jar;C:\Users\Administrator\AppData\Local\Android\sdk\build-tools\34.0.0\core-lambda-stubs.jar"
     javaSourceLevel="1.8"
     compileTarget="android-34"

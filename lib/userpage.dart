@@ -7,6 +7,7 @@ import 'package:logger/logger.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'package:intl/intl.dart';
 import 'package:pedometer/pedometer.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 import 'user_sports_booking.dart';
 import 'user_manage_booking.dart';
@@ -17,6 +18,7 @@ import 'user_membership.dart';
 import 'admin_page.dart';
 import 'user_calendar.dart';
 import 'user_ewallet.dart';
+import 'user_fitness.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -468,7 +470,19 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
               ),
               const SizedBox(height: 10),
-              const StepTracker(),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const FitnessPage()),
+                );
+              },
+              child: Column( // Wrap StepTracker with a Column
+                children: [
+                  StepTracker(),
+                ],
+              ),
+            ),
               const SizedBox(height: 30),
               SizedBox(
                 height: 200,
@@ -559,6 +573,22 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     );
                   },
+                  calendarBuilders: CalendarBuilders(
+                    markerBuilder: (context, date, events) {
+                      if (events.isNotEmpty) {
+                        return Container(
+                          margin: const EdgeInsets.only(top: 5.0), // Adjust margin as needed
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: const Color.fromARGB(255, 255, 255, 255), // Change the color here
+                          ),
+                          width: 8.0, // Adjust size as needed
+                          height: 8.0, // Adjust size as needed
+                        );
+                      }
+                      return null;
+                    },
+                  ),
                   calendarStyle: const CalendarStyle(
                     defaultTextStyle: TextStyle(color: Colors.white), // Text color
                     weekendTextStyle: TextStyle(color: Colors.white), // Weekend text color
@@ -625,12 +655,12 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             Image.asset(
               imagePath,
-              width: 200,
+              width: 600,
               height: 150,
               fit: BoxFit.cover,
             ),
             Container(
-              width: 200,
+              width: 600,
               padding: const EdgeInsets.all(8.0),
               decoration: BoxDecoration(
                 color: Colors.black,
@@ -695,7 +725,27 @@ class StepTrackerState extends State<StepTracker> {
     });
   }
 
+  Future<bool> _checkActivityRecognitionPermission() async {
+    bool granted = await Permission.activityRecognition.isGranted;
+    if (!granted) {
+      granted = await Permission.activityRecognition.request() ==
+          PermissionStatus.granted;
+    }
+    return granted;
+  }
+
   Future<void> initPlatformState() async {
+    bool granted = await _checkActivityRecognitionPermission();
+    if (!granted) {
+      // Show a snackbar to the user
+      if(mounted){
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+        content: Text(
+            'Step tracker will not work without activity recognition permission.'),
+      ));
+      }
+      return;
+    }
     _pedestrianStatusStream = Pedometer.pedestrianStatusStream;
     _pedestrianStatusStream
         .listen(onPedestrianStatusChanged)
@@ -706,7 +756,7 @@ class StepTrackerState extends State<StepTracker> {
 
     if (!mounted) return;
   }
-
+  
   @override
   Widget build(BuildContext context) {
     return Row(

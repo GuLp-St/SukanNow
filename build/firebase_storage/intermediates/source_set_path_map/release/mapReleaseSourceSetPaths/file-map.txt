@@ -23,9 +23,9 @@ io.flutter.plugins.firebase.storage.firebase_storage-jetified-firebase-common-21
 io.flutter.plugins.firebase.storage.firebase_storage-jetified-savedstate-1.2.1-22 C:\Users\Administrator\.gradle\caches\transforms-3\f43e84c994933236fb617181baea2b8d\transformed\jetified-savedstate-1.2.1\res
 io.flutter.plugins.firebase.storage.firebase_storage-main-23 C:\Users\Administrator\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_storage-12.4.0\android\src\main\res
 io.flutter.plugins.firebase.storage.firebase_storage-release-24 C:\Users\Administrator\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_storage-12.4.0\android\src\release\res
-io.flutter.plugins.firebase.storage.firebase_storage-release-25 C:\Users\Administrator\Desktop\apps\build\firebase_core\intermediates\packaged_res\release\packageReleaseResources
-io.flutter.plugins.firebase.storage.firebase_storage-pngs-26 C:\Users\Administrator\Desktop\apps\build\firebase_storage\generated\res\pngs\release
-io.flutter.plugins.firebase.storage.firebase_storage-resValues-27 C:\Users\Administrator\Desktop\apps\build\firebase_storage\generated\res\resValues\release
-io.flutter.plugins.firebase.storage.firebase_storage-mergeReleaseResources-28 C:\Users\Administrator\Desktop\apps\build\firebase_storage\intermediates\incremental\release\mergeReleaseResources\merged.dir
-io.flutter.plugins.firebase.storage.firebase_storage-mergeReleaseResources-29 C:\Users\Administrator\Desktop\apps\build\firebase_storage\intermediates\incremental\release\mergeReleaseResources\stripped.dir
-io.flutter.plugins.firebase.storage.firebase_storage-release-30 C:\Users\Administrator\Desktop\apps\build\firebase_storage\intermediates\merged_res\release\mergeReleaseResources
+io.flutter.plugins.firebase.storage.firebase_storage-release-25 C:\Users\Administrator\Desktop\SukanNow\build\firebase_core\intermediates\packaged_res\release\packageReleaseResources
+io.flutter.plugins.firebase.storage.firebase_storage-pngs-26 C:\Users\Administrator\Desktop\SukanNow\build\firebase_storage\generated\res\pngs\release
+io.flutter.plugins.firebase.storage.firebase_storage-resValues-27 C:\Users\Administrator\Desktop\SukanNow\build\firebase_storage\generated\res\resValues\release
+io.flutter.plugins.firebase.storage.firebase_storage-mergeReleaseResources-28 C:\Users\Administrator\Desktop\SukanNow\build\firebase_storage\intermediates\incremental\release\mergeReleaseResources\merged.dir
+io.flutter.plugins.firebase.storage.firebase_storage-mergeReleaseResources-29 C:\Users\Administrator\Desktop\SukanNow\build\firebase_storage\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+io.flutter.plugins.firebase.storage.firebase_storage-release-30 C:\Users\Administrator\Desktop\SukanNow\build\firebase_storage\intermediates\merged_res\release\mergeReleaseResources

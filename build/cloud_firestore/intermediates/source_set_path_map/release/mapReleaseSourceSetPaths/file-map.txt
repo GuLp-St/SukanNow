@@ -23,9 +23,9 @@ io.flutter.plugins.firebase.firestore.cloud_firestore-jetified-firebase-common-2
 io.flutter.plugins.firebase.firestore.cloud_firestore-jetified-savedstate-1.2.1-22 C:\Users\Administrator\.gradle\caches\transforms-3\f43e84c994933236fb617181baea2b8d\transformed\jetified-savedstate-1.2.1\res
 io.flutter.plugins.firebase.firestore.cloud_firestore-main-23 C:\Users\Administrator\AppData\Local\Pub\Cache\hosted\pub.dev\cloud_firestore-5.6.1\android\src\main\res
 io.flutter.plugins.firebase.firestore.cloud_firestore-release-24 C:\Users\Administrator\AppData\Local\Pub\Cache\hosted\pub.dev\cloud_firestore-5.6.1\android\src\release\res
-io.flutter.plugins.firebase.firestore.cloud_firestore-pngs-25 C:\Users\Administrator\Desktop\apps\build\cloud_firestore\generated\res\pngs\release
-io.flutter.plugins.firebase.firestore.cloud_firestore-resValues-26 C:\Users\Administrator\Desktop\apps\build\cloud_firestore\generated\res\resValues\release
-io.flutter.plugins.firebase.firestore.cloud_firestore-mergeReleaseResources-27 C:\Users\Administrator\Desktop\apps\build\cloud_firestore\intermediates\incremental\release\mergeReleaseResources\merged.dir
-io.flutter.plugins.firebase.firestore.cloud_firestore-mergeReleaseResources-28 C:\Users\Administrator\Desktop\apps\build\cloud_firestore\intermediates\incremental\release\mergeReleaseResources\stripped.dir
-io.flutter.plugins.firebase.firestore.cloud_firestore-release-29 C:\Users\Administrator\Desktop\apps\build\cloud_firestore\intermediates\merged_res\release\mergeReleaseResources
-io.flutter.plugins.firebase.firestore.cloud_firestore-release-30 C:\Users\Administrator\Desktop\apps\build\firebase_core\intermediates\packaged_res\release\packageReleaseResources
+io.flutter.plugins.firebase.firestore.cloud_firestore-pngs-25 C:\Users\Administrator\Desktop\SukanNow\build\cloud_firestore\generated\res\pngs\release
+io.flutter.plugins.firebase.firestore.cloud_firestore-resValues-26 C:\Users\Administrator\Desktop\SukanNow\build\cloud_firestore\generated\res\resValues\release
+io.flutter.plugins.firebase.firestore.cloud_firestore-mergeReleaseResources-27 C:\Users\Administrator\Desktop\SukanNow\build\cloud_firestore\intermediates\incremental\release\mergeReleaseResources\merged.dir
+io.flutter.plugins.firebase.firestore.cloud_firestore-mergeReleaseResources-28 C:\Users\Administrator\Desktop\SukanNow\build\cloud_firestore\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+io.flutter.plugins.firebase.firestore.cloud_firestore-release-29 C:\Users\Administrator\Desktop\SukanNow\build\cloud_firestore\intermediates\merged_res\release\mergeReleaseResources
+io.flutter.plugins.firebase.firestore.cloud_firestore-release-30 C:\Users\Administrator\Desktop\SukanNow\build\firebase_core\intermediates\packaged_res\release\packageReleaseResources

@@ -1,14 +1,14 @@
 <libraries>
   <library
-      name="__local_aars__:C:\Users\Administrator\Desktop\apps\build\app\intermediates\flutter\release\libs.jar:unspecified@jar"
-      jars="C:\Users\Administrator\Desktop\apps\build\app\intermediates\flutter\release\libs.jar"
-      resolved="__local_aars__:C:\Users\Administrator\Desktop\apps\build\app\intermediates\flutter\release\libs.jar:unspecified"/>
+      name="__local_aars__:C:\Users\Administrator\Desktop\SukanNow\build\app\intermediates\flutter\release\libs.jar:unspecified@jar"
+      jars="C:\Users\Administrator\Desktop\SukanNow\build\app\intermediates\flutter\release\libs.jar"
+      resolved="__local_aars__:C:\Users\Administrator\Desktop\SukanNow\build\app\intermediates\flutter\release\libs.jar:unspecified"/>
   <library
       name=":@@:cloud_firestore::release"
-      jars="C:\Users\Administrator\Desktop\apps\build\cloud_firestore\.transforms\d0325b6139a1ad1d7c7a175c150aabbc\transformed\out\jars\classes.jar;C:\Users\Administrator\Desktop\apps\build\cloud_firestore\.transforms\d0325b6139a1ad1d7c7a175c150aabbc\transformed\out\jars\libs\R.jar"
+      jars="C:\Users\Administrator\Desktop\SukanNow\build\cloud_firestore\.transforms\cc25c585a8e6bdb722950169f7ac28f9\transformed\out\jars\classes.jar;C:\Users\Administrator\Desktop\SukanNow\build\cloud_firestore\.transforms\cc25c585a8e6bdb722950169f7ac28f9\transformed\out\jars\libs\R.jar"
       resolved="io.flutter.plugins.firebase.cloudfirestore:cloud_firestore:unspecified"
-      partialResultsDir="C:\Users\Administrator\Desktop\apps\build\cloud_firestore\intermediates\lint_vital_partial_results\release\lintVitalAnalyzeRelease\out"
-      folder="C:\Users\Administrator\Desktop\apps\build\cloud_firestore\.transforms\d0325b6139a1ad1d7c7a175c150aabbc\transformed\out"
+      partialResultsDir="C:\Users\Administrator\Desktop\SukanNow\build\cloud_firestore\intermediates\lint_vital_partial_results\release\lintVitalAnalyzeRelease\out"
+      folder="C:\Users\Administrator\Desktop\SukanNow\build\cloud_firestore\.transforms\cc25c585a8e6bdb722950169f7ac28f9\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -19,10 +19,10 @@
       proguardRules="proguard.txt"/>
   <library
       name=":@@:desktop_webview_auth::release"
-      jars="C:\Users\Administrator\Desktop\apps\build\desktop_webview_auth\.transforms\a815c47c919981027088e4080eb2e355\transformed\out\jars\classes.jar;C:\Users\Administrator\Desktop\apps\build\desktop_webview_auth\.transforms\a815c47c919981027088e4080eb2e355\transformed\out\jars\libs\R.jar"
+      jars="C:\Users\Administrator\Desktop\SukanNow\build\desktop_webview_auth\.transforms\2174e0603f6318115baafe331365678c\transformed\out\jars\classes.jar;C:\Users\Administrator\Desktop\SukanNow\build\desktop_webview_auth\.transforms\2174e0603f6318115baafe331365678c\transformed\out\jars\libs\R.jar"
       resolved="com.example.desktop_webview_auth:desktop_webview_auth:unspecified"
-      partialResultsDir="C:\Users\Administrator\Desktop\apps\build\desktop_webview_auth\intermediates\lint_vital_partial_results\release\lintVitalAnalyzeRelease\out"
-      folder="C:\Users\Administrator\Desktop\apps\build\desktop_webview_auth\.transforms\a815c47c919981027088e4080eb2e355\transformed\out"
+      partialResultsDir="C:\Users\Administrator\Desktop\SukanNow\build\desktop_webview_auth\intermediates\lint_vital_partial_results\release\lintVitalAnalyzeRelease\out"
+      folder="C:\Users\Administrator\Desktop\SukanNow\build\desktop_webview_auth\.transforms\2174e0603f6318115baafe331365678c\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -33,10 +33,10 @@
       proguardRules="proguard.txt"/>
   <library
       name=":@@:firebase_auth::release"
-      jars="C:\Users\Administrator\Desktop\apps\build\firebase_auth\.transforms\9afd644b7f17a76bbd1a821889af87aa\transformed\out\jars\classes.jar;C:\Users\Administrator\Desktop\apps\build\firebase_auth\.transforms\9afd644b7f17a76bbd1a821889af87aa\transformed\out\jars\libs\R.jar"
+      jars="C:\Users\Administrator\Desktop\SukanNow\build\firebase_auth\.transforms\2a67761aa323766cdcb6a336dd047162\transformed\out\jars\classes.jar;C:\Users\Administrator\Desktop\SukanNow\build\firebase_auth\.transforms\2a67761aa323766cdcb6a336dd047162\transformed\out\jars\libs\R.jar"
       resolved="io.flutter.plugins.firebase.auth:firebase_auth:unspecified"
-      partialResultsDir="C:\Users\Administrator\Desktop\apps\build\firebase_auth\intermediates\lint_vital_partial_results\release\lintVitalAnalyzeRelease\out"
-      folder="C:\Users\Administrator\Desktop\apps\build\firebase_auth\.transforms\9afd644b7f17a76bbd1a821889af87aa\transformed\out"
+      partialResultsDir="C:\Users\Administrator\Desktop\SukanNow\build\firebase_auth\intermediates\lint_vital_partial_results\release\lintVitalAnalyzeRelease\out"
+      folder="C:\Users\Administrator\Desktop\SukanNow\build\firebase_auth\.transforms\2a67761aa323766cdcb6a336dd047162\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -47,10 +47,10 @@
       proguardRules="proguard.txt"/>
   <library
       name=":@@:firebase_database::release"
-      jars="C:\Users\Administrator\Desktop\apps\build\firebase_database\.transforms\b9d94f40cc879902c7d278b4a20b8c95\transformed\out\jars\classes.jar;C:\Users\Administrator\Desktop\apps\build\firebase_database\.transforms\b9d94f40cc879902c7d278b4a20b8c95\transformed\out\jars\libs\R.jar"
+      jars="C:\Users\Administrator\Desktop\SukanNow\build\firebase_database\.transforms\525c0680867feb6f4350137e363ec661\transformed\out\jars\classes.jar;C:\Users\Administrator\Desktop\SukanNow\build\firebase_database\.transforms\525c0680867feb6f4350137e363ec661\transformed\out\jars\libs\R.jar"
       resolved="io.flutter.plugins.firebase.database:firebase_database:unspecified"
-      partialResultsDir="C:\Users\Administrator\Desktop\apps\build\firebase_database\intermediates\lint_vital_partial_results\release\lintVitalAnalyzeRelease\out"
-      folder="C:\Users\Administrator\Desktop\apps\build\firebase_database\.transforms\b9d94f40cc879902c7d278b4a20b8c95\transformed\out"
+      partialResultsDir="C:\Users\Administrator\Desktop\SukanNow\build\firebase_database\intermediates\lint_vital_partial_results\release\lintVitalAnalyzeRelease\out"
+      folder="C:\Users\Administrator\Desktop\SukanNow\build\firebase_database\.transforms\525c0680867feb6f4350137e363ec661\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -61,10 +61,10 @@
       proguardRules="proguard.txt"/>
   <library
       name=":@@:firebase_dynamic_links::release"
-      jars="C:\Users\Administrator\Desktop\apps\build\firebase_dynamic_links\.transforms\84fbae1733373b5f8ad100b370d65f9a\transformed\out\jars\classes.jar;C:\Users\Administrator\Desktop\apps\build\firebase_dynamic_links\.transforms\84fbae1733373b5f8ad100b370d65f9a\transformed\out\jars\libs\R.jar"
+      jars="C:\Users\Administrator\Desktop\SukanNow\build\firebase_dynamic_links\.transforms\31a34f77ab20b9234bc9a235d3ef7dac\transformed\out\jars\classes.jar;C:\Users\Administrator\Desktop\SukanNow\build\firebase_dynamic_links\.transforms\31a34f77ab20b9234bc9a235d3ef7dac\transformed\out\jars\libs\R.jar"
       resolved="io.flutter.plugins.firebase.dynamiclinks:firebase_dynamic_links:unspecified"
-      partialResultsDir="C:\Users\Administrator\Desktop\apps\build\firebase_dynamic_links\intermediates\lint_vital_partial_results\release\lintVitalAnalyzeRelease\out"
-      folder="C:\Users\Administrator\Desktop\apps\build\firebase_dynamic_links\.transforms\84fbae1733373b5f8ad100b370d65f9a\transformed\out"
+      partialResultsDir="C:\Users\Administrator\Desktop\SukanNow\build\firebase_dynamic_links\intermediates\lint_vital_partial_results\release\lintVitalAnalyzeRelease\out"
+      folder="C:\Users\Administrator\Desktop\SukanNow\build\firebase_dynamic_links\.transforms\31a34f77ab20b9234bc9a235d3ef7dac\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -75,10 +75,10 @@
       proguardRules="proguard.txt"/>
   <library
       name=":@@:firebase_storage::release"
-      jars="C:\Users\Administrator\Desktop\apps\build\firebase_storage\.transforms\8b86b7e75cf5a66628709601046cb3a5\transformed\out\jars\classes.jar;C:\Users\Administrator\Desktop\apps\build\firebase_storage\.transforms\8b86b7e75cf5a66628709601046cb3a5\transformed\out\jars\libs\R.jar"
+      jars="C:\Users\Administrator\Desktop\SukanNow\build\firebase_storage\.transforms\02172e7eb78cc3c0fabc9735799a161b\transformed\out\jars\classes.jar;C:\Users\Administrator\Desktop\SukanNow\build\firebase_storage\.transforms\02172e7eb78cc3c0fabc9735799a161b\transformed\out\jars\libs\R.jar"
       resolved="io.flutter.plugins.firebase.storage:firebase_storage:unspecified"
-      partialResultsDir="C:\Users\Administrator\Desktop\apps\build\firebase_storage\intermediates\lint_vital_partial_results\release\lintVitalAnalyzeRelease\out"
-      folder="C:\Users\Administrator\Desktop\apps\build\firebase_storage\.transforms\8b86b7e75cf5a66628709601046cb3a5\transformed\out"
+      partialResultsDir="C:\Users\Administrator\Desktop\SukanNow\build\firebase_storage\intermediates\lint_vital_partial_results\release\lintVitalAnalyzeRelease\out"
+      folder="C:\Users\Administrator\Desktop\SukanNow\build\firebase_storage\.transforms\02172e7eb78cc3c0fabc9735799a161b\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -89,10 +89,10 @@
       proguardRules="proguard.txt"/>
   <library
       name=":@@:firebase_core::release"
-      jars="C:\Users\Administrator\Desktop\apps\build\firebase_core\.transforms\d178fe9a02dea0c812c5545aac72f915\transformed\out\jars\classes.jar;C:\Users\Administrator\Desktop\apps\build\firebase_core\.transforms\d178fe9a02dea0c812c5545aac72f915\transformed\out\jars\libs\R.jar"
+      jars="C:\Users\Administrator\Desktop\SukanNow\build\firebase_core\.transforms\3176b560676f87899425d7448a1a70d9\transformed\out\jars\classes.jar;C:\Users\Administrator\Desktop\SukanNow\build\firebase_core\.transforms\3176b560676f87899425d7448a1a70d9\transformed\out\jars\libs\R.jar"
       resolved="io.flutter.plugins.firebase.core:firebase_core:unspecified"
-      partialResultsDir="C:\Users\Administrator\Desktop\apps\build\firebase_core\intermediates\lint_vital_partial_results\release\lintVitalAnalyzeRelease\out"
-      folder="C:\Users\Administrator\Desktop\apps\build\firebase_core\.transforms\d178fe9a02dea0c812c5545aac72f915\transformed\out"
+      partialResultsDir="C:\Users\Administrator\Desktop\SukanNow\build\firebase_core\intermediates\lint_vital_partial_results\release\lintVitalAnalyzeRelease\out"
+      folder="C:\Users\Administrator\Desktop\SukanNow\build\firebase_core\.transforms\3176b560676f87899425d7448a1a70d9\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -103,10 +103,10 @@
       proguardRules="proguard.txt"/>
   <library
       name=":@@:flutter_plugin_android_lifecycle::release"
-      jars="C:\Users\Administrator\Desktop\apps\build\flutter_plugin_android_lifecycle\.transforms\f4bdf6ecd603dda633c6b292b5453ada\transformed\out\jars\classes.jar;C:\Users\Administrator\Desktop\apps\build\flutter_plugin_android_lifecycle\.transforms\f4bdf6ecd603dda633c6b292b5453ada\transformed\out\jars\libs\R.jar"
+      jars="C:\Users\Administrator\Desktop\SukanNow\build\flutter_plugin_android_lifecycle\.transforms\e1ae24e778b32e4e812d6f910235dd98\transformed\out\jars\classes.jar;C:\Users\Administrator\Desktop\SukanNow\build\flutter_plugin_android_lifecycle\.transforms\e1ae24e778b32e4e812d6f910235dd98\transformed\out\jars\libs\R.jar"
       resolved="io.flutter.plugins.flutter_plugin_android_lifecycle:flutter_plugin_android_lifecycle:unspecified"
-      partialResultsDir="C:\Users\Administrator\Desktop\apps\build\flutter_plugin_android_lifecycle\intermediates\lint_vital_partial_results\release\lintVitalAnalyzeRelease\out"
-      folder="C:\Users\Administrator\Desktop\apps\build\flutter_plugin_android_lifecycle\.transforms\f4bdf6ecd603dda633c6b292b5453ada\transformed\out"
+      partialResultsDir="C:\Users\Administrator\Desktop\SukanNow\build\flutter_plugin_android_lifecycle\intermediates\lint_vital_partial_results\release\lintVitalAnalyzeRelease\out"
+      folder="C:\Users\Administrator\Desktop\SukanNow\build\flutter_plugin_android_lifecycle\.transforms\e1ae24e778b32e4e812d6f910235dd98\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -117,10 +117,10 @@
       proguardRules="proguard.txt"/>
   <library
       name=":@@:google_sign_in_android::release"
-      jars="C:\Users\Administrator\Desktop\apps\build\google_sign_in_android\.transforms\bf1bd9ad1a3ab1b1fe1cbaa6c7c22825\transformed\out\jars\classes.jar;C:\Users\Administrator\Desktop\apps\build\google_sign_in_android\.transforms\bf1bd9ad1a3ab1b1fe1cbaa6c7c22825\transformed\out\jars\libs\R.jar"
+      jars="C:\Users\Administrator\Desktop\SukanNow\build\google_sign_in_android\.transforms\15d6a5b0646a034a2f109c4e5a030dfb\transformed\out\jars\classes.jar;C:\Users\Administrator\Desktop\SukanNow\build\google_sign_in_android\.transforms\15d6a5b0646a034a2f109c4e5a030dfb\transformed\out\jars\libs\R.jar"
       resolved="io.flutter.plugins.googlesignin:google_sign_in_android:unspecified"
-      partialResultsDir="C:\Users\Administrator\Desktop\apps\build\google_sign_in_android\intermediates\lint_vital_partial_results\release\lintVitalAnalyzeRelease\out"
-      folder="C:\Users\Administrator\Desktop\apps\build\google_sign_in_android\.transforms\bf1bd9ad1a3ab1b1fe1cbaa6c7c22825\transformed\out"
+      partialResultsDir="C:\Users\Administrator\Desktop\SukanNow\build\google_sign_in_android\intermediates\lint_vital_partial_results\release\lintVitalAnalyzeRelease\out"
+      folder="C:\Users\Administrator\Desktop\SukanNow\build\google_sign_in_android\.transforms\15d6a5b0646a034a2f109c4e5a030dfb\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -131,10 +131,10 @@
       proguardRules="proguard.txt"/>
   <library
       name=":@@:image_editor_common::release"
-      jars="C:\Users\Administrator\Desktop\apps\build\image_editor_common\.transforms\64bf3364a39e76a4b49b812b419b39a9\transformed\out\jars\classes.jar;C:\Users\Administrator\Desktop\apps\build\image_editor_common\.transforms\64bf3364a39e76a4b49b812b419b39a9\transformed\out\jars\libs\R.jar"
+      jars="C:\Users\Administrator\Desktop\SukanNow\build\image_editor_common\.transforms\cd051e786198dabc725583251216fb55\transformed\out\jars\classes.jar;C:\Users\Administrator\Desktop\SukanNow\build\image_editor_common\.transforms\cd051e786198dabc725583251216fb55\transformed\out\jars\libs\R.jar"
       resolved="com.fluttercandies.image_editor:image_editor_common:unspecified"
-      partialResultsDir="C:\Users\Administrator\Desktop\apps\build\image_editor_common\intermediates\lint_vital_partial_results\release\lintVitalAnalyzeRelease\out"
-      folder="C:\Users\Administrator\Desktop\apps\build\image_editor_common\.transforms\64bf3364a39e76a4b49b812b419b39a9\transformed\out"
+      partialResultsDir="C:\Users\Administrator\Desktop\SukanNow\build\image_editor_common\intermediates\lint_vital_partial_results\release\lintVitalAnalyzeRelease\out"
+      folder="C:\Users\Administrator\Desktop\SukanNow\build\image_editor_common\.transforms\cd051e786198dabc725583251216fb55\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -145,10 +145,38 @@
       proguardRules="proguard.txt"/>
   <library
       name=":@@:image_picker_android::release"
-      jars="C:\Users\Administrator\Desktop\apps\build\image_picker_android\.transforms\6c48e1cf498b0b95c31babbf8b8842e2\transformed\out\jars\classes.jar;C:\Users\Administrator\Desktop\apps\build\image_picker_android\.transforms\6c48e1cf498b0b95c31babbf8b8842e2\transformed\out\jars\libs\R.jar"
+      jars="C:\Users\Administrator\Desktop\SukanNow\build\image_picker_android\.transforms\c06269c2dfd8f9db43bdd67c128e3f5a\transformed\out\jars\classes.jar;C:\Users\Administrator\Desktop\SukanNow\build\image_picker_android\.transforms\c06269c2dfd8f9db43bdd67c128e3f5a\transformed\out\jars\libs\R.jar"
       resolved="io.flutter.plugins.imagepicker:image_picker_android:unspecified"
-      partialResultsDir="C:\Users\Administrator\Desktop\apps\build\image_picker_android\intermediates\lint_vital_partial_results\release\lintVitalAnalyzeRelease\out"
-      folder="C:\Users\Administrator\Desktop\apps\build\image_picker_android\.transforms\6c48e1cf498b0b95c31babbf8b8842e2\transformed\out"
+      partialResultsDir="C:\Users\Administrator\Desktop\SukanNow\build\image_picker_android\intermediates\lint_vital_partial_results\release\lintVitalAnalyzeRelease\out"
+      folder="C:\Users\Administrator\Desktop\SukanNow\build\image_picker_android\.transforms\c06269c2dfd8f9db43bdd67c128e3f5a\transformed\out"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name=":@@:open_file_android::release"
+      jars="C:\Users\Administrator\Desktop\SukanNow\build\open_file_android\.transforms\4d28c2ea060712be4f65894accedad77\transformed\out\jars\classes.jar;C:\Users\Administrator\Desktop\SukanNow\build\open_file_android\.transforms\4d28c2ea060712be4f65894accedad77\transformed\out\jars\libs\R.jar"
+      resolved="com.crazecoder.openfile:open_file_android:unspecified"
+      partialResultsDir="C:\Users\Administrator\Desktop\SukanNow\build\open_file_android\intermediates\lint_vital_partial_results\release\lintVitalAnalyzeRelease\out"
+      folder="C:\Users\Administrator\Desktop\SukanNow\build\open_file_android\.transforms\4d28c2ea060712be4f65894accedad77\transformed\out"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name=":@@:path_provider_android::release"
+      jars="C:\Users\Administrator\Desktop\SukanNow\build\path_provider_android\.transforms\8f21e50b17e918763849dbb865dc5c4f\transformed\out\jars\classes.jar;C:\Users\Administrator\Desktop\SukanNow\build\path_provider_android\.transforms\8f21e50b17e918763849dbb865dc5c4f\transformed\out\jars\libs\R.jar"
+      resolved="io.flutter.plugins.pathprovider:path_provider_android:unspecified"
+      partialResultsDir="C:\Users\Administrator\Desktop\SukanNow\build\path_provider_android\intermediates\lint_vital_partial_results\release\lintVitalAnalyzeRelease\out"
+      folder="C:\Users\Administrator\Desktop\SukanNow\build\path_provider_android\.transforms\8f21e50b17e918763849dbb865dc5c4f\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -159,10 +187,10 @@
       proguardRules="proguard.txt"/>
   <library
       name=":@@:pedometer::release"
-      jars="C:\Users\Administrator\Desktop\apps\build\pedometer\.transforms\f75b9e689940488159fc16ab8709ebea\transformed\out\jars\classes.jar;C:\Users\Administrator\Desktop\apps\build\pedometer\.transforms\f75b9e689940488159fc16ab8709ebea\transformed\out\jars\libs\R.jar"
+      jars="C:\Users\Administrator\Desktop\SukanNow\build\pedometer\.transforms\bf4375ed3d2bddbab061517584786c4d\transformed\out\jars\classes.jar;C:\Users\Administrator\Desktop\SukanNow\build\pedometer\.transforms\bf4375ed3d2bddbab061517584786c4d\transformed\out\jars\libs\R.jar"
       resolved="com.example.pedometer:pedometer:unspecified"
-      partialResultsDir="C:\Users\Administrator\Desktop\apps\build\pedometer\intermediates\lint_vital_partial_results\release\lintVitalAnalyzeRelease\out"
-      folder="C:\Users\Administrator\Desktop\apps\build\pedometer\.transforms\f75b9e689940488159fc16ab8709ebea\transformed\out"
+      partialResultsDir="C:\Users\Administrator\Desktop\SukanNow\build\pedometer\intermediates\lint_vital_partial_results\release\lintVitalAnalyzeRelease\out"
+      folder="C:\Users\Administrator\Desktop\SukanNow\build\pedometer\.transforms\bf4375ed3d2bddbab061517584786c4d\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -173,10 +201,24 @@
       proguardRules="proguard.txt"/>
   <library
       name=":@@:permission_handler_android::release"
-      jars="C:\Users\Administrator\Desktop\apps\build\permission_handler_android\.transforms\af21f8ca1da10a00b53a6d517dae3442\transformed\out\jars\classes.jar;C:\Users\Administrator\Desktop\apps\build\permission_handler_android\.transforms\af21f8ca1da10a00b53a6d517dae3442\transformed\out\jars\libs\R.jar"
+      jars="C:\Users\Administrator\Desktop\SukanNow\build\permission_handler_android\.transforms\2d6a728c11be9c6a66655f9d56a7671b\transformed\out\jars\classes.jar;C:\Users\Administrator\Desktop\SukanNow\build\permission_handler_android\.transforms\2d6a728c11be9c6a66655f9d56a7671b\transformed\out\jars\libs\R.jar"
       resolved="com.baseflow.permissionhandler:permission_handler_android:unspecified"
-      partialResultsDir="C:\Users\Administrator\Desktop\apps\build\permission_handler_android\intermediates\lint_vital_partial_results\release\lintVitalAnalyzeRelease\out"
-      folder="C:\Users\Administrator\Desktop\apps\build\permission_handler_android\.transforms\af21f8ca1da10a00b53a6d517dae3442\transformed\out"
+      partialResultsDir="C:\Users\Administrator\Desktop\SukanNow\build\permission_handler_android\intermediates\lint_vital_partial_results\release\lintVitalAnalyzeRelease\out"
+      folder="C:\Users\Administrator\Desktop\SukanNow\build\permission_handler_android\.transforms\2d6a728c11be9c6a66655f9d56a7671b\transformed\out"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name=":@@:printing::release"
+      jars="C:\Users\Administrator\Desktop\SukanNow\build\printing\.transforms\ecfb34ceec8c229495e2ae362594ce7c\transformed\out\jars\classes.jar;C:\Users\Administrator\Desktop\SukanNow\build\printing\.transforms\ecfb34ceec8c229495e2ae362594ce7c\transformed\out\jars\libs\R.jar"
+      resolved="net.nfet.flutter.printing:printing:unspecified"
+      partialResultsDir="C:\Users\Administrator\Desktop\SukanNow\build\printing\intermediates\lint_vital_partial_results\release\lintVitalAnalyzeRelease\out"
+      folder="C:\Users\Administrator\Desktop\SukanNow\build\printing\.transforms\ecfb34ceec8c229495e2ae362594ce7c\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -597,6 +639,32 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
+      name="androidx.appcompat:appcompat-resources:1.6.1@aar"
+      jars="C:\Users\Administrator\.gradle\caches\transforms-3\3ba1c41de0e9d53fd780e09cdaebb4a5\transformed\jetified-appcompat-resources-1.6.1\jars\classes.jar"
+      resolved="androidx.appcompat:appcompat-resources:1.6.1"
+      folder="C:\Users\Administrator\.gradle\caches\transforms-3\3ba1c41de0e9d53fd780e09cdaebb4a5\transformed\jetified-appcompat-resources-1.6.1"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="androidx.appcompat:appcompat:1.6.1@aar"
+      jars="C:\Users\Administrator\.gradle\caches\transforms-3\9eb00dccf0e570d516179c732833cbba\transformed\appcompat-1.6.1\jars\classes.jar"
+      resolved="androidx.appcompat:appcompat:1.6.1"
+      folder="C:\Users\Administrator\.gradle\caches\transforms-3\9eb00dccf0e570d516179c732833cbba\transformed\appcompat-1.6.1"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
       name="androidx.credentials:credentials:1.2.0-rc01@aar"
       jars="C:\Users\Administrator\.gradle\caches\transforms-3\1048f859c20cb78a07de8b4d016dd8ea\transformed\jetified-credentials-1.2.0-rc01\jars\classes.jar"
       resolved="androidx.credentials:credentials:1.2.0-rc01"
@@ -766,6 +834,32 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
+      name="androidx.emoji2:emoji2-views-helper:1.2.0@aar"
+      jars="C:\Users\Administrator\.gradle\caches\transforms-3\39fdc7082a8f939d67ef5d6130ef6652\transformed\jetified-emoji2-views-helper-1.2.0\jars\classes.jar"
+      resolved="androidx.emoji2:emoji2-views-helper:1.2.0"
+      folder="C:\Users\Administrator\.gradle\caches\transforms-3\39fdc7082a8f939d67ef5d6130ef6652\transformed\jetified-emoji2-views-helper-1.2.0"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="androidx.emoji2:emoji2:1.2.0@aar"
+      jars="C:\Users\Administrator\.gradle\caches\transforms-3\d09b5c7f981e4d3a8b7d0d610e29fece\transformed\jetified-emoji2-1.2.0\jars\classes.jar;C:\Users\Administrator\.gradle\caches\transforms-3\d09b5c7f981e4d3a8b7d0d610e29fece\transformed\jetified-emoji2-1.2.0\jars\libs\repackaged.jar"
+      resolved="androidx.emoji2:emoji2:1.2.0"
+      folder="C:\Users\Administrator\.gradle\caches\transforms-3\d09b5c7f981e4d3a8b7d0d610e29fece\transformed\jetified-emoji2-1.2.0"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
       name="org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.3@jar"
       jars="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlinx\kotlinx-coroutines-play-services\1.7.3\7087d47913cfb0062c9909dacbfc78fe44c5ecff\kotlinx-coroutines-play-services-1.7.3.jar"
       resolved="org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.3"/>
@@ -809,10 +903,49 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
+      name="androidx.drawerlayout:drawerlayout:1.0.0@aar"
+      jars="C:\Users\Administrator\.gradle\caches\transforms-3\658d3b0c08b127a42275a7e29e6cde10\transformed\drawerlayout-1.0.0\jars\classes.jar"
+      resolved="androidx.drawerlayout:drawerlayout:1.0.0"
+      folder="C:\Users\Administrator\.gradle\caches\transforms-3\658d3b0c08b127a42275a7e29e6cde10\transformed\drawerlayout-1.0.0"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
       name="androidx.browser:browser:1.4.0@aar"
       jars="C:\Users\Administrator\.gradle\caches\transforms-3\2106d9c23741fad136dda07a6d8335fe\transformed\browser-1.4.0\jars\classes.jar"
       resolved="androidx.browser:browser:1.4.0"
       folder="C:\Users\Administrator\.gradle\caches\transforms-3\2106d9c23741fad136dda07a6d8335fe\transformed\browser-1.4.0"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="androidx.vectordrawable:vectordrawable-animated:1.1.0@aar"
+      jars="C:\Users\Administrator\.gradle\caches\transforms-3\1e02242df5a910219602fc0459fc2e50\transformed\vectordrawable-animated-1.1.0\jars\classes.jar"
+      resolved="androidx.vectordrawable:vectordrawable-animated:1.1.0"
+      folder="C:\Users\Administrator\.gradle\caches\transforms-3\1e02242df5a910219602fc0459fc2e50\transformed\vectordrawable-animated-1.1.0"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="androidx.vectordrawable:vectordrawable:1.1.0@aar"
+      jars="C:\Users\Administrator\.gradle\caches\transforms-3\7c99c7a52251d8616915b6572fd9a452\transformed\vectordrawable-1.1.0\jars\classes.jar"
+      resolved="androidx.vectordrawable:vectordrawable:1.1.0"
+      folder="C:\Users\Administrator\.gradle\caches\transforms-3\7c99c7a52251d8616915b6572fd9a452\transformed\vectordrawable-1.1.0"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -860,6 +993,23 @@
       symbolFile="R.txt"
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
+  <library
+      name="androidx.cursoradapter:cursoradapter:1.0.0@aar"
+      jars="C:\Users\Administrator\.gradle\caches\transforms-3\f3f1c1262babbdb9703b23da8660f9aa\transformed\cursoradapter-1.0.0\jars\classes.jar"
+      resolved="androidx.cursoradapter:cursoradapter:1.0.0"
+      folder="C:\Users\Administrator\.gradle\caches\transforms-3\f3f1c1262babbdb9703b23da8660f9aa\transformed\cursoradapter-1.0.0"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="androidx.resourceinspection:resourceinspection-annotation:1.0.1@jar"
+      jars="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\androidx.resourceinspection\resourceinspection-annotation\1.0.1\8c21f8ff5d96d5d52c948707f7e4d6ca6773feef\resourceinspection-annotation-1.0.1.jar"
+      resolved="androidx.resourceinspection:resourceinspection-annotation:1.0.1"/>
   <library
       name="androidx.localbroadcastmanager:localbroadcastmanager:1.0.0@aar"
       jars="C:\Users\Administrator\.gradle\caches\transforms-3\2be708a2ea45fe15e2b4c5cddb6dc5c4\transformed\localbroadcastmanager-1.0.0\jars\classes.jar"

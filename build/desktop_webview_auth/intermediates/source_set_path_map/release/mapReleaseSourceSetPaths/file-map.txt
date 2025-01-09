@@ -20,8 +20,8 @@ io.invertase.desktop_webview_auth-jetified-core-1.0.0-18 C:\Users\Administrator\
 io.invertase.desktop_webview_auth-jetified-savedstate-1.2.1-19 C:\Users\Administrator\.gradle\caches\transforms-3\f43e84c994933236fb617181baea2b8d\transformed\jetified-savedstate-1.2.1\res
 io.invertase.desktop_webview_auth-main-20 C:\Users\Administrator\AppData\Local\Pub\Cache\hosted\pub.dev\desktop_webview_auth-0.0.15\android\src\main\res
 io.invertase.desktop_webview_auth-release-21 C:\Users\Administrator\AppData\Local\Pub\Cache\hosted\pub.dev\desktop_webview_auth-0.0.15\android\src\release\res
-io.invertase.desktop_webview_auth-pngs-22 C:\Users\Administrator\Desktop\apps\build\desktop_webview_auth\generated\res\pngs\release
-io.invertase.desktop_webview_auth-resValues-23 C:\Users\Administrator\Desktop\apps\build\desktop_webview_auth\generated\res\resValues\release
-io.invertase.desktop_webview_auth-mergeReleaseResources-24 C:\Users\Administrator\Desktop\apps\build\desktop_webview_auth\intermediates\incremental\release\mergeReleaseResources\merged.dir
-io.invertase.desktop_webview_auth-mergeReleaseResources-25 C:\Users\Administrator\Desktop\apps\build\desktop_webview_auth\intermediates\incremental\release\mergeReleaseResources\stripped.dir
-io.invertase.desktop_webview_auth-release-26 C:\Users\Administrator\Desktop\apps\build\desktop_webview_auth\intermediates\merged_res\release\mergeReleaseResources
+io.invertase.desktop_webview_auth-pngs-22 C:\Users\Administrator\Desktop\SukanNow\build\desktop_webview_auth\generated\res\pngs\release
+io.invertase.desktop_webview_auth-resValues-23 C:\Users\Administrator\Desktop\SukanNow\build\desktop_webview_auth\generated\res\resValues\release
+io.invertase.desktop_webview_auth-mergeReleaseResources-24 C:\Users\Administrator\Desktop\SukanNow\build\desktop_webview_auth\intermediates\incremental\release\mergeReleaseResources\merged.dir
+io.invertase.desktop_webview_auth-mergeReleaseResources-25 C:\Users\Administrator\Desktop\SukanNow\build\desktop_webview_auth\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+io.invertase.desktop_webview_auth-release-26 C:\Users\Administrator\Desktop\SukanNow\build\desktop_webview_auth\intermediates\merged_res\release\mergeReleaseResources

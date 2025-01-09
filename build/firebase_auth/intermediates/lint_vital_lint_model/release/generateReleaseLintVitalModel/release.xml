@@ -3,10 +3,10 @@
     package="io.flutter.plugins.firebase.auth"
     minSdkVersion="23"
     targetSdkVersion="23"
-    mergedManifest="C:\Users\Administrator\Desktop\apps\build\firebase_auth\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml"
-    manifestMergeReport="C:\Users\Administrator\Desktop\apps\build\firebase_auth\outputs\logs\manifest-merger-release-report.txt"
-    proguardFiles="C:\Users\Administrator\Desktop\apps\build\firebase_auth\intermediates\default_proguard_files\global\proguard-android.txt-8.3.1"
-    partialResultsDir="C:\Users\Administrator\Desktop\apps\build\firebase_auth\intermediates\lint_vital_partial_results\release\lintVitalAnalyzeRelease\out">
+    mergedManifest="C:\Users\Administrator\Desktop\SukanNow\build\firebase_auth\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml"
+    manifestMergeReport="C:\Users\Administrator\Desktop\SukanNow\build\firebase_auth\outputs\logs\manifest-merger-release-report.txt"
+    proguardFiles="C:\Users\Administrator\Desktop\SukanNow\build\firebase_auth\intermediates\default_proguard_files\global\proguard-android.txt-8.3.1"
+    partialResultsDir="C:\Users\Administrator\Desktop\SukanNow\build\firebase_auth\intermediates\lint_vital_partial_results\release\lintVitalAnalyzeRelease\out">
   <buildFeatures
       namespacing="REQUIRED"/>
   <sourceProviders>
@@ -21,11 +21,11 @@
   <testFixturesSourceProviders>
   </testFixturesSourceProviders>
   <artifact
-      classOutputs="C:\Users\Administrator\Desktop\apps\build\firebase_auth\intermediates\javac\release\compileReleaseJavaWithJavac\classes;C:\Users\Administrator\Desktop\apps\build\firebase_auth\intermediates\compile_r_class_jar\release\generateReleaseRFile\R.jar"
+      classOutputs="C:\Users\Administrator\Desktop\SukanNow\build\firebase_auth\intermediates\javac\release\compileReleaseJavaWithJavac\classes;C:\Users\Administrator\Desktop\SukanNow\build\firebase_auth\intermediates\compile_r_class_jar\release\generateReleaseRFile\R.jar"
       type="MAIN"
       applicationId="io.flutter.plugins.firebase.auth"
-      generatedSourceFolders="C:\Users\Administrator\Desktop\apps\build\firebase_auth\generated\ap_generated_sources\release\out;C:\Users\Administrator\Desktop\apps\build\firebase_auth\generated\source\buildConfig\release"
-      generatedResourceFolders="C:\Users\Administrator\Desktop\apps\build\firebase_auth\generated\res\resValues\release"
+      generatedSourceFolders="C:\Users\Administrator\Desktop\SukanNow\build\firebase_auth\generated\ap_generated_sources\release\out;C:\Users\Administrator\Desktop\SukanNow\build\firebase_auth\generated\source\buildConfig\release"
+      generatedResourceFolders="C:\Users\Administrator\Desktop\SukanNow\build\firebase_auth\generated\res\resValues\release"
       desugaredMethodsFiles="C:\Users\Administrator\.gradle\caches\transforms-3\5021ac30ec257667757ba481f1ffeadd\transformed\D8BackportedDesugaredMethods.txt">
   </artifact>
 </variant>
