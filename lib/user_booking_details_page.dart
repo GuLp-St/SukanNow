@@ -63,47 +63,78 @@ Future<void> _confirmBooking(BuildContext context) async {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Booking Details'),
+        title: const Text('Booking Confirmation'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('Sport: $sport'),
-            Text('Date: ${date.toString()}'),
-            Text('Court: $court'),
-            Text('Time: $time'),
-            ElevatedButton(
-              onPressed: () {
-                showDialog(
-                  context: context,
-                  builder: (BuildContext context) {
-                    return AlertDialog(
-                      title: const Text("Confirm Booking"),
-                      content:
-                      const Text("Are you sure you want to book this court?"),
-                      actions: [
-                        TextButton(
-                          child: const Text("Cancel"),
-                          onPressed: () {
-                            Navigator.of(context).pop();
-                          },
-                        ),
-                        TextButton(
-                          child: const Text("Confirm"),
-                          onPressed: () {
-                            _confirmBooking(context);
-                            Navigator.of(context).pop(); // Close the dialog
-                          },
-                        ),
-                      ],
-                    );
-                  },
-                );
-              },
-              child: const Text('Confirm Booking'),
-            ),
-          ],
+      body: Container( // Add Container for gradient
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color(0xFF000000), // Black
+              Color(0xFF212121), // Dark gray
+            ],
+            stops: [0.0, 1.0],
+          ),
+        ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('Sport: $sport'),
+              Text('Date: ${date.toString()}'),
+              Text('Court: $court'),
+              Text('Time: $time'),
+              ElevatedButton(
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return AlertDialog(
+                        title: const Text("Confirm Booking"),
+                        content:
+                        const Text("Are you sure you want to book this court?"),
+                        actions: [
+                          TextButton(
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.transparent, 
+                              shadowColor: Colors.transparent, 
+                              foregroundColor: Colors.deepOrange, // Set the text color
+                              textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+                            ),
+                            child: const Text("Cancel"),
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                          ),
+                          TextButton(
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.transparent, 
+                              shadowColor: Colors.transparent, 
+                              foregroundColor: Colors.deepOrange, // Set the text color
+                              textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+                            ),
+                            child: const Text("Confirm"),
+                            onPressed: () {
+                              _confirmBooking(context);
+                              Navigator.of(context).pop(); // Close the dialog
+                            },
+                          ),
+                        ],
+                      );
+                    },
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.transparent, 
+                  shadowColor: Colors.transparent, 
+                  foregroundColor: Colors.deepOrange, // Set the text color
+                  textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+                ),
+                child: const Text('Confirm Booking'),
+              ),
+            ],
+          ),
         ),
       ),
     );

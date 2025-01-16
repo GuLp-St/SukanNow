@@ -13,8 +13,9 @@ class _AdminStatsState extends State<AdminStats> {
   final database = FirebaseDatabase.instance.ref();
   int _totalUsers = 0;
   int _totalBookings = 0;
+  int _totalMemberships = 0; 
   final Map<String, int> _eventParticipation = {};
-  final Map<String, int> _membershipParticipation = {};
+  final Map<String, Map<String, int>> _membershipParticipation = {};
   final Map<String, Map<String, int>> _sportsParticipation = {};
 
   @override
@@ -32,6 +33,7 @@ class _AdminStatsState extends State<AdminStats> {
 
     // Fetch total bookings and sports participation
     final sports = ['badminton', 'futsal', 'basketball', 'pingpong'];
+
     // Fetch sports participation with this week/last week breakdown
     final now = DateTime.now();
     final thisWeekStart = now.subtract(Duration(days: now.weekday - 1));
@@ -45,7 +47,6 @@ class _AdminStatsState extends State<AdminStats> {
         'This Week': 0,
         'Last Week': 0,
       };
-
       // Fetch unavailable dates for the sport
       final unavailableDatesSnapshot = await database.child('$sport/availability/dates').get();
       List<DateTime> unavailableDates = [];
@@ -70,14 +71,15 @@ class _AdminStatsState extends State<AdminStats> {
           (courtsData as Map<dynamic, dynamic>).forEach((court, sessionsData) {
             if (sessionsData is Map<dynamic, dynamic>) {
               thisWeekCount += sessionsData.values.where((sessionData) => sessionData
-              is Map && sessionData['status'] != 'open' && DateTime.parse(date).isAfter(thisWeekStart) && DateTime.parse(date).isBefore(thisWeekEnd)).length;
-              lastWeekCount += sessionsData.values.where((sessionData) => sessionData is Map && sessionData['status'] != 'open' && DateTime.parse(date).isAfter(lastWeekStart) && DateTime.parse(date).isBefore(lastWeekEnd)).length;
-              _totalBookings += sessionsData.values.where((sessionData) => sessionData is Map && sessionData['status'] != 'open').length;
+              is Map && sessionData['status'] == 'booked' && DateTime.parse(date).isAfter(thisWeekStart) && DateTime.parse(date).isBefore(thisWeekEnd)).length;
+              lastWeekCount += sessionsData.values.where((sessionData) => sessionData is Map && sessionData['status'] == 'booked' &&
+                  DateTime.parse(date).isAfter(lastWeekStart) && DateTime.parse(date).isBefore(lastWeekEnd)).length;
+              _totalBookings += sessionsData.values.where((sessionData) => sessionData is Map && sessionData['status'] == 'booked').length;
             } else if (sessionsData is List) {
-              thisWeekCount += sessionsData.where((sessionData) => sessionData is Map && sessionData['status'] != 'open' && DateTime.parse(date).isAfter(thisWeekStart) &&
+              thisWeekCount += sessionsData.where((sessionData) => sessionData is Map && sessionData['status'] == 'booked' && DateTime.parse(date).isAfter(thisWeekStart) &&
                   DateTime.parse(date).isBefore(thisWeekEnd)).length;
-              lastWeekCount += sessionsData.where((sessionData) => sessionData is Map && sessionData['status'] != 'open' && DateTime.parse(date).isAfter(lastWeekStart) && DateTime.parse(date).isBefore(lastWeekEnd)).length;
-              _totalBookings += sessionsData.where((sessionData) => sessionData is Map && sessionData['status'] != 'open').length;
+              lastWeekCount += sessionsData.where((sessionData) => sessionData is Map && sessionData['status'] == 'booked' && DateTime.parse(date).isAfter(lastWeekStart) && DateTime.parse(date).isBefore(lastWeekEnd)).length;
+              _totalBookings += sessionsData.where((sessionData) => sessionData is Map && sessionData['status'] == 'booked').length;
             }
           });
           _sportsParticipation[sport]!['This Week'] = _sportsParticipation[sport]!['This Week']! + thisWeekCount;
@@ -101,21 +103,23 @@ class _AdminStatsState extends State<AdminStats> {
       });
     }
 
-    // Fetch membership participation with pass type breakdown
-    final usersData = await database.child('users').get();
-    if (usersData.exists) {
-      (usersData.value as Map<dynamic, dynamic>).forEach((userId, userData) {
+    // Fetch membership participation with pass type breakdown and calculate total memberships
+    if (usersSnapshot.exists) {
+      final usersData = usersSnapshot.value as Map<dynamic, dynamic>;
+      for (var entry in usersData.entries) {
+        final userData = entry.value;
         if (userData is Map<dynamic, dynamic> && userData['membership'] != null) {
           final membershipData = userData['membership'] as Map<dynamic, dynamic>;
-          membershipData.forEach((activityKey, activityData) {
-            if (activityData is Map<dynamic, dynamic> && activityData['status'] == 'active') {
-              final passType = activityData['type'] as String;
-              final key = '$activityKey - $passType';
-              _membershipParticipation.update(key, (value) => value + 1, ifAbsent: () => 1);
+          for (var sport in ['gym', 'swimming']) {
+            if (membershipData[sport] != null && membershipData[sport]['status'] == 'active') {
+              final type = membershipData[sport]['type'];
+              _membershipParticipation.putIfAbsent(sport, () => {});
+              _membershipParticipation[sport]!.update(type, (value) => value + 1, ifAbsent: () => 1);
+              _totalMemberships++; // Increment total memberships
             }
-          });
+          }
         }
-      });
+      }
     }
 
     setState(() {});
@@ -127,41 +131,79 @@ class _AdminStatsState extends State<AdminStats> {
       appBar: AppBar(
         title: const Text('Statistics'),
       ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              _buildStatTile('Total Users', _totalUsers),
-              _buildStatTile('Total Bookings', _totalBookings),
-              const Divider(),
-              const Text('Event Participation', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-              _buildParticipationList(_eventParticipation),
-              const Divider(),
-              const Text('Membership', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-              _buildParticipationList(_membershipParticipation),
-              const Divider(),
-              const Text('Sports ', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-              SizedBox(height: 10),
-              _buildSportsParticipationList(_sportsParticipation),
+      body: Container( // Add Container for gradient
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color(0xFF000000), // Black
+              Color(0xFF212121), // Dark gray
             ],
+            stops: [0.0, 1.0],
           ),
         ),
+        child: Column( // Add Column to wrap the SingleChildScrollView
+          children: [
+            Expanded( // Expand the SingleChildScrollView to fill available space
+              child: SingleChildScrollView(
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround, // Distribute icons evenly
+                      children: [
+                        Column(
+                          children: [
+                            Icon(Icons.person,),
+                            Text('$_totalUsers'),
+                            Text('Total Users'),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Icon(Icons.book),
+                            Text('$_totalBookings'),
+                            Text('Total Bookings'),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Icon(Icons.card_membership),
+                            Text('$_totalMemberships'), // Display total memberships
+                            Text('Memberships'),
+                          ],
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 20),
+                    const Divider(),
+                    const SizedBox(height: 10),
+                    const Text('Sports Bookings', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                    SizedBox(height: 10),
+                    _buildSportsParticipationList(_sportsParticipation),
+                    const Divider(),
+                    const SizedBox(height: 20),
+                    const Text('Event Participation', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                    _buildParticipationList(_eventParticipation),
+                    const Divider(),
+                    const Text('Membership', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                    _buildMembershipParticipationList(_membershipParticipation),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
-    );
-  }
-
-  Widget _buildStatTile(String title, int value) {
-    return ListTile(
-      title: Text(title, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-      trailing: Text(value.toString(), style: const TextStyle(fontSize: 18)),
-    );
-  }
-
+    ),
+  );
+}
   Widget _buildParticipationList(Map<String, int> participationData) {
     return SfCircularChart(
-      title: ChartTitle(text: 'Participation Overview'),
+      title: ChartTitle(text: 'Events Overview'),
       legend: Legend(isVisible: true), // Add this line to enable the legend
       series: <PieSeries<MapEntry<String, int>, String>>[
         PieSeries<MapEntry<String, int>, String>(
@@ -176,19 +218,37 @@ class _AdminStatsState extends State<AdminStats> {
     );
   }
 
-Widget _buildSportsParticipationList(Map<String, Map<String, int>> participationData) {
-  return SfCartesianChart(
-    title: ChartTitle(text: 'Sports Participation'),
-    primaryXAxis: CategoryAxis(),
-    legend: Legend(isVisible: true), // Add the legend here
-    series: participationData.entries.map((entry) {
-      return ColumnSeries<MapEntry<String, int>, String>(
-        name: entry.key,
-        dataSource: entry.value.entries.toList(),
-        xValueMapper: (MapEntry<String, int> entry, _) => entry.key,
-        yValueMapper: (MapEntry<String, int> entry, _) => entry.value,
-      );
-    }).toList(),
-  );
-}
+  Widget _buildSportsParticipationList(Map<String, Map<String, int>> participationData) {
+    return SfCartesianChart(
+      title: ChartTitle(text: 'Sports Overview'),
+      primaryXAxis: CategoryAxis(),
+      legend: Legend(isVisible: true),
+      series: participationData.entries.map((entry) {
+        return ColumnSeries<MapEntry<String, int>, String>(
+          name: entry.key,
+          dataSource: entry.value.entries.toList(),
+          xValueMapper: (MapEntry<String, int> entry, _) => entry.key,
+          yValueMapper: (MapEntry<String, int> entry, _) => entry.value,
+          dataLabelSettings: const DataLabelSettings(isVisible: true),
+        );
+      }).toList(),
+    );
+  }
+
+  Widget _buildMembershipParticipationList(Map<String, Map<String, int>> participationData) {
+    return SfCartesianChart(
+      title: ChartTitle(text: 'Membership Overview'),
+      primaryXAxis: CategoryAxis(),
+      legend: Legend(isVisible: true),
+      series: participationData.entries.map((entry) {
+        return ColumnSeries<MapEntry<String, int>, String>(
+          name: entry.key,
+          dataSource: entry.value.entries.toList(),
+          xValueMapper: (MapEntry<String, int> entry, _) => entry.key,
+          yValueMapper: (MapEntry<String, int> entry, _) => entry.value,
+          dataLabelSettings: const DataLabelSettings(isVisible: true),
+        );
+      }).toList(),
+    );
+  }
 }

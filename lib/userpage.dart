@@ -242,7 +242,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                                 actions: [
                                   SignedOutAction((context) {
-                                    Navigator.of(context).pop();
+                                    Navigator.pushReplacementNamed(context, '/auth-gate');  
                                   })
                                 ],
                               ),
@@ -334,7 +334,7 @@ class _HomeScreenState extends State<HomeScreen> {
           padding: EdgeInsets.zero,
           children: [
             Container(
-              color: const Color.fromARGB(255, 214, 96, 0),
+              color: Colors.deepOrange,
               padding: const EdgeInsets.symmetric(vertical: 12.0),
               child: const Center(
                 child: Text(
@@ -425,219 +425,228 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
-      body: SingleChildScrollView(
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              // Simple wallet display
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround, // Distribute space around
-                children: [
-              GestureDetector(
-                onTap: () {
-                  // Navigate to your wallet.dart page
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const SukanCoin()), // Replace UserEwallet with your actual wallet page
-                  );
-                },
-                child: Container(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Row(
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color(0xFF000000), // Black
+              Color(0xFF212121), // Dark gray
+            ],
+            stops: [0.0, 1.0],
+          ),
+        ),
+        child: Column( // Wrap the SingleChildScrollView with a Column
+          children: [
+            Expanded( // Expand the SingleChildScrollView to fill the available space
+              child: SingleChildScrollView(
+                child: Center(
+                  child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Icon(Icons.wallet, size: 34), // Wallet icon
-                      const SizedBox(width: 8), // Spacing
-                      Text(
-                        '$_walletAmount',
-                        style: const TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
+                      // Simple wallet display
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround, // Distribute space around
+                        children: [
+                      GestureDetector(
+                        onTap: () {
+                          // Navigate to your wallet.dart page
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => const SukanCoin()), // Replace UserEwallet with your actual wallet page
+                          );
+                        },
+                        child: Container(
+                          padding: const EdgeInsets.all(16.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Icon(Icons.wallet, size: 34, color: Colors.white), // Wallet icon
+                              const SizedBox(width: 8), // Spacing
+                              Text(
+                                '$_walletAmount',
+                                style: const TextStyle(
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              const Text(
+                                ' 🪙',
+                                style: TextStyle(
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
-                      const Text(
-                        ' 🪙',
-                        style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
+                      ],
+                      ),
+                      const SizedBox(height: 10),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const FitnessPage()),
+                        );
+                      },
+                      child: Column( // Wrap StepTracker with a Column
+                        children: [
+                          StepTracker(),
+                        ],
+                      ),
+                    ),
+                      const SizedBox(height: 30),
+                      SizedBox(
+                        height: 200,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: [
+                            _buildImageCard(
+                              'assets/sports_booking.png',
+                              'SPORTS',
+                              () => Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const SportsBooking(),
+                                ),
+                              ),
+                            ),
+                            _buildImageCard(
+                              'assets/sport_event.png',
+                              'EVENTS',
+                              () => Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const UserEvent(),
+                                ),
+                              ),
+                            ),
+                            _buildImageCard(
+                              'assets/membership.png',
+                              'MEMBERSHIP',
+                              () => Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const Membership(),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      // Calendar with styling
+                      Container(
+                        padding: const EdgeInsets.all(16.0),
+                        child: TableCalendar(
+                          firstDay: DateTime.utc(2010, 10, 16),
+                          lastDay: DateTime.utc(2030, 3, 14),
+                          focusedDay: DateTime.now(),
+                          eventLoader: (day) {
+                            final formattedDay = DateFormat('yyyy-MM-dd').format(day);
+                            final events = <dynamic>[];
+
+                            // Add registered events to the calendar
+                            for (var event in registeredEvents) {
+                              final eventData = event.values.first as Map<dynamic, dynamic>;
+                              if (eventData['date'] == formattedDay) {
+                                events.add(eventData['name']);
+                              }
+                            }
+
+                            // Add court bookings to the calendar
+                            for (var booking in _bookings) {
+                              if (booking['date'] == formattedDay) {
+                                events.add(booking['sport']);
+                              }
+                            }
+
+                            return events;
+                          },
+                          onDaySelected: (selectedDay, focusedDay) {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => UserCalendar(
+                                  selectedDay: selectedDay,
+                                  bookings: _bookings,
+                                  registeredEvents: registeredEvents,
+                                ),
+                              ),
+                            );
+                          },
+                          calendarBuilders: CalendarBuilders(
+                            markerBuilder: (context, date, events) {
+                              if (events.isNotEmpty) {
+                                return Container(
+                                  margin: const EdgeInsets.only(top: 5.0), // Adjust margin as needed
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: const Color.fromARGB(255, 255, 255, 255), // Change the color here
+                                  ),
+                                  width: 8.0, // Adjust size as needed
+                                  height: 8.0, // Adjust size as needed
+                                );
+                              }
+                              return null;
+                            },
+                          ),
+                          calendarStyle: const CalendarStyle(
+                            defaultTextStyle: TextStyle(color: Colors.white), // Text color
+                            weekendTextStyle: TextStyle(color: Colors.white), // Weekend text color
+                            todayDecoration: BoxDecoration( // Today's date decoration
+                              color: Colors.deepOrange, 
+                              shape: BoxShape.circle,
+                            ),
+                            selectedDecoration: BoxDecoration( // Selected date decoration
+                              color: Colors.blue, 
+                              shape: BoxShape.circle,
+                            ),
+                            outsideDaysVisible: false, // Hide days outside the current month
+                            cellMargin: EdgeInsets.all(5), // Add margin around each day cell
+                            canMarkersOverflow: true, // Allow markers to overflow if there are many
+                          ),
+                          headerStyle: const HeaderStyle(
+                            formatButtonVisible: false,
+                            formatButtonShowsNext: false, // Hide the "next" button
+                            titleCentered: true,
+                            titleTextStyle: TextStyle(
+                              color: Colors.white, // Header text color
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            decoration: BoxDecoration(
+                              color: Colors.deepOrange,
+                              borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(10),
+                                topRight: Radius.circular(10),
+                              ),
+                            ),
+                            leftChevronPadding: EdgeInsets.only(left: 16), // Add padding to the left chevron
+                            rightChevronPadding: EdgeInsets.only(right: 16), // Add padding to the right chevron
+                            headerMargin: EdgeInsets.only(bottom: 20), // Add margin below the header
+                          ),
+                          daysOfWeekStyle: const DaysOfWeekStyle(
+                            weekdayStyle: TextStyle(
+                              color: Colors.white, // Weekday text color
+                              fontWeight: FontWeight.bold,
+                            ),
+                            weekendStyle: TextStyle(
+                              color: Colors.white, // Weekend text color
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
                         ),
                       ),
                     ],
                   ),
                 ),
               ),
-              ],
-              ),
-              const SizedBox(height: 10),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const FitnessPage()),
-                );
-              },
-              child: Column( // Wrap StepTracker with a Column
-                children: [
-                  StepTracker(),
-                ],
-              ),
             ),
-              const SizedBox(height: 30),
-              SizedBox(
-                height: 200,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: [
-                    SizedBox( // Add SizedBox for fixed width
-                      width: 200, // Set the desired width
-                      child: _buildImageCard(
-                        'assets/sports_booking.png',
-                        'SPORTS',
-                        () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const SportsBooking(),
-                          ),
-                        ),
-                      ),
-                    ),
-                    SizedBox( // Add SizedBox for fixed width
-                      width: 200, // Set the desired width
-                      child: _buildImageCard(
-                        'assets/sport_event.png',
-                        'EVENTS',
-                        () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const UserEvent(),
-                          ),
-                        ),
-                      ),
-                    ),
-                    SizedBox( // Add SizedBox for fixed width
-                      width: 200, // Set the desired width
-                      child: _buildImageCard(
-                        'assets/membership.png',
-                        'MEMBERSHIP',
-                        () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const Membership(),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-
-              const SizedBox(height: 20),
-              // Calendar with styling
-              Container(
-                padding: const EdgeInsets.all(16.0),
-                child: TableCalendar(
-                  firstDay: DateTime.utc(2010, 10, 16),
-                  lastDay: DateTime.utc(2030, 3, 14),
-                  focusedDay: DateTime.now(),
-                  eventLoader: (day) {
-                    final formattedDay = DateFormat('yyyy-MM-dd').format(day);
-                    final events = <dynamic>[];
-
-                    // Add registered events to the calendar
-                    for (var event in registeredEvents) {
-                      final eventData = event.values.first as Map<dynamic, dynamic>;
-                      if (eventData['date'] == formattedDay) {
-                        events.add(eventData['name']);
-                      }
-                    }
-
-                    // Add court bookings to the calendar
-                    for (var booking in _bookings) {
-                      if (booking['date'] == formattedDay) {
-                        events.add(booking['sport']);
-                      }
-                    }
-
-                    return events;
-                  },
-                  onDaySelected: (selectedDay, focusedDay) {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => UserCalendar(
-                          selectedDay: selectedDay,
-                          bookings: _bookings,
-                          registeredEvents: registeredEvents,
-                        ),
-                      ),
-                    );
-                  },
-                  calendarBuilders: CalendarBuilders(
-                    markerBuilder: (context, date, events) {
-                      if (events.isNotEmpty) {
-                        return Container(
-                          margin: const EdgeInsets.only(top: 5.0), // Adjust margin as needed
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: const Color.fromARGB(255, 255, 255, 255), // Change the color here
-                          ),
-                          width: 8.0, // Adjust size as needed
-                          height: 8.0, // Adjust size as needed
-                        );
-                      }
-                      return null;
-                    },
-                  ),
-                  calendarStyle: const CalendarStyle(
-                    defaultTextStyle: TextStyle(color: Colors.white), // Text color
-                    weekendTextStyle: TextStyle(color: Colors.white), // Weekend text color
-                    todayDecoration: BoxDecoration( // Today's date decoration
-                      color: Colors.orange, 
-                      shape: BoxShape.circle,
-                    ),
-                    selectedDecoration: BoxDecoration( // Selected date decoration
-                      color: Colors.blue, 
-                      shape: BoxShape.circle,
-                    ),
-                    outsideDaysVisible: false, // Hide days outside the current month
-                    cellMargin: EdgeInsets.all(5), // Add margin around each day cell
-                    canMarkersOverflow: true, // Allow markers to overflow if there are many
-                  ),
-                  headerStyle: const HeaderStyle(
-                    formatButtonVisible: false,
-                    formatButtonShowsNext: false, // Hide the "next" button
-                    titleCentered: true,
-                    titleTextStyle: TextStyle(
-                      color: Colors.white, // Header text color
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                    decoration: BoxDecoration(
-                      color: Color(0xFFF09433),
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(10),
-                        topRight: Radius.circular(10),
-                      ),
-                    ),
-                    leftChevronPadding: EdgeInsets.only(left: 16), // Add padding to the left chevron
-                    rightChevronPadding: EdgeInsets.only(right: 16), // Add padding to the right chevron
-                    headerMargin: EdgeInsets.only(bottom: 20), // Add margin below the header
-                  ),
-                  daysOfWeekStyle: const DaysOfWeekStyle(
-                    weekdayStyle: TextStyle(
-                      color: Colors.white, // Weekday text color
-                      fontWeight: FontWeight.bold,
-                    ),
-                    weekendStyle: TextStyle(
-                      color: Colors.white, // Weekend text color
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
+          ],
         ),
       ),
     );
@@ -647,25 +656,20 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget _buildImageCard(String imagePath, String label, VoidCallback onTap) {
     return GestureDetector(
       onTap: onTap,
-      child: Card(
+      child: Material( // Use Material widget
         clipBehavior: Clip.antiAlias,
-        shape: RoundedRectangleBorder( // Apply to all corners of the Card
-        ),
+        shape: RoundedRectangleBorder(),
+        color: Colors.transparent, 
         child: Column(
           children: [
             Image.asset(
               imagePath,
-              width: 600,
+              width: 300,
               height: 150,
               fit: BoxFit.cover,
             ),
-            Container(
-              width: 600,
+            Padding( // Add padding to the Text widget
               padding: const EdgeInsets.all(8.0),
-              decoration: BoxDecoration(
-                color: Colors.black,
-                borderRadius: BorderRadius.circular(10.0), // Apply to all corners of the Container
-              ),
               child: Text(
                 label,
                 textAlign: TextAlign.center,
@@ -766,7 +770,7 @@ class StepTrackerState extends State<StepTracker> {
         const SizedBox(width: 16),
         Text(
           _steps,
-          style: const TextStyle(fontSize: 20),
+          style: const TextStyle(fontSize: 20,color: Colors.white),
         ),
         const SizedBox(width: 32),
         Icon(

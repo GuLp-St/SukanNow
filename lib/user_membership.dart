@@ -24,7 +24,19 @@ class _MembershipState extends State<Membership> {
       appBar: AppBar(
         title: const Text('Membership'),
       ),
-      body: Column(
+      body: Container( // Add Container for gradient
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color(0xFF000000), // Black
+              Color(0xFF212121), // Dark gray
+            ],
+            stops: [0.0, 1.0],
+          ),
+        ),
+        child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const SizedBox(height: 20),
@@ -79,6 +91,7 @@ class _MembershipState extends State<Membership> {
             ),
           ),
         ],
+      ),
       ),
     );
   }
@@ -263,108 +276,145 @@ class _MembershipDetailsState extends State<MembershipDetails> {
       appBar: AppBar(
         title: Text('${widget.activity} Membership'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Choose Membership for ${widget.activity}',
-              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(height: 20),
+      body: Container( // Add Container for gradient
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color(0xFF000000), // Black
+              Color(0xFF212121), // Dark gray
+            ],
+            stops: [0.0, 1.0],
+          ),
+        ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Choose Membership for ${widget.activity}',
+                style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(height: 20),
 
-            // Show membership options ONLY if NO membership or AFTER renew button is clicked
-            if (!_hasMembership || (_isExpired && !_showRenewalButton))
-              Column(
-                children: [
-                  if (widget.activity == 'Swimming') ...[
-                    _buildMembershipButton('Day Pass', 2),
-                    _buildMembershipButton('Week Pass', 10),
-                    _buildMembershipButton('Month Pass', 30),
-                    _buildMembershipButton('Year Pass', 100),
-                  ] else ...[ 
-                    _buildMembershipButton('Day Pass', 5),
-                    _buildMembershipButton('Week Pass', 30),
-                    _buildMembershipButton('Month Pass', 90),
-                    _buildMembershipButton('Year Pass', 500),
+              // Show membership options ONLY if NO membership or AFTER renew button is clicked
+              if (!_hasMembership || (_isExpired && !_showRenewalButton))
+                Column(
+                  children: [
+                    if (widget.activity == 'Swimming') ...[
+                      _buildMembershipButton('Day Pass', 2),
+                      _buildMembershipButton('Week Pass', 10),
+                      _buildMembershipButton('Month Pass', 30),
+                      _buildMembershipButton('Year Pass', 100),
+                    ] else ...[ 
+                      _buildMembershipButton('Day Pass', 5),
+                      _buildMembershipButton('Week Pass', 30),
+                      _buildMembershipButton('Month Pass', 90),
+                      _buildMembershipButton('Year Pass', 500),
+                    ],
+                    const SizedBox(height: 20),
                   ],
-                  const SizedBox(height: 20),
-                ],
-              ),
+                ),
 
-            // Conditionally render cancel button or renew button
-            if (_hasMembership && !_isExpired) // Show cancel button if active
-              ElevatedButton(
-                onPressed: _cancelMembership,
-                child: const Text('Cancel Membership'),
-              )
-            else if (_showRenewalButton) // Show renew button if expired AND _showRenewalButton is true
-              ElevatedButton(
-                onPressed: () {
-                  // This effectively re-shows the membership options
-                  setState(() { 
-                    _showRenewalButton = false; 
-                  });
-                },
-                child: const Text('Renew Membership'),
-              ),
+              // Conditionally render cancel button or renew button
+              if (_hasMembership && !_isExpired) // Show cancel button if active
+                ElevatedButton(
+                  onPressed: _cancelMembership,
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.transparent, 
+                    shadowColor: Colors.transparent, 
+                    foregroundColor: Colors.deepOrange, // Set the text color
+                    textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+                  ),
+                  child: const Text('Cancel Membership'),
+                )
+              else if (_showRenewalButton) // Show renew button if expired AND _showRenewalButton is true
+                ElevatedButton(
+                  onPressed: () {
+                    // This effectively re-shows the membership options
+                    setState(() { 
+                      _showRenewalButton = false; 
+                    });
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.transparent, 
+                    shadowColor: Colors.transparent, 
+                    foregroundColor: Colors.deepOrange, // Set the text color
+                    textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+                  ),
+                  child: const Text('Renew Membership'),
+                ),
 
-            const SizedBox(height: 20),
+              const SizedBox(height: 20),
 
-            // View Membership Status Button
-            if (_hasMembership)
-              ElevatedButton(
-                onPressed: () async {
-                  // Get the membership for the current activity
-                  String activityKey =widget.activity.toLowerCase().replaceAll(' ', '_');
-                  final snapshot = await database.child('users/$userId/membership/$activityKey').get();
+              // View Membership Status Button
+              if (_hasMembership)
+                ElevatedButton(
+                  onPressed: () async {
+                    // Get the membership for the current activity
+                    String activityKey =widget.activity.toLowerCase().replaceAll(' ', '_');
+                    final snapshot = await database.child('users/$userId/membership/$activityKey').get();
 
-                  // Build a string to display membership details
-                  String membershipDetails = "";
+                    // Build a string to display membership details
+                    String membershipDetails = "";
 
-                  if (snapshot.exists) {
-                    Map<dynamic, dynamic>? membershipData = snapshot.value as Map?;
-                    String type = membershipData?['type'] ?? 'No membership';
-                    String status = membershipData?['status'] ?? '';
-                    String expiryDateString = membershipData?['expiryDate'] ?? '';
+                    if (snapshot.exists) {
+                      Map<dynamic, dynamic>? membershipData = snapshot.value as Map?;
+                      String type = membershipData?['type'] ?? 'No membership';
+                      String status = membershipData?['status'] ?? '';
+                      String expiryDateString = membershipData?['expiryDate'] ?? '';
 
-                    // Format expiry date
-                    DateTime expiryDate = DateTime.parse(expiryDateString);
-                    String formattedExpiryDate = "${expiryDate.day}-${expiryDate.month}-${expiryDate.year}";
+                      // Format expiry date
+                      DateTime expiryDate = DateTime.parse(expiryDateString);
+                      String formattedExpiryDate = "${expiryDate.day}-${expiryDate.month}-${expiryDate.year}";
 
-                    // Build the decorated message
-                    membershipDetails += "Membership: $type\n";
-                    if (expiryDate.isBefore(DateTime.now())) {
-                      membershipDetails += "Status: Expired ❌\n"; // Force expired status
+                      // Build the decorated message
+                      membershipDetails += "Membership: $type\n";
+                      if (expiryDate.isBefore(DateTime.now())) {
+                        membershipDetails += "Status: Expired ❌\n"; // Force expired status
+                      } else {
+                        membershipDetails += "Status: ${status == 'active' ? 'Active ✅' : 'Expired ❌'}\n";
+                      }
+                      membershipDetails += "Expires: $formattedExpiryDate"; 
                     } else {
-                      membershipDetails += "Status: ${status == 'active' ? 'Active ✅' : 'Expired ❌'}\n";
+                      membershipDetails = "You do not have an active ${widget.activity} membership.";
                     }
-                    membershipDetails += "Expires: $formattedExpiryDate"; 
-                  } else {
-                    membershipDetails = "You do not have an active ${widget.activity} membership.";
-                  }
 
-                  // Show membership details in a dialog
-                  if (mounted) { // Add this check
-                    showDialog(
-                      // ignore: use_build_context_synchronously
-                      context: context,
-                      builder: (context) => AlertDialog(
-                        title: const Text('Membership Status'),
-                        content: Text(membershipDetails),
-                        actions: [
-                          TextButton(
-                            onPressed: () => Navigator.pop(context),
-                            child: const Text('OK'),
-                          ),
-                        ],
-                      ),
-                    );
-                  }
-                },
-                child: const Text('View Membership Status'),
-              ),
-          ],
+                    // Show membership details in a dialog
+                    if (mounted) { // Add this check
+                      showDialog(
+                        // ignore: use_build_context_synchronously
+                        context: context,
+                        builder: (context) => AlertDialog(
+                          title: const Text('Membership Status'),
+                          content: Text(membershipDetails),
+                          actions: [
+                            TextButton(
+                              onPressed: () => Navigator.pop(context),
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.transparent, 
+                                shadowColor: Colors.transparent, 
+                                foregroundColor: Colors.deepOrange, // Set the text color
+                                textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+                              ),
+                              child: const Text('OK'),
+                            ),
+                          ],
+                        ),
+                      );
+                    }
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.transparent, 
+                    shadowColor: Colors.transparent, 
+                    foregroundColor: Colors.deepOrange, // Set the text color
+                    textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+                  ),
+                  child: const Text('View Membership Status'),
+                ),
+            ],
+          ),
         ),
       ),
     );
@@ -378,6 +428,12 @@ class _MembershipDetailsState extends State<MembershipDetails> {
         });
         _purchaseMembership(cost);
       },
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.transparent, 
+        shadowColor: Colors.transparent, 
+        foregroundColor: Colors.yellow, // Set the text color
+        textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+      ),
       child: Text('$type - $cost 🪙'),
     );
   }

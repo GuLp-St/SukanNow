@@ -85,11 +85,23 @@ class _ManageBookingsPageState extends State<ManageBookingsPage> {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context, false),
-            child: const Text('No'),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.transparent, 
+              shadowColor: Colors.transparent, 
+              foregroundColor: Colors.deepOrange, // Set the text color
+              textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+            ),
+            child: const Text('Cancel'),
           ),
           TextButton(
             onPressed: () => Navigator.pop(context, true),
-            child: const Text('Yes'),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.transparent, 
+              shadowColor: Colors.transparent, 
+              foregroundColor: Colors.deepOrange, // Set the text color
+              textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+            ),
+            child: const Text('Confirm'),
           ),
         ],
       ),
@@ -132,34 +144,59 @@ class _ManageBookingsPageState extends State<ManageBookingsPage> {
       appBar: AppBar(
         title: const Text('Manage Bookings'),
       ),
-      body: _bookings.isEmpty
-          ? const Center(child: Text('No bookings found.'))
-          : ListView.builder(
-              itemCount: _bookings.length,
-              itemBuilder: (context, index) {
-                final booking = _bookings[index];
-                final sport = booking['sport'];
-                final date = booking['date'];
-                final court = booking['court'];
-                final time = booking['time'];
-                final status = booking['status'];
-
-                // Check if the booking date has passed
-                final bookingDate = DateFormat('yyyy-MM-dd').parse(date);
-                final isPastBooking = bookingDate.isBefore(DateTime.now());
-
-                return ListTile(
-                  title: Text('$sport: $court'),
-                  subtitle: Text('Date: $date, Time: $time, Status: $status'),
-                  trailing: isPastBooking
-                      ? null
-                      : ElevatedButton(
-                          onPressed: () => _cancelBooking(sport, date, court, time),
-                          child: const Text('Cancel'),
-                        ),
-                );
-              },
+      body: Container( // Add Container for gradient
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Color(0xFF000000), // Black
+                  Color(0xFF212121), // Dark gray
+                ],
+                stops: [0.0, 1.0],
+              ),
             ),
+            child: _bookings.isEmpty
+                ? const Center(child: Text('No bookings found.'))
+                : Column( // Wrap the ListView.builder with a Column
+                    children: [
+                      Expanded( // Expand the ListView.builder to fill the available space
+                        child: ListView.builder(
+                          itemCount: _bookings.length,
+                          itemBuilder: (context, index) {
+                          final booking = _bookings[index];
+                          final sport = booking['sport'];
+                          final date = booking['date'];
+                          final court = booking['court'];
+                          final time = booking['time'];
+                          final status = booking['status'];
+
+                          // Check if the booking date has passed
+                          final bookingDate = DateFormat('yyyy-MM-dd').parse(date);
+                          final isPastBooking = bookingDate.isBefore(DateTime.now());
+
+                          return ListTile(
+                            title: Text('$sport: $court'),
+                            subtitle: Text('Date: $date, Time: $time, Status: $status'),
+                            trailing: isPastBooking
+                                ? null
+                                : ElevatedButton(
+                                    onPressed: () => _cancelBooking(sport, date, court, time),
+                                    style: ElevatedButton.styleFrom(
+                                      backgroundColor: Colors.transparent, 
+                                      shadowColor: Colors.transparent,
+                                      foregroundColor: Colors.deepOrange, // Set the text color
+                                      textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+                                    ),
+                                    child: const Text('Cancel'),
+                                  ),
+                          );
+                        },
+                  ),
+                  ),
+                ],
+              ),
+      ),
     );
   }
 }

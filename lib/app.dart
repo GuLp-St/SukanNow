@@ -13,7 +13,10 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: const AuthGate(),
+      home: const AuthGate(), 
+      routes: {
+        '/auth-gate': (context) => const AuthGate(), // Define the route
+      },
     );
   }
 }

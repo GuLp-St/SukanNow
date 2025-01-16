@@ -102,88 +102,152 @@ class _FitnessPageState extends State<FitnessPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Fitness Page'),
+        title: const Text('Fitness Tracker'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SfRadialGauge(
-              axes: <RadialAxis>[
-                RadialAxis(
-                  minimum: 0,
-                  maximum: 1,
-                  showLabels: false,
-                  showTicks: false,
-                  startAngle: 270,
-                  endAngle: 270,
-                  radiusFactor: 0.8,
-                  axisLineStyle: const AxisLineStyle(
-                    thickness: 0.2,
-                    color: Color.fromARGB(30, 255, 196, 0),
-                    thicknessUnit: GaugeSizeUnit.factor,
-                    cornerStyle: CornerStyle.bothCurve,
-                  ),
-                  pointers: <GaugePointer>[
-                    RangePointer(
-                      value: _progress,
+      body: Container( // Add Container for gradient
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color(0xFF000000), // Black
+              Color(0xFF212121), // Dark gray
+            ],
+            stops: [0.0, 1.0],
+          ),
+        ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SfRadialGauge(
+                axes: <RadialAxis>[
+                  RadialAxis(
+                    minimum: 0,
+                    maximum: 1,
+                    showLabels: false,
+                    showTicks: false,
+                    startAngle: 270,
+                    endAngle: 270,
+                    radiusFactor: 0.8,
+                    axisLineStyle: const AxisLineStyle(
+                      thickness: 0.2,
+                      color: Color.fromARGB(52, 255, 86, 34),
+                      thicknessUnit: GaugeSizeUnit.factor,
                       cornerStyle: CornerStyle.bothCurve,
-                      width: 0.2,
-                      sizeUnit: GaugeSizeUnit.factor,
-                      color: const Color.fromARGB(255, 255, 196, 0),
                     ),
-                    MarkerPointer(
-                      value: _progress,
-                      markerHeight: 20,
-                      markerWidth: 20,
-                      markerType: MarkerType.circle,
-                      color: const Color.fromARGB(255, 255, 196, 0),
-                    ),
-                  ],
-                  annotations: <GaugeAnnotation>[
-                    GaugeAnnotation(
-                      widget: Text(
-                        _todaySteps.toString(),
-                        style: const TextStyle(
-                          fontSize: 40,
-                          fontWeight: FontWeight.bold,
-                          color: Color.fromARGB(255, 255, 196, 0),
-                        ),
+                    pointers: <GaugePointer>[
+                      RangePointer(
+                        value: _progress,
+                        cornerStyle: CornerStyle.bothCurve,
+                        width: 0.2,
+                        sizeUnit: GaugeSizeUnit.factor,
+                        color: Colors.deepOrange,
                       ),
-                      angle: 90,
-                      positionFactor: 0.5,
-                    ),
-                    GaugeAnnotation(
-                      widget: Text(
-                        'Goal: $_goal step',
-                        style: const TextStyle(
-                          fontSize: 20,
-                          color: Color.fromARGB(255, 255, 255, 255),
-                        ),
+                      MarkerPointer(
+                        value: _progress,
+                        markerHeight: 20,
+                        markerWidth: 20,
+                        markerType: MarkerType.circle,
+                        color: Colors.deepOrange,
                       ),
-                      angle: 90,
-                      positionFactor: 1.3,
-                    ),
-                  ],
+                    ],
+                    annotations: <GaugeAnnotation>[
+                      GaugeAnnotation(
+                        widget: Text(
+                          _todaySteps.toString(),
+                          style: const TextStyle(
+                            fontSize: 40,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.deepOrange,
+                          ),
+                        ),
+                        angle: 90,
+                        positionFactor: 0.5,
+                      ),
+                      GaugeAnnotation(
+                        widget: Text(
+                          'Goal: $_goal step',
+                          style: const TextStyle(
+                            fontSize: 20,
+                            color: Color.fromARGB(255, 255, 255, 255),
+                          ),
+                        ),
+                        angle: 90,
+                        positionFactor: 1.3,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              const SizedBox(height: 30),
+              ElevatedButton(
+                onPressed: () async {
+                  final newGoalController = TextEditingController();
+                  final newGoal = await showDialog<int>(
+                    context: context,
+                    builder: (context) {
+                      return AlertDialog(
+                        title: const Text('Set Daily Goal'),
+                        content: TextField(
+                          controller: newGoalController,
+                          cursorColor: Colors.deepOrange,
+                          decoration: const InputDecoration(
+                            enabledBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(color: Colors.deepOrange), // Change line color
+                            ),
+                            focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(color: Colors.orange), // Change focused line color
+                            ),
+                          ),
+                          keyboardType: TextInputType.number,
+                        ),
+                        actions: [
+                          TextButton(
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.transparent, 
+                              shadowColor: Colors.transparent, 
+                              foregroundColor: Colors.deepOrange, // Set the text color
+                              textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+                            ),
+                            child: const Text('Cancel'),
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              final newGoal = int.tryParse(newGoalController.text);
+                              Navigator.pop(context, newGoal);
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.transparent, 
+                              shadowColor: Colors.transparent, 
+                              foregroundColor: Colors.deepOrange, // Set the text color
+                              textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+                            ),
+                            child: const Text('OK'),
+                          ),
+                        ],
+                      );
+                    },
+                  );
+                  if (newGoal != null) {
+                    _setGoal(newGoal);
+                  }
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.transparent, 
+                  shadowColor: Colors.transparent, 
+                  foregroundColor: Colors.deepOrange, // Set the text color
+                  textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12), // Customize padding
+                  side: const BorderSide(color: Colors.deepOrange, width: 2), // Add a border
                 ),
-              ],
-            ),
-            const SizedBox(height: 30),
-            ElevatedButton(
-              onPressed: () async {
-                final newGoal = await showDialog<int>(
-                  context: context,
-                  builder: (context) {
-                    return GoalDialog(initialGoal: _goal);
-                  },
-                );
-                if (newGoal != null) {
-                  _setGoal(newGoal);
-                }
-              },
-              child: const Text('Set Goal'),
-            ),
-          ],
+                child: const Text('Set Goal'),
+              ),
+            ],
+          ),
         ),
       ),
     );

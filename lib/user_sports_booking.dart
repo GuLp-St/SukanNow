@@ -29,7 +29,19 @@ class SportsBooking extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Sports Booking'),
       ),
-      body: Column(
+      body: Container( // Add Container for gradient
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [
+            Color(0xFF000000), // Black
+            Color(0xFF212121), // Dark gray
+          ],
+          stops: [0.0, 1.0],
+        ),
+      ),
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const SizedBox(height: 20),
@@ -98,8 +110,9 @@ class SportsBooking extends StatelessWidget {
                 );
               },
             ),
-          ),
-        ],
+            ),
+          ],
+        ),
       ),
     );
   }

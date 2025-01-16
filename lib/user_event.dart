@@ -32,46 +32,74 @@ class _UserEventState extends State<UserEvent> {
     }
   }
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Events'),
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(
+      title: const Text('Events'),
+    ),
+    body: Container( // Add Container for gradient
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [
+            Color(0xFF000000), // Black
+            Color(0xFF212121), // Dark gray
+          ],
+          stops: [0.0, 1.0],
+        ),
       ),
-      body: ListView.builder(
-        itemCount: events.length,
-        itemBuilder: (context, index) {
-          final eventKey = events[index].keys.first;
-          final event = events[index][eventKey] as Map<dynamic, dynamic>;
+      child: Column( // Wrap the ListView with a Column
+        children: [
+          Expanded( // Expand the ListView to fill the available space
+            child: ListView.builder(
+              itemCount: events.length,
+              itemBuilder: (context, index) {
+                final eventKey = events[index].keys.first;
+                final event = events[index][eventKey] as Map<dynamic, dynamic>;
 
-          return Card(
-            child: ListTile(
-              leading: event['imageUrl'] != null
-                  ? SizedBox(
-                      width: 50, // Set the width of the image
-                      height: 50, // Set the height of the image
-                      child: Image.network(event['imageUrl'], fit: BoxFit.cover),
-                    )
-                  : const Icon(Icons.event),
-              title: Text(event['name']),
-              subtitle: Text(event['date']),
-              trailing: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => EventDetails(
-                        event: event,
-                        eventKey: eventKey,
+                return Card(
+                  color: Colors.transparent,
+                  elevation: 0,
+                  child: ListTile(
+                    leading: event['imageUrl'] != null
+                        ? SizedBox(
+                            width: 100, // Set the width of the image
+                            height: 100, // Set the height of the image
+                            child: Image.network(event['imageUrl'], fit: BoxFit.cover),
+                          )
+                        : const Icon(Icons.event),
+                    title: Text(event['name']),
+                    subtitle: Text(event['date']),
+                    trailing: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => EventDetails(
+                              event: event,
+                              eventKey: eventKey,
+                            ),
+                          ),
+                        );
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.transparent, 
+                        shadowColor: Colors.transparent, 
+                        foregroundColor: Colors.deepOrange, // Set the text color
+                        textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+                        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12), // Customize padding
                       ),
+                      child: const Text('View Details'),
                     ),
-                  );
-                },
-                child: const Text('View Details'),
-              ),
+                  ),
+                );
+              },
+               ),
             ),
-          );
-        },
+          ],
+        ),
       ),
     );
   }
@@ -303,67 +331,98 @@ class _EventDetailsState extends State<EventDetails> {
           if (_isRegistered)
             ElevatedButton(
               onPressed: _unregisterForEvent,
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.transparent, 
+                  shadowColor: Colors.transparent, 
+                  foregroundColor: Colors.deepOrange, // Set the text color
+                  textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+                ),
               child: const Text('Unregister'),
             )
           else
             ElevatedButton(
               onPressed: _registerForEvent,
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.transparent, 
+                  shadowColor: Colors.transparent, 
+                  foregroundColor: Colors.deepOrange, // Set the text color
+                  textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+                ),
               child: const Text('Register'),
             ),
         ],
       ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              if (widget.event['imageUrl'] != null)
-                SizedBox(
-                  height: 200, // Set a fixed height for the image
-                  child: Image.network(widget.event['imageUrl'],
-                      width: double.infinity, fit: BoxFit.cover),
-                ),
-              const SizedBox(height: 16),
-              Text(
-                'Description:',
-                style: Theme.of(context).textTheme.titleMedium,
-              ),
-              Text(widget.event['description']),
-              const SizedBox(height: 16),
-              Text(
-                'Date:',
-                style: Theme.of(context).textTheme.titleMedium,
-              ),
-              if (widget.event['date'] != null) Text(widget.event['date']),
-              const SizedBox(height: 16),
-              Text(
-                'Time:',
-                style: Theme.of(context).textTheme.titleMedium,
-              ),
-              if (widget.event['time'] != null) Text(widget.event['time']),
-              const SizedBox(height: 16),
-              Text(
-                'Location:',
-                style: Theme.of(context).textTheme.titleMedium,
-              ),
-              Text(widget.event['location']),
-              const SizedBox(height: 16),
-              Text(
-                'Max Participants:',
-                style: Theme.of(context).textTheme.titleMedium,
-              ),
-              Text(widget.event['maxParticipants'].toString()),
-              if (widget.event['requireWallet']) ...[
-                const SizedBox(height: 16),
-                Text(
-                  '🪙 Required:',
-                  style: Theme.of(context).textTheme.titleMedium,
-                ),
-                Text(widget.event['walletAmount'].toString()),
-              ],
+      body: Container( // Add Container for gradient
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color(0xFF000000), // Black
+              Color(0xFF212121), // Dark gray
             ],
+            stops: [0.0, 1.0],
           ),
+        ),
+        child: Column( // Wrap the SingleChildScrollView with a Column
+          children: [
+            Expanded( // Expand the SingleChildScrollView to fill the available space
+              child: SingleChildScrollView(
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      if (widget.event['imageUrl'] != null)
+                        SizedBox(
+                          height: 200, // Set a fixed height for the image
+                          child: Image.network(widget.event['imageUrl'],
+                              width: double.infinity, fit: BoxFit.cover),
+                        ),
+                      const SizedBox(height: 16),
+                      Text(
+                        'Description:',
+                        style: Theme.of(context).textTheme.titleMedium,
+                      ),
+                      Text(widget.event['description']),
+                      const SizedBox(height: 16),
+                      Text(
+                        'Date:',
+                        style: Theme.of(context).textTheme.titleMedium,
+                      ),
+                      if (widget.event['date'] != null) Text(widget.event['date']),
+                      const SizedBox(height: 16),
+                      Text(
+                        'Time:',
+                        style: Theme.of(context).textTheme.titleMedium,
+                      ),
+                      if (widget.event['time'] != null) Text(widget.event['time']),
+                      const SizedBox(height: 16),
+                      Text(
+                        'Location:',
+                        style: Theme.of(context).textTheme.titleMedium,
+                      ),
+                      Text(widget.event['location']),
+                      const SizedBox(height: 16),
+                      Text(
+                        'Max Participants:',
+                        style: Theme.of(context).textTheme.titleMedium,
+                      ),
+                      Text(widget.event['maxParticipants'].toString()),
+                      if (widget.event['requireWallet']) ...[
+                        const SizedBox(height: 16),
+                        Text(
+                          '🪙 Required:',
+                          style: Theme.of(context).textTheme.titleMedium,
+                        ),
+                        Text(widget.event['walletAmount'].toString()),
+                      ],
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );

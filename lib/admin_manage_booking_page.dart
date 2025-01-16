@@ -147,6 +147,12 @@ class _AdminManageBookingPageState extends State<AdminManageBookingPage> {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.transparent, 
+              shadowColor: Colors.transparent, 
+              foregroundColor: Colors.orange, // Set the text color
+              textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+            ),
             child: const Text('Cancel'),
           ),
           TextButton(
@@ -199,6 +205,12 @@ class _AdminManageBookingPageState extends State<AdminManageBookingPage> {
                 }
               }
             },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.transparent, 
+              shadowColor: Colors.transparent, 
+              foregroundColor: Colors.red, // Set the text color
+              textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+            ),
             child: const Text('Reject'),
           ),
         ],
@@ -212,55 +224,98 @@ class _AdminManageBookingPageState extends State<AdminManageBookingPage> {
       appBar: AppBar(
         title: const Text('Manage Bookings'),
       ),
-      body: _pendingBookings.isEmpty
-          ? const Center(child: Text('No pending bookings found.'))
-          : ListView.builder(
-              itemCount: _pendingBookings.length,
-              itemBuilder: (context, index) {
-                final booking = _pendingBookings[index];
-                final sport = booking['sport'];
-                final date = booking['date'];
-                final court = booking['court'];
-                final time = booking['time'];
-                final userId = booking['userId'];
-                final email = booking['email'];
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color(0xFF000000), // Black
+              Color(0xFF212121), // Dark gray
+            ],
+            stops: [0.0, 1.0],
+          ),
+        ),
+        child: _pendingBookings.isEmpty
+            ? const Center(child: Text('No pending bookings found.'))
+            : Column(
+                children: [
+                  Expanded(
+                    child: ListView.separated( 
+                      itemCount: _pendingBookings.length,
+                      separatorBuilder: (context, index) => const Divider(
+                        color: Colors.grey, 
+                        thickness: 1, 
+                        indent: 16, 
+                        endIndent: 16, 
+                      ),
+                      itemBuilder: (context, index) {
+                        final booking = _pendingBookings[index];
+                        final sport = booking['sport'];
+                        final date = booking['date'];
+                        final court = booking['court'];
+                        final time = booking['time'];
+                        final userId = booking['userId'];
+                        final email = booking['email'];
 
-                return Card(
-                  child: Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch, // Stretch the column
-                      children: [
-                        Text('Email: $email', style: const TextStyle(fontWeight: FontWeight.bold)),
-                        Text('Sport: $sport'),
-                        Text('Court: $court'),
-                        Text('Date: $date'),
-                        Text('Time: $time'),
-                        const SizedBox(height: 16),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround, // Space buttons evenly
-                          children: [
-                            Expanded( // Expand buttons to fill the width
-                              child: ElevatedButton(
-                                onPressed: () => _approveBooking(sport, date, court, time, userId),
-                                child: const Text('Approve'),
-                              ),
+                        return Card(
+                          color: Colors.transparent,
+                          elevation: 0,
+                          child: Padding(
+                            padding: const EdgeInsets.all(16.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
+                              children: [
+                                Text('Email: $email', style: const TextStyle(fontWeight: FontWeight.bold)),
+                                Text('Sport: $sport'),
+                                Text('Court: $court'),
+                                Text('Date: $date'),
+                                Text('Time: $time'),
+                                const SizedBox(height: 16),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                  children: [
+                                    Expanded(
+                                      child: ElevatedButton(
+                                        onPressed: () => _approveBooking(sport, date, court, time, userId),
+                                        style: ElevatedButton.styleFrom(
+                                          backgroundColor: Colors.transparent, 
+                                          shadowColor: Colors.transparent, 
+                                          foregroundColor: Colors.green,
+                                          textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                                          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                                          side: const BorderSide(color: Colors.green, width: 2),
+                                        ),
+                                        child: const Text('Approve'),
+                                      ),
+                                    ),
+                                    const SizedBox(width: 16),
+                                    Expanded(
+                                      child: ElevatedButton(
+                                        onPressed: () => _rejectBooking(sport, date, court, time, userId),
+                                        style: ElevatedButton.styleFrom(
+                                          backgroundColor: Colors.transparent, 
+                                          shadowColor: Colors.transparent, 
+                                          foregroundColor: Colors.deepOrange,
+                                          textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                                          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                                          side: const BorderSide(color: Colors.deepOrange, width: 2),
+                                        ),
+                                        child: const Text('Reject'),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
                             ),
-                            const SizedBox(width: 16),
-                            Expanded( // Expand buttons to fill the width
-                              child: ElevatedButton(
-                                onPressed: () => _rejectBooking(sport, date, court, time, userId),
-                                child: const Text('Reject'),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
+                          ),
+                        );
+                      },
                     ),
                   ),
-                );
-              },
-            ),
+                ],
+              ),
+      ),
     );
   }
 }

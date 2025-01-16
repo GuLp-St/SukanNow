@@ -134,7 +134,7 @@ class _AdminPageState extends State<AdminPage> {
                                 ),
                                 actions: [
                                   SignedOutAction((context) {
-                                    Navigator.of(context).pop();
+                                    Navigator.pushReplacementNamed(context, '/auth-gate');
                                   })
                                 ],
                               ),
@@ -172,35 +172,11 @@ class _AdminPageState extends State<AdminPage> {
             ),
             GestureDetector(
               onTap: () {
-                // Show confirmation dialog
-                showDialog(
-                  context: context,
-                  builder: (BuildContext context) {
-                    return AlertDialog(
-                      title: const Text('Confirmation'),
-                      content: const Text(
-                          'Enter User Mode?'),
-                      actions: <Widget>[
-                        TextButton(
-                          onPressed: () {
-                            Navigator.of(context).pop(); // Close the dialog
-                          },
-                          child: const Text('Cancel'),
-                        ),
-                        TextButton(
-                          onPressed: () {
-                            // Navigate to the HomeScreen (UserPage)
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const HomeScreen()),
-                            );
-                          },
-                          child: const Text('Confirm'),
-                        ),
-                      ],
-                    );
-                  },
+                // Directly navigate to the HomeScreen (UserPage)
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const HomeScreen()),
                 );
               },
               child: Padding(
@@ -215,16 +191,87 @@ class _AdminPageState extends State<AdminPage> {
         ),
         automaticallyImplyLeading: false,
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(
-                  width: 150,
-                  child: ElevatedButton(
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color(0xFF000000), // Black
+              Color(0xFF212121), // Dark gray 
+            ],
+            stops: [0.0, 1.0], 
+          ),
+        ),
+        child: Column( // Wrap the Center widget with a Column
+          children: [
+            Expanded( // Expand to fill available space
+              child: Center( 
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+              SizedBox(
+                width: 200, // Adjust size as needed
+                height: 200, // Adjust size as needed
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    InkWell( 
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => AdminManageBookingPage(),
+                          ),
+                        );
+                      },
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Icon(
+                            Icons.calendar_today,
+                            size: 80,
+                            color: const Color.fromARGB(255, 255, 255, 255), // Example icon color
+                          ),
+                          const Text(
+                            'Manage\nBookings',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
+                          ),
+                        ],
+                      ),
+                    ),
+                    if (_pendingBookingsCount > 0)
+                      Positioned(
+                        right: 50,
+                        top: 30,
+                        child: Container(
+                          padding: const EdgeInsets.all(5),
+                          decoration: const BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.red,
+                          ),
+                          child: Text(
+                            '$_pendingBookingsCount',
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 12,
+                            ),
+                          ),
+                        ),
+                      ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 40),
+
+              // Other buttons arranged in a row with icons
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  _buildIconButton(
+                    icon: Icons.sports_tennis,
+                    label: 'Manage Court\nAvailability',
                     onPressed: () {
                       Navigator.push(
                         context,
@@ -233,126 +280,110 @@ class _AdminPageState extends State<AdminPage> {
                         ),
                       );
                     },
-                    child: const Column( // Wrap text with Column
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Text('Manage Court'),
-                        Text('Availability'), // Separate text into two lines
-                      ],
-                    ),
                   ),
-                ),
-                SizedBox(width: 20),
-                SizedBox(
-                  width: 150,
-                  child: Stack(
-                    alignment: Alignment.center,
-                    children: [
-                      ElevatedButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => AdminManageBookingPage(),
-                            ),
-                          );
-                        },
-                        child: const Column( // Wrap text with Column
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Text('Manage Court'),
-                            Text('Bookings'), // Separate text into two lines
-                          ],
+                  const SizedBox(width: 20),
+                  _buildIconButton(
+                    icon: Icons.group,
+                    label: 'Manage\nMembership',
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => AdminMembership(),
                         ),
-                      ),
-                      if (_pendingBookingsCount > 0)
-                        Positioned(
-                          right: 8,
-                          top: 8,
-                          child: Container(
-                            padding: const EdgeInsets.all(5),
-                            decoration: const BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.red,
-                            ),
-                            child: Text(
-                              '$_pendingBookingsCount',
-                              style: const TextStyle(
-                                color: Colors.white,
-                                fontSize: 12,
-                              ),
-                            ),
-                          ),
+                      );
+                    },
+                    counter: _pendingMembershipRequestsCount,
+                  ),
+                ],
+              ),
+              const SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  _buildIconButton(
+                    icon: Icons.event,
+                    label: 'Manage\nEvent',
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => AdminEvent(),
                         ),
-                    ],
+                      );
+                    },
                   ),
-                ),
-              ],
-            ),
-            SizedBox(height: 20),
-
-            // Rest of the buttons in a column
-            Stack( // Wrap the ElevatedButton with a Stack
-              alignment: Alignment.center,
-              children: [
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => AdminMembership(),
-                      ),
-                    );
-                  },
-                  child: const Text('Manage Membership'),
-                ),
-                if (_pendingMembershipRequestsCount > 0) // Add the counter
-                  Positioned(
-                    right: 8,
-                    top: 8,
-                    child: Container(
-                      padding: const EdgeInsets.all(5),
-                      decoration: const BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.red,
-                      ),
-                      child: Text(
-                        '$_pendingMembershipRequestsCount',
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 12,
+                  const SizedBox(width: 20),
+                  _buildIconButton(
+                    icon: Icons.bar_chart,
+                    label: 'Statistics',
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => AdminStats(),
                         ),
-                      ),
-                    ),
+                      );
+                    },
                   ),
-              ],
-            ),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => AdminEvent(),
-                  ),
-                );
-              },
-              child: const Text('Manage Event'),
-            ),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => AdminStats(),
-                  ),
-                );
-              },
-              child: const Text('Statistics'),
+                ],
+              ),
+            ],
+                ),
+              ),
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  // Helper function to build icon buttons
+  Widget _buildIconButton({
+    required IconData icon,
+    required String label,
+    required VoidCallback onPressed,
+    int counter = 0,
+  }) {
+    return SizedBox(
+      width: 150,
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          IconButton( // Use IconButton instead
+            onPressed: onPressed,
+            icon: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(icon, size: 40, color: const Color.fromARGB(255, 253, 253, 253)), // Example icon color
+                Text(
+                  label,
+                  textAlign: TextAlign.center, // Center the label text
+                  style: TextStyle(color: const Color.fromARGB(255, 255, 255, 255)), // Example text color
+                ),
+              ],
+            ),
+          ),
+          if (counter > 0)
+            Positioned(
+              right: 45,
+              top: 2,
+              child: Container(
+                padding: const EdgeInsets.all(5),
+                decoration: const BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.red,
+                ),
+                child: Text(
+                  '$counter',
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 12,
+                  ),
+                ),
+              ),
+            ),
+        ],
       ),
     );
   }

@@ -278,160 +278,292 @@ class _AdminEventState extends State<AdminEvent> {
       appBar: AppBar(
         title: const Text('Manage Event'),
       ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            children: [
-              // Radio buttons to choose between creating and modifying
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Text('Create Event'),
-                  Radio<bool>(
-                    value: false,
-                    groupValue: _isModifying,
-                    onChanged: (value) {
-                      setState(() {
-                        _isModifying = value!;
-                        _formKey.currentState!.reset(); // Clear form when switching
-                        _imageFile = null;
-                        _requireWallet = false;
-                        _eventId = null;
-                      });
-                    },
+      body: Container( // Add Container for gradient
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color(0xFF000000), // Black
+              Color(0xFF212121), // Dark gray
+            ],
+            stops: [0.0, 1.0],
+          ),
+        ),
+        child: Column( // Add Column to wrap the SingleChildScrollView
+          children: [
+            Expanded( // Expand the SingleChildScrollView to fill available space
+              child: SingleChildScrollView(
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Column(
+                    children: [
+                      // Radio buttons to choose between creating and modifying
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Text('Create Event'),
+                          Radio<bool>(
+                            value: false,
+                            groupValue: _isModifying,
+                            onChanged: (value) {
+                              setState(() {
+                                _isModifying = value!;
+                                _formKey.currentState!.reset(); // Clear form when switching
+                                _imageFile = null;
+                                _requireWallet = false;
+                                _eventId = null;
+                              });
+                            },
+                            fillColor: WidgetStateProperty.resolveWith<Color>((Set<WidgetState> states) {
+                              if (states.contains(WidgetState.disabled)) {
+                                return Colors.grey; // Color when disabled
+                              }
+                              return Colors.deepOrange; // Color when enabled
+                            }),
+                          ),
+                          const Text('Modify Event'),
+                          Radio<bool>(
+                            value: true,
+                            groupValue: _isModifying,
+                            onChanged: (value) {
+                              setState(() {
+                                _isModifying = value!;
+                                _formKey.currentState!.reset(); // Clear form when switching
+                                _imageFile = null;
+                                _requireWallet = false;
+                                _eventId = null;
+                              });
+                              _showEventList(); // Show event list when modifying
+                            },
+                            fillColor: WidgetStateProperty.resolveWith<Color>((Set<WidgetState> states) {
+                              if (states.contains(WidgetState.disabled)) {
+                                return Colors.grey; // Color when disabled
+                              }
+                              return Colors.deepOrange; // Color when enabled
+                            }),
+                          ),
+                        ],
+                      ),
+                      Form(
+                        key: _formKey,
+                        child: Column(
+                          children: [
+                            TextFormField(
+                              controller: _nameController,
+                              cursorColor: Colors.deepOrange,
+                              decoration: const InputDecoration(
+                                labelText: 'Event Name',
+                                labelStyle: TextStyle(fontSize: 16, color: Colors.deepOrange), 
+                                enabledBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.deepOrange), // Change line color
+                                ),
+                                focusedBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.orange), // Change focused line color
+                                ),
+                              ),
+                              validator: (value) {
+                                if (value == null || value.isEmpty) {
+                                  return 'Please enter event name';
+                                }
+                                return null;
+                              },
+                            ),
+                            const SizedBox(height: 10),
+                            TextFormField(
+                              controller: _descriptionController,
+                              cursorColor: Colors.deepOrange,
+                              decoration: const InputDecoration(
+                                labelText: 'Descriptions',
+                                labelStyle: TextStyle(fontSize: 16, color: Colors.deepOrange), 
+                                enabledBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.deepOrange), // Change line color
+                                ),
+                                focusedBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.orange), // Change focused line color
+                                ),
+                              ),
+                              validator: (value) {
+                                if (value == null || value.isEmpty) {
+                                  return 'Please enter description';
+                                }
+                                return null;
+                              },
+                            ),
+                            const SizedBox(height: 10),
+                            TextFormField(
+                              controller: _dateController,
+                              cursorColor: Colors.deepOrange,
+                              decoration: const InputDecoration(
+                                labelText: 'Date',
+                                labelStyle: TextStyle(fontSize: 16, color: Colors.deepOrange), 
+                                enabledBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.deepOrange), // Change line color
+                                ),
+                                focusedBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.orange), // Change focused line color
+                                ),
+                              ),
+                              onTap: () => _selectDate(context), // Call the date picker
+                              readOnly: true, // Prevent manual editing
+                              validator: (value) {
+                                if (value == null || value.isEmpty) {
+                                  return 'Please select a date';
+                                }
+                                return null;
+                              },
+                            ),
+                            const SizedBox(height: 20),
+                            ElevatedButton(
+                              onPressed: () => _selectTime(context),
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.transparent, 
+                                shadowColor: Colors.transparent, 
+                                foregroundColor: Colors.deepOrange, // Set the text color
+                                textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+                              ),
+                              child: const Text('Select Time'),
+                            ),
+                            if (_selectedTime != null)
+                              Text(
+                                'Selected Time: ${_selectedTime!.format(context)}',
+                              ),
+                            TextFormField(
+                              controller: _locationController,
+                              cursorColor: Colors.deepOrange,
+                              decoration: const InputDecoration(
+                                labelText: 'Location',
+                                labelStyle: TextStyle(fontSize: 16, color: Colors.deepOrange), 
+                                enabledBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.deepOrange), // Change line color
+                                ),
+                                focusedBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.orange), // Change focused line color
+                                ),
+                              ),
+                              validator: (value) {
+                                if (value == null || value.isEmpty) {
+                                  return 'Please enter location';
+                                }
+                                return null;
+                              },
+                            ),
+                            const SizedBox(height: 10),
+                            TextFormField(
+                              controller: _maxParticipantsController,
+                              keyboardType: TextInputType.number,
+                              cursorColor: Colors.deepOrange,
+                              decoration: const InputDecoration(
+                                labelText: 'Max Participants',
+                                labelStyle: TextStyle(fontSize: 16, color: Colors.deepOrange), 
+                                enabledBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.deepOrange), // Change line color
+                                ),
+                                focusedBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.orange), // Change focused line color
+                                ),
+                              ),
+                              validator: (value) {
+                                if (value == null || value.isEmpty) {
+                                  return 'Please enter max participants';
+                                }
+                                return null;
+                              },
+                            ),
+                            const SizedBox(height: 20),
+                            CheckboxListTile(
+                              checkColor: Colors.white, 
+                              activeColor: Colors.deepOrange, 
+                              title: const Text('Require SukanCoin to participate'),
+                              value: _requireWallet,
+                              onChanged: (value) {
+                                setState(() {
+                                  _requireWallet = value!;
+                                });
+                              },
+                            ),
+                            if (_requireWallet)
+                              TextFormField(
+                                controller: _walletAmountController,
+                                keyboardType: TextInputType.number,
+                                cursorColor: Colors.deepOrange,
+                                decoration: const InputDecoration(
+                                  labelText: 'SukanCoin Amount',
+                                  labelStyle: TextStyle(fontSize: 16, color: Colors.deepOrange), 
+                                  enabledBorder: UnderlineInputBorder(
+                                    borderSide: BorderSide(color: Colors.deepOrange), // Change line color
+                                  ),
+                                  focusedBorder: UnderlineInputBorder(
+                                    borderSide: BorderSide(color: Colors.orange), // Change focused line color
+                                  ),
+                                ),
+                                validator: (value) {
+                                  if (value == null || value.isEmpty) {
+                                    return 'Please enter SukanCoin amount';
+                                  }
+                                  return null;
+                                },
+                              ),
+                            const SizedBox(height: 20),
+                            ElevatedButton(
+                              onPressed: _pickImage,
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.transparent, 
+                                  shadowColor: Colors.transparent, 
+                                  foregroundColor: Colors.deepOrange, // Set the text color
+                                  textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+                                ),
+                              child: const Text('Upload Image'),
+                            ),
+                            if (_imageFile != null)
+                              Image.file(File(_imageFile!.path)),
+                            // Show different buttons based on whether creating or modifying
+                            const SizedBox(height: 10),
+                            if (_isModifying)
+                              ElevatedButton(
+                                onPressed: _updateEvent,
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.transparent, 
+                                  shadowColor: Colors.transparent, 
+                                  foregroundColor: Colors.deepOrange, // Set the text color
+                                  textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+                                ),                                child: const Text('Update Event'),
+                              )
+                            else
+                              ElevatedButton(
+                                onPressed: _createEvent,
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.transparent, 
+                                  shadowColor: Colors.transparent, 
+                                  foregroundColor: Colors.deepOrange, // Set the text color
+                                  textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+                                ),
+                                child: const Text('Create Event'),
+                              ),
+                            // Add a delete button for modifying events
+                            const SizedBox(height: 10),
+                            if (_isModifying)
+                              ElevatedButton(
+                                onPressed: _deleteEvent,
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.transparent, 
+                                  shadowColor: Colors.transparent, 
+                                  foregroundColor: Colors.deepOrange, // Set the text color
+                                  textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+                                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12), // Customize padding
+                                  side: const BorderSide(color: Colors.deepOrange, width: 2), // Add a border
+                                ),
+                                child: const Text('Delete Event'),
+                              ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
-                  const Text('Modify Event'),
-                  Radio<bool>(
-                    value: true,
-                    groupValue: _isModifying,
-                    onChanged: (value) {
-                      setState(() {
-                        _isModifying = value!;
-                        _formKey.currentState!.reset(); // Clear form when switching
-                        _imageFile = null;
-                        _requireWallet = false;
-                        _eventId = null;
-                      });
-                      _showEventList(); // Show event list when modifying
-                    },
-                  ),
-                ],
-              ),
-              Form(
-                key: _formKey,
-                child: Column(
-                  children: [
-                    TextFormField(
-                      controller: _nameController,
-                      decoration: const InputDecoration(labelText: 'Event Name'),
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Please enter event name';
-                        }
-                        return null;
-                      },
-                    ),
-                    TextFormField(
-                      controller: _descriptionController,
-                      decoration: const InputDecoration(labelText: 'Description'),
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Please enter description';
-                        }
-                        return null;
-                      },
-                    ),
-                    TextFormField(
-                      controller: _dateController,
-                      decoration: const InputDecoration(labelText: 'Date'),
-                      onTap: () => _selectDate(context), // Call the date picker
-                      readOnly: true, // Prevent manual editing
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Please select a date';
-                        }
-                        return null;
-                      },
-                    ),
-                    ElevatedButton(
-                      onPressed: () => _selectTime(context),
-                      child: const Text('Select Time'),
-                    ),
-                    if (_selectedTime != null)
-                      Text(
-                        'Selected Time: ${_selectedTime!.format(context)}',
-                      ),
-                    TextFormField(
-                      controller: _locationController,
-                      decoration: const InputDecoration(labelText: 'Location'),
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Please enter location';
-                        }
-                        return null;
-                      },
-                    ),
-                    TextFormField(
-                      controller: _maxParticipantsController,
-                      keyboardType: TextInputType.number,
-                      decoration: const InputDecoration(labelText: 'Max Participants'),
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Please enter max participants';
-                        }
-                        return null;
-                      },
-                    ),
-                    CheckboxListTile(
-                      title: const Text('Require SukanCoin to participate'),
-                      value: _requireWallet,
-                      onChanged: (value) {
-                        setState(() {
-                          _requireWallet = value!;
-                        });
-                      },
-                    ),
-                    if (_requireWallet)
-                      TextFormField(
-                        controller: _walletAmountController,
-                        keyboardType: TextInputType.number,
-                        decoration: const InputDecoration(labelText: 'SukanCoin Amount'),
-                        validator: (value) {
-                          if (value == null || value.isEmpty) {
-                            return 'Please enter SukanCoin amount';
-                          }
-                          return null;
-                        },
-                      ),
-                    ElevatedButton(
-                      onPressed: _pickImage,
-                      child: const Text('Upload Image'),
-                    ),
-                    if (_imageFile != null)
-                      Image.file(File(_imageFile!.path)),
-                    // Show different buttons based on whether creating or modifying
-                    if (_isModifying)
-                      ElevatedButton(
-                        onPressed: _updateEvent,
-                        child: const Text('Update Event'),
-                      )
-                    else
-                      ElevatedButton(
-                        onPressed: _createEvent,
-                        child: const Text('Create Event'),
-                      ),
-                    // Add a delete button for modifying events
-                    if (_isModifying)
-                      ElevatedButton(
-                        onPressed: _deleteEvent,
-                        child: const Text('Delete Event'),
-                      ),
-                  ],
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

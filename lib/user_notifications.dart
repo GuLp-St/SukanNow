@@ -74,41 +74,69 @@ class _UserNotificationsState extends State<UserNotifications> {
     }
   }
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Notifications'),
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(
+      title: const Text('Notifications'),
+    ),
+    body: Container( // Add Container for gradient
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [
+            Color(0xFF000000), // Black
+            Color(0xFF212121), // Dark gray
+          ],
+          stops: [0.0, 1.0],
+        ),
       ),
-      body: Column(
+      child: Column(
         children: [
-          Expanded(
+          Expanded( // This Expanded is already in your code
             child: _notifications.isEmpty
                 ? const Center(
                     child: Text('No notifications yet.'),
                   )
-                : ListView.separated( 
+                : ListView.separated(
                     itemCount: _notifications.length,
                     separatorBuilder: (context, index) => const Divider(
-                      indent: 180, // Add indent to the divider
-                      endIndent: 180, // Add endIndent to the divider
-                      color: Colors.orange, // Set divider color to orange
+                      indent: 180,
+                      endIndent: 180,
+                      color:Color.fromARGB(255, 61, 61, 61)
                     ), 
                     itemBuilder: (context, index) {
-                      return ListTile(
-                        title: Text(_notifications[index]),
+                      return Container( // Add Container for decoration
+                        decoration: BoxDecoration(
+                          color: const Color.fromARGB(255, 34, 34, 34), // Semi-transparent background
+                          border: Border.all(color: const Color.fromARGB(255, 34, 34, 34)), // Add border
+                          borderRadius: BorderRadius.circular(5.0), // Add rounded corners
+                        ),
+                        margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8), // Add margin
+                        padding: const EdgeInsets.all(5.0), // Add padding
+                        child: ListTile(
+                          title: Text(_notifications[index]),
+                        ),
                       );
                     },
                   ),
-          ),
-          Padding( // Button at the bottom
-            padding: const EdgeInsets.all(16.0),
-            child: ElevatedButton(
-              onPressed: _markAllAsRead,
-              child: const Text('Mark All as Read'),
             ),
-          ),
-        ],
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: ElevatedButton(
+                onPressed: _markAllAsRead,
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.transparent, 
+                  shadowColor: Colors.transparent, 
+                  foregroundColor: Colors.deepOrange, // Set the text color
+                  textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+                ),
+                child: const Text('Mark All as Read'),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

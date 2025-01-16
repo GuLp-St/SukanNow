@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.apps.app-mergeReleaseResources-35:/values-land/values-land.xml",
+            "outputFile": "com.example.apps.app-mergeReleaseResources-49:/values-land/values-land.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-3\\9eb00dccf0e570d516179c732833cbba\\transformed\\appcompat-1.6.1\\res\\values-land\\values-land.xml",

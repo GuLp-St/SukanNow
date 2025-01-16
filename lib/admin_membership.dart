@@ -13,29 +13,63 @@ class _AdminMembershipState extends State<AdminMembership> {
   final database = FirebaseDatabase.instance.ref();
   final logger = Logger();
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Admin Membership'),
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(
+      title: const Text('Manage Membership'),
+    ),
+    body: Container( // Add Container for gradient
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [
+            Color(0xFF000000), // Black
+            Color(0xFF212121), // Dark gray
+          ],
+          stops: [0.0, 1.0],
+        ),
       ),
-      body: FutureBuilder( // Use FutureBuilder instead of StreamBuilder
-        future: _loadRequests(), // Call a function to load the requests
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(child: CircularProgressIndicator());
-          } else if (snapshot.hasError) {
-            return Center(child: Text('Error: ${snapshot.error}'));
-          } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
-            return const Center(child: Text('No pending requests.'));
-          } else {
-            List<Widget> requestWidgets = snapshot.data!;
-            return ListView(children: requestWidgets);
-          }
-        },
+      child: Column(
+        children: [
+          Expanded( 
+            child: FutureBuilder(
+              future: _loadRequests(),
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  return const Center(child: CircularProgressIndicator());
+                } else if (snapshot.hasError) {
+                  return Center(child: Text('Error: ${snapshot.error}'));
+                } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
+                  return const Center(child: Text('No pending requests.'));
+                } else {
+                  List<Widget> requestWidgets = snapshot.data!;
+                  return ListView(
+                    children: requestWidgets.map((widget) {
+                      return Column(
+                        children: [
+                          widget,
+                          const Divider(
+                            height: 2, 
+                            thickness: 1,
+                            color: Colors.grey, 
+                            indent: 16, 
+                            endIndent: 16, 
+                          ), 
+                        ],
+                      );
+                    }).toList(),
+                  );
+                }
+              }
+            ),
+          ),
+        ],
       ),
-    );
-  }
+    ),
+  );
+}
 
   // Function to load requests asynchronously
   Future<List<Widget>> _loadRequests() async {
@@ -81,43 +115,73 @@ class _AdminMembershipState extends State<AdminMembership> {
     return requestWidgets;
   }
   
-  Widget _buildRequestTile(String userId, String userEmail, String activityKey, String membershipType) {
-    return ListTile(
-      title: Text('$userEmail - ${activityKey.replaceAll('_', ' ')} - $membershipType'),
-      trailing: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          IconButton(
+Widget _buildRequestTile(String userId, String userEmail, String activityKey, String membershipType) {
+  return ListTile(
+    title: Text('$userEmail - ${activityKey.replaceAll('_', ' ')} - $membershipType'),
+    trailing: Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        SizedBox(
+          width: 105, // Set desired width here
+          child: OutlinedButton(
             onPressed: () => _approveMembership(userId, activityKey, membershipType),
-            icon: const Icon(Icons.check, color: Colors.green),
+            style: OutlinedButton.styleFrom(
+              foregroundColor: Colors.green,
+              side: const BorderSide(color: Colors.green, width: 2.0), // Adjust width here
+            ),
+            child: const Text('Approve'),
           ),
-          IconButton(
+        ),
+        const SizedBox(width: 8),
+        SizedBox(
+          width: 105, // Same width as the Approve button
+          child: OutlinedButton(
             onPressed: () => _rejectMembership(userId, activityKey, membershipType),
-            icon: const Icon(Icons.close, color: Colors.red),
+            style: OutlinedButton.styleFrom(
+              foregroundColor: Colors.deepOrange, 
+              side: const BorderSide(color: Colors.deepOrange, width: 2.0), // Adjust width here
+            ),
+            child: const Text('Reject'),
           ),
-        ],
-      ),
-    );
-  }
+        ),
+      ],
+    ),
+  );
+}
 
-  Widget _buildCancellationTile(String userId, String userEmail, String activityKey, String membershipType) {
-    return ListTile(
-      title: Text('$userEmail - ${activityKey.replaceAll('_', ' ')} - Cancellation'),
-      trailing: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          IconButton(
+Widget _buildCancellationTile(String userId, String userEmail, String activityKey, String membershipType) {
+  return ListTile(
+    title: Text('$userEmail - ${activityKey.replaceAll('_', ' ')} - Cancellation'),
+    trailing: Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        SizedBox(
+          width: 105, // Set desired width here
+          child: OutlinedButton(
             onPressed: () => _approveCancellation(userId, activityKey, membershipType),
-            icon: const Icon(Icons.check, color: Colors.green),
+            style: OutlinedButton.styleFrom(
+              foregroundColor: Colors.green,
+              side: const BorderSide(color: Colors.green, width: 2.0),
+            ),
+            child: const Text('Approve'),
           ),
-          IconButton(
+        ),
+        const SizedBox(width: 8),
+        SizedBox(
+          width: 105, // Same width as the Approve button
+          child: OutlinedButton(
             onPressed: () => _rejectCancellation(userId, activityKey),
-            icon: const Icon(Icons.close, color: Colors.red),
+            style: OutlinedButton.styleFrom(
+              foregroundColor: Colors.deepOrange, 
+              side: const BorderSide(color: Colors.deepOrange, width: 2.0),
+            ),
+            child: const Text('Reject'),
           ),
-        ],
-      ),
-    );
-  }
+        ),
+      ],
+    ),
+  );
+}
 
   Future<void> _approveMembership(String userId, String activityKey, String membershipType) async {
     try {
@@ -186,15 +250,61 @@ class _AdminMembershipState extends State<AdminMembership> {
   }
 
   Future<void> _rejectMembership(String userId, String activityKey, String membershipType) async {
-    // Get rejection reason from user (using a dialog or any other method)
-    String rejectionReason = await _getRejectionReason();
+    final rejectionReasonController = TextEditingController();
+    String? reason = await showDialog<String>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Reject Request'),
+        content: TextField(
+          cursorColor: Colors.deepOrange,
+          controller: rejectionReasonController,
+          decoration: const InputDecoration(
+            hintText: 'Enter reason for rejection (optional)',
+            focusedBorder: UnderlineInputBorder( // Customize the focused border
+              borderSide: BorderSide(color: Colors.orange), // Set the line color to blue
+            ),
+            enabledBorder: UnderlineInputBorder( // Customize the unfocused border
+              borderSide: BorderSide(color: Colors.deepOrange), // Set the unfocused line color to grey
+            ),
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context, null),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.transparent, 
+              shadowColor: Colors.transparent, 
+              foregroundColor: Colors.orange, // Set the text color
+              textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+            ),
+            child: const Text('Cancel'),
+          ),
+          TextButton(
+            onPressed: () => Navigator.pop(context, rejectionReasonController.text.trim()),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.transparent, 
+              shadowColor: Colors.transparent, 
+              foregroundColor: Colors.red, // Set the text color
+              textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+            ),
+            child: const Text('Reject'),
+          ),
+        ],
+      ),
+    );
+    
+    // If the reason is null, the admin canceled the rejection.
+    if (reason == null) {
+      return; // Exit the function early
+    }
+
     try {
       // Remove the request key
       await database.child('users/$userId/membership/$activityKey/request').remove();
 
       // Send notification about membership rejection with reason
       await database.child('users/$userId/notifications').push().set({
-        'message':'Your $membershipType membership request for ${activityKey.replaceAll('_', ' ')} has been rejected. Reason: $rejectionReason',
+        'message':'Your $membershipType membership request for ${activityKey.replaceAll('_', ' ')} has been rejected. Reason: $reason',
         'timestamp': ServerValue.timestamp,
       });
 
@@ -253,15 +363,61 @@ class _AdminMembershipState extends State<AdminMembership> {
   }
 
   Future<void> _rejectCancellation(String userId, String activityKey) async {
-    // Get rejection reason from user (using a dialog or any other method)
-    String rejectionReason = await _getRejectionReason();
+    final rejectionReasonController = TextEditingController();
+    String? reason = await showDialog<String>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Reject Request'),
+        content: TextField(
+          controller: rejectionReasonController,
+          cursorColor: Colors.deepOrange,
+          decoration: const InputDecoration(
+            hintText: 'Enter reason for rejection (optional)',
+            focusedBorder: UnderlineInputBorder( // Customize the focused border
+              borderSide: BorderSide(color: Colors.orange), // Set the line color to blue
+            ),
+            enabledBorder: UnderlineInputBorder( // Customize the unfocused border
+              borderSide: BorderSide(color: Colors.deepOrange), // Set the unfocused line color to grey
+            ),
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context, null),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.transparent, 
+              shadowColor: Colors.transparent, 
+              foregroundColor: Colors.orange, // Set the text color
+              textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+            ),
+            child: const Text('Cancel'),
+          ),
+          TextButton(
+            onPressed: () => Navigator.pop(context, rejectionReasonController.text.trim()),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.transparent, 
+              shadowColor: Colors.transparent, 
+              foregroundColor: Colors.red, // Set the text color
+              textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+            ),
+            child: const Text('Reject'),
+          ),
+        ],
+      ),
+    );
+    
+    // If the reason is null, the admin canceled the rejection.
+    if (reason == null) {
+      return; // Exit the function early
+    }
+
     try {
       // Remove the delete key
       await database.child('users/$userId/membership/$activityKey/delete').remove();
 
       // Send notification about cancellation rejection with reason
       await database.child('users/$userId/notifications').push().set({
-        'message': 'Your ${activityKey.replaceAll('_', ' ')} membership cancellation request has been rejected. Reason: $rejectionReason',
+        'message': 'Your ${activityKey.replaceAll('_', ' ')} membership cancellation request has been rejected. Reason: $reason',
         'timestamp': ServerValue.timestamp,
       });
 
@@ -280,28 +436,6 @@ class _AdminMembershipState extends State<AdminMembership> {
       );
       }
     }
-  }
-
-  // Function to get the rejection reason from the admin
-  Future<String> _getRejectionReason() async {
-    String reason = '';
-    await showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: const Text('Rejection Reason'),
-        content: TextField(
-          onChanged: (value) => reason = value,
-          decoration: const InputDecoration(hintText: 'Enter rejection reason'),
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: const Text('Submit'),
-          ),
-        ],
-      ),
-    );
-    return reason;
   }
 
   // Helper function to get membership cost based on activity and type

@@ -93,6 +93,7 @@
   <androidx.palette/>
   <androidx.pdf/>
   <androidx.percentlayout/>
+  <androidx.performance/>
   <androidx.preference/>
   <androidx.print/>
   <androidx.privacysandbox.activity/>

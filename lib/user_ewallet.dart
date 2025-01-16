@@ -79,6 +79,12 @@ class _SukanCoinState extends State<SukanCoin> {
               onPressed: () {
                 Navigator.of(context).pop();
               },
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.transparent, 
+                  shadowColor: Colors.transparent, 
+                  foregroundColor: Colors.deepOrange, // Set the text color
+                  textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+              ),
               child: const Text('Cancel'),
             ),
           ],
@@ -90,6 +96,12 @@ class _SukanCoinState extends State<SukanCoin> {
   Widget _buildPaymentMethodButton(String text, Future<void> Function(BuildContext) onPressed) {
     return ElevatedButton(
       onPressed: () => onPressed(context),
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.transparent, 
+        shadowColor: Colors.transparent, 
+        foregroundColor: Colors.deepOrange, // Set the text color
+        textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+      ),
       child: Text(text),
     );
   }
@@ -113,7 +125,7 @@ Future<void> _showBankListDialog(BuildContext context) async {
                   Navigator.of(context).pop(); // Close the payment method dialog
                 },
                 child: const ListTile(
-                  leading: Icon(Icons.account_balance),
+                  leading: Icon(Icons.account_balance, color: Colors.deepOrange,),
                   title: Text('Maybank'),
                 ),
               ),
@@ -125,7 +137,7 @@ Future<void> _showBankListDialog(BuildContext context) async {
                   Navigator.of(context).pop(); // Close the payment method dialog
                 },
                 child: const ListTile(
-                  leading: Icon(Icons.account_balance),
+                  leading: Icon(Icons.account_balance, color: Colors.deepOrange,),
                   title: Text('CIMB Bank'),
                 ),
               ),
@@ -137,7 +149,7 @@ Future<void> _showBankListDialog(BuildContext context) async {
                   Navigator.of(context).pop(); // Close the payment method dialog
                 },
                 child: const ListTile(
-                  leading: Icon(Icons.account_balance),
+                  leading: Icon(Icons.account_balance, color: Colors.deepOrange,),
                   title: Text('Public Bank'),
                 ),
               ),
@@ -150,6 +162,12 @@ Future<void> _showBankListDialog(BuildContext context) async {
             onPressed: () {
               Navigator.of(context).pop();
             },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.transparent, 
+              shadowColor: Colors.transparent, 
+              foregroundColor: Colors.deepOrange, // Set the text color
+              textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+            ),
             child: const Text('Cancel'),
           ),
         ],
@@ -177,7 +195,7 @@ Future<void> _showOnlinePaymentListDialog(BuildContext context) async {
                   Navigator.of(context).pop(); // Close the payment method dialog
                 },
                 child: const ListTile(
-                  leading: Icon(Icons.payment),
+                  leading: Icon(Icons.payment, color: Colors.deepOrange,),
                   title: Text('Touch \'n Go eWallet'),
                 ),
               ),
@@ -189,7 +207,7 @@ Future<void> _showOnlinePaymentListDialog(BuildContext context) async {
                   Navigator.of(context).pop(); // Close the payment method dialog
                 },
                 child: const ListTile(
-                  leading: Icon(Icons.payment),
+                  leading: Icon(Icons.payment, color: Colors.deepOrange,),
                   title: Text('GrabPay'),
                 ),
               ),
@@ -201,7 +219,7 @@ Future<void> _showOnlinePaymentListDialog(BuildContext context) async {
                   Navigator.of(context).pop(); // Close the payment method dialog
                 },
                 child: const ListTile(
-                  leading: Icon(Icons.payment),
+                  leading: Icon(Icons.payment, color: Colors.deepOrange,),
                   title: Text('Boost'),
                 ),
               ),
@@ -214,6 +232,12 @@ Future<void> _showOnlinePaymentListDialog(BuildContext context) async {
             onPressed: () {
               Navigator.of(context).pop();
             },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.transparent, 
+              shadowColor: Colors.transparent, 
+              foregroundColor: Colors.deepOrange, // Set the text color
+              textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+            ),
             child: const Text('Cancel'),
           ),
         ],
@@ -244,6 +268,12 @@ Future<void> _showOnlinePaymentListDialog(BuildContext context) async {
               onPressed: () {
                 Navigator.of(context).pop();
               },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.transparent, 
+                shadowColor: Colors.transparent, 
+                foregroundColor: Colors.deepOrange, // Set the text color
+                textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+              ),
               child: const Text('Cancel'),
             ),
             TextButton(
@@ -253,6 +283,12 @@ Future<void> _showOnlinePaymentListDialog(BuildContext context) async {
                 Navigator.of(context).pop();
                 Navigator.of(context).pop(); // Close the payment method dialog
               },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.transparent, 
+                shadowColor: Colors.transparent, 
+                foregroundColor: Colors.deepOrange, // Set the text color
+                textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+              ),
               child: const Text('Confirm'),
             ),
           ],
@@ -267,28 +303,58 @@ Future<void> _showOnlinePaymentListDialog(BuildContext context) async {
       appBar: AppBar(
         title: const Text('SukanCoin'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('Wallet Balance: $_walletAmount 🪙', style: const TextStyle(fontSize: 24)),
-            const SizedBox(height: 20),
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: TextField(
-                controller: _amountController,
-                keyboardType: TextInputType.number,
-                decoration: const InputDecoration(
-                  hintText: 'Enter amount to top up',
-                  border: OutlineInputBorder(),
-                ),
+      body: Container( // Add Container for gradient
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color(0xFF000000), // Black
+              Color(0xFF212121), // Dark gray
+            ],
+            stops: [0.0, 1.0],
+          ),
+        ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('Wallet Balance: $_walletAmount 🪙', style: const TextStyle(fontSize: 24)),
+              const SizedBox(height: 20),
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: 
+                TextField(
+                  controller: _amountController,
+                  keyboardType: TextInputType.number,
+                  decoration: const InputDecoration(
+                    hintText: 'Enter amount to top up',
+                    border: OutlineInputBorder( // Add this
+                      borderSide: BorderSide(color: Colors.yellow), // This sets the border color
+                    ),
+                    enabledBorder: OutlineInputBorder( // And this
+                      borderSide: BorderSide(color: Colors.yellow), // This sets the border color when not focused
+                    ),  
+                    focusedBorder: OutlineInputBorder( // And this
+                      borderSide: BorderSide(color: Colors.orange), // This sets the border color when focused
+                    ),
+                  ),
+                )
               ),
-            ),
-            ElevatedButton(
-              onPressed: () => _showPaymentDialog(context),
-              child: const Text('Top Up'),
-            ),
-          ],
+              ElevatedButton(
+                onPressed: () => _showPaymentDialog(context),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.transparent, 
+                  shadowColor: Colors.transparent, 
+                  foregroundColor: Colors.yellow, // Set the text color
+                  textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12), // Customize padding
+                  side: const BorderSide(color: Colors.yellow, width: 2), // Add a border
+                ),
+                child: const Text('Top Up'),
+              ),
+            ],
+          ),
         ),
       ),
     );

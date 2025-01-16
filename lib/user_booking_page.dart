@@ -102,110 +102,136 @@ class _BookingPageState extends State<BookingPage> {
       appBar: AppBar(
         title: Text('Book ${widget.sport} Court'),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // Date Picker
-            ElevatedButton(
-              onPressed: () async {
-                final DateTime? pickedDate = await showDatePicker(
-                  context: context,
-                  initialDate: _selectedDate!,
-                  firstDate: DateTime.now().add(const Duration(days: 1)),
-                  lastDate: DateTime.now().add(const Duration(days: 8)),
-                  selectableDayPredicate: (DateTime date) {
-                    return !_blockedDates.contains(date);
-                  },
-                );
-                if (pickedDate != null && pickedDate != _selectedDate) {
+      body: Container( // Add Container for gradient
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color(0xFF000000), // Black
+              Color(0xFF212121), // Dark gray
+            ],
+            stops: [0.0, 1.0],
+          ),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Date Picker
+              ElevatedButton(
+                onPressed: () async {
+                  final DateTime? pickedDate = await showDatePicker(
+                    context: context,
+                    initialDate: _selectedDate!,
+                    firstDate: DateTime.now().add(const Duration(days: 1)),
+                    lastDate: DateTime.now().add(const Duration(days: 8)),
+                    selectableDayPredicate: (DateTime date) {
+                      return !_blockedDates.contains(date);
+                    },
+                  );
+                  if (pickedDate != null && pickedDate != _selectedDate) {
+                    setState(() {
+                      _selectedDate = pickedDate;
+                    });
+                    _fetchSessions();
+                  }
+                },
+                style: ElevatedButton.styleFrom(
+                  alignment: Alignment.centerLeft, 
+                  padding: const EdgeInsets.only(left: 0.0), 
+                  backgroundColor: Colors.transparent, 
+                  shadowColor: Colors.transparent, 
+                  foregroundColor: Colors.deepOrange, // Set the text color
+                  textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Customize text style
+                ),
+                child: Text(
+                  'Select Date: ${DateFormat('yyyy-MM-dd').format(_selectedDate!)}',
+                  style: TextStyle(fontSize: 20.0),
+                ),
+              ),
+              const SizedBox(height: 16),
+
+              // Court Selector
+              DropdownButtonFormField<String>(
+                decoration: InputDecoration(
+                  labelText: 'Select Court',
+                  labelStyle: TextStyle(color: Colors.deepOrange), // Change the label color
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Colors.deepOrange), // Change the line color
+                  ),
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Colors.deepOrange), // Change the focused line color
+                  ),
+                ),
+                value: _selectedCourt,
+                onChanged: (String? newValue) {
                   setState(() {
-                    _selectedDate = pickedDate;
+                    _selectedCourt = newValue;
                   });
                   _fetchSessions();
-                }
-              },
-              style: ElevatedButton.styleFrom(
-                alignment: Alignment.centerLeft, 
-                padding: const EdgeInsets.only(left: 0.0), 
+                },
+                items: ['A', 'B', 'C', 'D'].map((court) {
+                  return DropdownMenuItem(
+                    value: court,
+                    child: Text('Court $court'),
+                  );
+                }).toList(),
               ),
-              child: Text(
-                'Select Date: ${DateFormat('yyyy-MM-dd').format(_selectedDate!)}',
-                style: TextStyle(fontSize: 20.0),
-              ),
-            ),
-            const SizedBox(height: 16),
+              const SizedBox(height: 16),
 
-            // Court Selector
-            DropdownButtonFormField<String>(
-              decoration: const InputDecoration(labelText: 'Select Court'),
-              value: _selectedCourt,
-              onChanged: (String? newValue) {
-                setState(() {
-                  _selectedCourt = newValue;
-                });
-                _fetchSessions();
-              },
-              items: ['A', 'B', 'C', 'D'].map((court) {
-                return DropdownMenuItem(
-                  value: court,
-                  child: Text('Court $court'),
-                );
-              }).toList(),
-            ),
-            const SizedBox(height: 16),
+              // Session List
+              Expanded(
+                child: _sessions.isEmpty
+                    ? const Center(
+                        child: Text('No sessions available.'),
+                      )
+                    : ListView.builder(
+                        itemCount: _sessions.length,
+                        itemBuilder: (context, index) {
+                          final session = _sessions[index];
+                          final isInteractable = session['status'] == 'open'; // Only open sessions are interactable
 
-            // Session List
-            Expanded(
-              child: _sessions.isEmpty
-                  ? const Center(
-                      child: Text('No sessions available.'),
-                    )
-                  : ListView.builder(
-                      itemCount: _sessions.length,
-                      itemBuilder: (context, index) {
-                        final session = _sessions[index];
-                        final isInteractable = session['status'] == 'open'; // Only open sessions are interactable
-
-                        return ListTile(
-                          title: Text(session['time']),
-                          trailing: Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              Text(session['status']), // Display the status
-                              const SizedBox(width: 8),
-                              IconButton(
-                                onPressed: isInteractable
-                                    ? () {
-                                        Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (context) =>
-                                                BookingDetailsPage(
-                                              sport: widget.sport,
-                                              date: _selectedDate!,
-                                              court: _selectedCourt!,
-                                              time: session['time'],
-                                              onBookingConfirmed: () {
-                                                _fetchSessions();
-                                              },
+                          return ListTile(
+                            title: Text(session['time']),
+                            trailing: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Text(session['status']), // Display the status
+                                const SizedBox(width: 8),
+                                IconButton(
+                                  onPressed: isInteractable
+                                      ? () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  BookingDetailsPage(
+                                                sport: widget.sport,
+                                                date: _selectedDate!,
+                                                court: _selectedCourt!,
+                                                time: session['time'],
+                                                onBookingConfirmed: () {
+                                                  _fetchSessions();
+                                                },
+                                              ),
                                             ),
-                                          ),
-                                        );
-                                      }
-                                    : null,
-                                icon: const Icon(Icons.add),
-                              ),
-                            ],
-                          ),
-                        );
-                      },
-                    ),
-            ),
-          ],
-        ),
+                                          );
+                                        }
+                                      : null,
+                                  icon: const Icon(Icons.add),
+                                ),
+                              ],
+                            ),
+                          );
+                        },
+                      ),
+              ),
+            ],
+          ),
       ),
+    ),
     );
   }
 }
